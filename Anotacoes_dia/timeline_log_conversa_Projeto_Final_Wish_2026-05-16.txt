@@ -1,0 +1,933 @@
+════════════════════════════════════════════════════════════
+  WhatsApp — Log de Conversa
+  Grupo/Chat : Projeto Final Wish
+  Exportado  : 17/05/2026, 00:40:24
+  Total msgs : 142
+════════════════════════════════════════════════════════════
+
+──── 2026-05-15 ──────────────────────────────────────
+
+[12:46] Letícia Alexandre (b4f):
+    Quanto vai vender?  Previsão / regressão
+    
+    
+    
+    O que faz um produto vender mais? Correlação / importância de variáveis
+    
+    
+    
+    Vale a pena anunciar? Comparação com/sem ad boost
+    
+    
+    
+    Que tipo de produto tem melhor avaliação? Segmentação / clustering
+    
+    
+    
+    Como precificar melhor? Análise de preço vs. volume
+
+
+──── 2026-05-16 ──────────────────────────────────────
+
+[07:27] Ricardo Neves (b4f):
+    Pessoal eu hoje não vou conseguir comparecer pessoalmente pois estou passando mal , mas posso participar de boa de qualquer outra forma que não seja presencialmente
+
+[11:10] Letícia Alexandre (b4f):
+    as melhoras amigo
+
+[11:10] Letícia Alexandre (b4f):
+    faz-nos uma vídeo chamada
+
+[12:00] Gustavo:
+    Salve
+
+[12:01] Gustavo:
+    Melhoras mano, a gente liga pelo discord?
+
+[12:39] Letícia Alexandre (b4f):
+    @Gustavo vc chega aqui 13h msm?
+
+[12:41] Letícia Alexandre (b4f):
+    ia te falar se era de boa as 14h pq tô bem cansada
+    
+    vou comer agora
+
+[12:50] Gustavo:
+    Eai, kkkkkkkkk melhor por acaso senão já ia atrasar
+
+[12:51] Gustavo:
+    Tô arrumando aq só por agora tbm, q não vi as horas passarem
+
+[12:53] Gustavo:
+    E gente ontem eu cheguei em casa aí, fiquei pensando, junto com o Claudio, tipo nessa linha, pra mim ajudou a organizar uma esturura de pastas e etc
+
+[13:00] Gustavo:
+    Exato. O storytelling não é uma fase — é o fio que atravessa tudo desde o início.
+    
+    
+    
+    O problema da estrutura anterior é que separa demais: "Letícia faz os slides, Ricardo escreve, Gustavo valida". Mas um projeto com diferencial real é aquele onde o design já está a pensar na narrativa quando os dados ainda estão a ser limpos, e o escritor já está a formular as subquestões com o analista.
+    
+    
+    
+    Deixa-me repensar do zero.
+    
+    
+    
+    ---
+    
+    
+    
+    *O eixo central: uma história com 3 camadas*
+    
+    
+    
+    Cada fase do projeto tem 3 dimensões simultâneas:
+    
+    
+    
+    | Dimensão | Quem puxa | O que garante |
+    
+    |---|---|---|
+    
+    | *O que os dados dizem* | Gustavo | Rigor, estrutura, verdade dos números |
+    
+    | *O que isso significa* | Ricardo | Linguagem, contexto, argumento |
+    
+    | *Como isso chega ao outro* | Letícia | Impac… *O eixo central: uma história com 3 camadas *O que os dados dizem *O que isso significa *Como isso chega ao outro
+
+[13:00] Gustavo:
+    imagina preciso seguir toda a esturua disso, passo a passo tim tim por tim tim, primeiro me sugir todo um tree de pastas, e o comando para criar elas
+    
+    
+    
+    o objetivo é criar todo uma estutura de arquivos que facam sentido para o projeto seguindo regras e normas
+    
+    
+    
+    
+    
+    
+    
+    somos 3 integrantes
+    
+    
+    
+    Leticia, 
+    
+    Ricardo, 
+    
+    Gustavo.
+    
+    
+    
+    Pefil de design e história da arte, 
+    
+    Pefil de escritor e definições, 
+    
+    Perfil de estruturas e normas.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    gostei mas leu os pdfs pra seguir o q mandam? ate pq ta legal essa estrutura e outra nao focou nas habilidades do perifl de cada um
+    
+    
+    
+    pq isso q importa no fundo como unimos nossas skills
+    
+    
+    
+    
+    
+    
+    
+    acho que cada um podia agregar em todas as fazes ai que esta a dificuldade pra termos diferencial de fato com storytelling no fundo
+
+[13:18] Letícia Alexandre (b4f):
+    vamos vendo isso pessoalmente 
+    
+    vou tentar fazer o meu máximo, e sinceramente to pensando como aplicar cultura a essa loja tendo os dados que temos, que é produtos como bikini blusas e etc 
+    
+    mas eu vou agr dar uma olhada melhor nos produtos e tbm na história da empresa
+
+[13:41] Letícia Alexandre (b4f):
+    │ ↩ Letícia Alexandre (b4f): vamos vendo isso pessoalmente 
+vou tentar fazer o meu máximo, e sinceramente to pensando como aplicar cultura a essa loja tendo os dados que temos, que é produtos como bikini blusas e etc 
+mas eu vou agr dar uma olhada melhor nos produtos e tbm na história da empresa
+    Pra mim é sobre isso, como juntamos o que cada um agrega pra, entregar algo com diferençial e impacto
+
+[13:42] Letícia Alexandre (b4f):
+    │ ↩ Pra mim é sobre isso, como juntamos o que cada um agrega pra, entregar algo com diferençial e impacto
+    sim tá certo
+
+[13:42] Letícia Alexandre (b4f):
+    │ ↩ Tô saindo por agr daq de casa
+    beleza
+
+[13:42] Gustavo:
+    Tô saindo por agr daq de casa
+
+[13:43] Letícia Alexandre (b4f):
+    você conseguiu consertar aquela coluna?
+
+[13:47] Letícia Alexandre (b4f):
+    │ ↩ Letícia Alexandre (b4f): você conseguiu consertar aquela coluna?
+    Qual? Coluna? Agora boiei
+
+[13:48] Gustavo:
+    Kkkkkk pensei coluna de coluna de som
+
+[13:48] Gustavo:
+    Ahhh
+
+[13:48] Letícia Alexandre (b4f):
+    desculpa
+
+[13:48] Letícia Alexandre (b4f):
+    linha
+
+[13:51] Letícia Alexandre (b4f):
+    [Imagem/Vídeo 📷]
+
+[13:51] Letícia Alexandre (b4f):
+    fiz isso dentro do power BI msm
+
+[13:51] Letícia Alexandre (b4f):
+    [Imagem/Vídeo 📷]
+
+[13:57] Letícia Alexandre (b4f):
+    @Ricardo Neves (b4f) tas melhor?
+
+[13:58] Ricardo Neves (b4f):
+    Nem por isso
+
+[13:58] Ricardo Neves (b4f):
+    mas ja estou a ver a base de dados
+
+[13:58] Letícia Alexandre (b4f):
+    deve ter sido de ontem
+
+[13:58] Letícia Alexandre (b4f):
+    a fumaça do cigarro
+
+[13:58] Letícia Alexandre (b4f):
+    sinto muito
+
+[13:59] Ricardo Neves (b4f):
+    quem me dera que fosse  isso
+
+[13:59] Ricardo Neves (b4f):
+    acho que algo que comi me fez mal pois as dores de barriga não me deixaram dormir
+
+[13:59] Letícia Alexandre (b4f):
+    o que vc tem?
+
+[13:59] Letícia Alexandre (b4f):
+    eita
+
+[13:59] Letícia Alexandre (b4f):
+    será a comida do asilo?
+
+[14:00] Ricardo Neves (b4f):
+    ns mas algo consegui me fazer ficar acordado a noite toda
+
+[14:00] Ricardo Neves (b4f):
+    e agora estou a viver a base de cha e bolachas
+
+[14:08] Ricardo Neves (b4f):
+    Letícia consegues mandar a base de dados arrumada?
+
+[14:09] Ricardo Neves (b4f):
+    │ ↩ Ricardo Neves (b4f): Letícia consegues mandar a base de dados arrumada?
+    sim amor
+
+[14:09] Letícia Alexandre (b4f):
+    1 min
+
+[14:18] Letícia Alexandre (b4f):
+    desculpa eu fechei aqui sem querer to procurando
+
+[14:19] Letícia Alexandre (b4f):
+    @Gustavo kd vc
+
+[14:19] Gustavo:
+    Agarrado no trânsito
+
+[14:20] Ricardo Neves (b4f):
+    no google sheet não acontece o erro
+
+[14:21] Letícia Alexandre (b4f):
+    então só tava bugado msm
+
+[14:21] Ricardo Neves (b4f):
+    │ ↩ Ricardo Neves (b4f): no google sheet não acontece o erro
+    sério?
+
+[14:21] Letícia Alexandre (b4f):
+    é a linha 1555
+
+[14:25] Letícia Alexandre (b4f):
+    realmente
+
+[14:25] Letícia Alexandre (b4f):
+    acabei de abrir no sheets tbm
+
+[14:25] Letícia Alexandre (b4f):
+    perdemos tempo com isso
+
+[14:25] Ricardo Neves (b4f):
+    ai esta a base arrumada
+
+[14:25] Ricardo Neves (b4f):
+    da para colocar no power bi sem problema
+
+[14:25] Letícia Alexandre (b4f):
+    vc mexeu em algo?
+
+[14:25] Letícia Alexandre (b4f):
+    só pra saber
+
+[14:26] Ricardo Neves (b4f):
+    nop
+
+[14:26] Ricardo Neves (b4f):
+    so importei em arquivo de xlsx no google sheet
+
+[14:26] Letícia Alexandre (b4f):
+    eu abri aqui tbm diretamente e a coluna tá certa, foi só bug msm ou alguma configuração
+
+[14:27] Ricardo Neves (b4f):
+    e uma configuração do power bi de dividir por virgula acho eu
+
+[14:27] Letícia Alexandre (b4f):
+    simm
+
+[14:27] Letícia Alexandre (b4f):
+    │ ↩ Letícia Alexandre (b4f): ignorar quebra de linhas
+    [Imagem/Vídeo 📷] eu fiz isso aqui dps e deu certo
+
+[14:28] Ricardo Neves (b4f):
+    https://teams.microsoft.com/meet/351097655855028?p=RrCNWnjW84lIOuXrWJ https://teams.microsoft.com/meet/351097655855028?p=RrCNWnjW84lIOuXrWJ
+        🔗 Join meeting on Teams
+
+[14:29] Ricardo Neves (b4f):
+    estou no teams caso precisem de algo
+
+[14:33] Ricardo Neves (b4f):
+    Acho bom nos seguirmos pelos 3 pontos :
+    
+    O que queremos melhorar?
+    
+    
+    
+    Por quê isso importa para o negócio?
+    
+    
+    
+    Como saberemos que deu certo?
+
+[14:37] Gustavo:
+    Tô parando agr na república
+
+[14:39] Gustavo:
+    Tá sem vaga nenhuma nessa cidade
+
+[14:39] Gustavo:
+    Tá loco
+
+[14:39] Ricardo Neves (b4f):
+    │ ↩ Ricardo Neves (b4f): Acho bom nos seguirmos pelos 3 pontos :
+O que queremos melhorar?
+
+Por quê isso importa para o negócio?
+
+Como saberemos que deu certo?
+    eu vi que existe uma coisa que a temu tem que da mto sucesso que a wish não tem
+    
+    que é consumer-to-manufacturer
+
+[14:40] Letícia Alexandre (b4f):
+    │ ↩ Tá sem vaga nenhuma nessa cidade
+    hoje tem festa do porto
+
+[14:40] Letícia Alexandre (b4f):
+    vao fechar os aliados, os jogadores vão se apresentar dps de chegar de barco da ribeira
+
+[14:40] Ricardo Neves (b4f):
+    │ ↩ Ricardo Neves (b4f): e uma configuração do power bi de dividir por virgula acho eu
+    Sim eu vi isso era o 200 linhas acho pq a quebra tava dps
+
+[14:40] Letícia Alexandre (b4f):
+    que é basicamente fabricar de acordo com o que o consumidor quer
+
+[14:40] Gustavo:
+    Aquele no import msm
+
+[14:41] Letícia Alexandre (b4f):
+    uma palhaçada de macho que atrapalha td mundo q transita na cidade
+
+[14:43] Gustavo:
+    Assim, isso é qnd tira as linhas de autocarro
+
+[14:43] Gustavo:
+    Deve ser pior ainda
+
+[14:43] Letícia Alexandre (b4f):
+    eles vão tirar no aliados
+
+[14:44] Gustavo:
+    Mas pelo menos acho q a aqui promove cultura e tals
+
+[14:48] Ricardo Neves (b4f):
+    [Imagem/Vídeo 📷]
+
+[14:48] Gustavo:
+    Tá impossível não tem
+
+[14:48] Gustavo:
+    Tô rodando dnv kkkkkk
+
+[14:48] Ricardo Neves (b4f):
+    tambem mostra quantos produtos foram vendidos
+
+[14:48] Gustavo:
+    Pq pessoal já tá parando onde nem pode msm
+
+[14:49] Letícia Alexandre (b4f):
+    │ ↩ Tá impossível não tem
+    tenta no silo auto
+
+[14:49] Letícia Alexandre (b4f):
+    é um estacionamento
+
+[14:49] Ricardo Neves (b4f):
+    o as ad boosts e para ser jogado para a frente e assim aparecer mais
+
+[14:49] Letícia Alexandre (b4f):
+    eu pensei numa ideia
+
+[14:50] Letícia Alexandre (b4f):
+    eu pensei se a gente fizesse algo voltado para reduzir o impacto ambiental
+
+[14:52] Letícia Alexandre (b4f):
+    por exemplo a wish não usa o msm sistema da temu de levar tds os pedidos para uma fábrica e serem embalados de uma vez só
+    
+    
+    
+    eles embalam um de cada vez e são enviados separadamente
+
+[14:52] Letícia Alexandre (b4f):
+    ou seja embalagens individuais em excesso
+
+[14:52] Letícia Alexandre (b4f):
+    a gente pode analisar se tbm existem outros impactos no sistema deles e quais possíveis melhorias
+
+[14:52] Letícia Alexandre (b4f):
+    é só uma ideia
+
+[14:53] Letícia Alexandre (b4f):
+    com certeza vamos encontrar mts furos com essa base de dados com bastante informação
+
+[14:56] Letícia Alexandre (b4f):
+    como cada país se comporta a partir disso
+
+[14:56] Letícia Alexandre (b4f):
+    como fatores culturais influenciam padrões de consumo pouco sustentável na plataforma wish?
+
+[15:01] Letícia Alexandre (b4f):
+    a minha parte eu posso estudar a cultura de cada país e estudar sobre o consumo baseado no que temos nos dados
+
+[15:01] Letícia Alexandre (b4f):
+    é uma ideia
+
+[15:01] Letícia Alexandre (b4f):
+    @Ricardo Neves (b4f) @Gustavo o que acham?
+
+[15:02] Gustavo:
+    Calma tô lendo, tô andando prai
+
+[15:06] Ricardo Neves (b4f):
+    Eu gosto da ideia, mas falta como gerar lucro para a empresa
+
+[15:07] Gustavo:
+    ESG
+
+[15:08] Gustavo:
+    Eai
+
+[15:08] Gustavo:
+    E tô na rua aq
+
+[15:08] Gustavo:
+    Abre aq pf?
+
+[15:08] Gustavo:
+    Social ambiental e econômico
+
+[15:08] Letícia Alexandre (b4f):
+    isso pode ser um truque para gerar lucro
+
+[15:09] Letícia Alexandre (b4f):
+    abro
+
+[15:09] Letícia Alexandre (b4f):
+    pera
+
+[15:11] Ricardo Neves (b4f):
+    Excelente — aqui já estás a dar um salto de nível  (passar de análise de vendas → estratégia sustentável).
+    
+    
+    
+    Vou mostrar-te passo a passo como *integrar impacto ambiental no teu objetivo de negócio* usando o teu dataset.
+    
+    
+    
+    *
+    
+    
+    
+    #  1. Ideia-chave: juntar negócio + sustentabilidade
+    
+    
+    
+    Um objetivo moderno não é só:
+    
+    
+    
+    “vender mais”
+    
+    
+    Mas sim:
+    
+    
+    
+    “vender mais *de forma sustentável*”
+    
+    
+     Então o teu objetivo passa a ser:
+    
+    
+    
+    *económico* → vendas / lucro
+    *ambiental* → reduzir impacto
+    
+    
+    *
+    
+    
+    
+    #  2. O que tens no dataset que pode ligar ao ambiente
+    
+    
+    
+    Mesmo não sendo um dataset “verde”, tens variáveis que ajudam muito:
+    
+    
+    
+    ###  Logística (muito importante ambientalmente)
+    
+    
+    
+    shipping_option_price
+    shipping_is_express
+    countries_shipped_to
+    origin_country
+    
+    
+     Impacto:
+    
+    
+    
+    transporte
+    … *integrar impacto ambiental no teu objetivo de negócio * “vender mais” “vender mais *de forma sustentável*” *de forma sustentável *económico* → vendas / lucro *económico *ambiental* → reduzir impacto *ambiental * shipping_option_price shipping_option_price shipping_is_express shipping_is_express countries_shipped_to countries_shipped_to origin_country origin_country transporte
+
+[15:12] Ricardo Neves (b4f):
+    tentei pedir a ai para fazer o objetivo de negocio algo mais voltado para reduzir o impacto ambiental
+
+[15:35] Gustavo:
+    https://tm-code-server.tuamarca.com.br/ https://tm-code-server.tuamarca.com.br/
+
+[15:36] Gustavo:
+    JDvpRgyU~M7Tuqfu@U
+
+[15:36] Letícia Alexandre (b4f):
+    Identificar padrões de consumo na plataforma Wish que contribuem para impacto ambiental negativo, e propor métricas que poderiam orientar práticas mais sustentáveis.
+
+[15:38] Ricardo Neves (b4f):
+    │ ↩ Ricardo Neves (b4f): Eu gosto da ideia, mas falta como gerar lucro para a empresa
+    Empresas eco-friendly geram lucro unindo responsabilidade ambiental e estratégia comercial. A rentabilidade vem da redução de custos operacionais (diminuição de desperdícios, reciclagem e eficiência energética), da atração de consumidores conscientes dispostos a pagar mais por produtos sustentáveis e da facilidade de captar investimentos globais focados em práticas ESG.
+
+[15:46] Ricardo Neves (b4f):
+    A. Impacto do envio (logística)
+    
+     Pergunta de negócio:
+    
+    
+    
+    “Envio expresso aumenta vendas mas também impacto ambiental?”
+    
+    
+    
+     O que analisar:
+    
+    
+    
+    shipping_is_express vs units_sold
+    
+    custo de envio vs vendas
+    
+    
+    
+     Possível conclusão:
+    
+    
+    
+    se não aumenta muito vendas → evitar → menos impacto
+    
+    
+    
+    
+    
+     B. Qualidade vs desperdício
+    
+     Pergunta:
+    
+    
+    
+    “Produtos com baixo rating geram mais desperdício?”
+    
+    
+    
+     Analisar:
+    
+    
+    
+    rating vs units_sold
+    
+    
+    
+     Ideia:
+    
+    
+    
+    promover produtos com melhor rating = mais duráveis
+    
+    
+    
+    
+    
+     C. Preço vs fast fashion
+    
+     Pergunta:
+    
+    
+    
+    “Produtos muito baratos são mais vendidos mas menos sustentáveis?”
+    
+    
+    
+     Analisar:
+    
+    
+    
+    price vs units_sold
+    
+    
+    
+     Insight:
+    
+    
+    
+    fast fashion → grande volume → impacto ambiental
+    
+    
+    
+    
+    
+     D. Origem (transporte global)
+    
+     Pergunta:
+    
+    
+    
+    “Produtos importados têm maior i…
+
+[15:47] Ricardo Neves (b4f):
+    e tambem da para criar um score de sustentabilidade
+
+[15:55] Ricardo Neves (b4f):
+    │ ↩ Ricardo Neves (b4f): A. Impacto do envio (logística)
+ Pergunta de negócio:
+
+“Envio expresso aumenta vendas mas também impacto ambiental?”
+
+ O que analisar:
+
+shipping_is_express vs units_sold
+custo de envio vs vendas
+
+ Possível conclusão:
+
+se não aumenta muito vendas → evitar → menos impacto
+
+
+ B. Qualidade vs desperdício
+ Pergunta:
+
+“Produtos com baixo rating geram mais desperdício?”
+
+ Analisar:
+
+rating vs units_sold
+
+ Ideia:
+
+promover produtos com melhor rating = mais duráveis
+
+
+ C. Preço vs fast fashion
+ Pergunta:
+
+“Produtos muito baratos são mais vendidos mas menos sustentáveis?”
+
+ Analisar:
+
+price vs units_sold
+
+ Insight:
+
+fast fashion → grande volume → impacto ambiental
+
+
+ D. Origem (transporte global)
+ Pergunta:
+
+“Produtos importados têm maior i
+    você gosta dessa ideia?
+
+[16:00] Ricardo Neves (b4f):
+    A B e D são interessantes na minha visão e a pergunta da A  pode ser interessante pois o envio tambem influencia no impacto ambiental
+
+[16:02] Ricardo Neves (b4f):
+    Tipo se venderem produtos de melhor qualidade eles vão durar mais então vai gerar um impacto menor no ambiente
+
+[16:08] Letícia Alexandre (b4f):
+    Perfeito! Vamos à *Etapa 1* então. Com base nas colunas que você me mandou, vou verificar coluna por coluna o que conseguimos responder sobre o impacto ambiental.
+    
+    
+    
+    ---
+    
+    
+    
+    ##  Mapeando as colunas com foco ambiental
+    
+    
+    
+    ###  Frete e Transporte — maior fonte de emissão de CO₂
+    
+    
+    
+    | Coluna | O que nos diz | Útil pra questão ambiental? |
+    
+    |---|---|---|
+    
+    | shipping_option_price | Custo do frete |  Frete caro pode indicar longa distância |
+    
+    | shipping_is_express | Se é expresso |  Expresso = avião = mais poluente |
+    
+    | countries_shipped_to | Quantos países recebe |  Mais países = mais rotas de transporte |
+    
+    | shipping_option_name | Nome do tipo de frete |  Pode identificar transportadoras |
+    
+    | origin_country | País de origem |  Distância até o comprador |
+    
+    
+    
+    *Pergunta que … *Etapa 1 shipping_option_price shipping_is_express countries_shipped_to shipping_option_name origin_country *Pergunta que
+
+[16:09] Letícia Alexandre (b4f):
+    Assim fica bem mais fácil de ver de relance o que o dataset cobre. Quer passar para a *Etapa 2 — Formular o objetivo principal* do projeto com base nisso? *Etapa 2 — Formular o objetivo principal
+
+[16:12] Ricardo Neves (b4f):
+    Acho que podemos usar todas as que aparecem com o
+
+[16:21] Ricardo Neves (b4f):
+    Estão a ler o html em que aplicação ?
+
+[16:51] Gustavo:
+    HTML baixa, e arrasta pra uma aba do Chrome
+
+[16:51] Gustavo:
+    Ele abre, vê se deu certo
+
+[16:52] Ricardo Neves (b4f):
+    deu certo sim
+
+[16:53] Gustavo:
+    Boaaa
+
+[16:57] Ricardo Neves (b4f):
+    Vou arrumar em texto aquilo que ja fizemos do que foi pedido pode ser ?
+
+[16:59] Letícia Alexandre (b4f):
+    ricardo atende ai
+
+[17:07] Ricardo Neves (b4f):
+    Passo 1: Definir um Objetivo de Negócio (Business Goal)
+    
+    Examinar o conjunto de dados e compreender o significado das colunas e as
+    
+    relações entre elas
+    
+    Formular uma questão de objetivo de negócio, tendo em conta os seguintes
+    
+    pontos:
+    
+    
+    
+    Qual é o objetivo da análise?
+    
+    Resposta: Identificar padrões de consumo na plataforma Wish que contribuem para impacto ambiental negativo, e propor métricas que poderiam orientar práticas mais sustentáveis.
+    
+    
+    
+    Quem é o potencial cliente de negócio para este tipo de análise de dados?
+    
+    Resposta: O cliente que se preocupa com a sua pegada biológica mesmo que pagar mais para isso.
+    
+    
+    
+    Que valor pode o potencial cliente de negócio obter dos resultados da
+    
+    análise?
+    
+    Resposta: O cliente alvo desse tema poderá pagar mais pelo produto, assim gerando maior lucro para empresa e menos desperdício
+
+[17:22] Ricardo Neves (b4f):
+    “Analisar os padrões de consumo na plataforma Wish que geram impacto ambiental negativo e definir métricas sustentáveis capazes de orientar práticas mais ecológicas sem comprometer o lucro.”
+
+[17:27] Gustavo:
+    # Business Goal
+    
+    *Projeto Final — Data Analyst Junior*
+    
+    *Grupo:* Letícia · Ricardo · Gustavo
+    
+    *Dataset:* Sales of Summer Clothes — Wish Platform (Kaggle, agosto 2020)
+    
+    *Data:* 16 de maio de 2025
+    
+    
+    
+    ---
+    
+    
+    
+    ## Declaração de Propósito
+    
+    
+    
+    Identificar padrões de consumo na plataforma Wish que contribuem para impacto
+    
+    ambiental negativo, e propor métricas que poderiam orientar práticas mais
+    
+    sustentáveis.
+    
+    
+    
+    A forma como consumimos está a mudar — especialmente na Europa. O consumidor
+    
+    europeu está a transitar para um modelo de *compra pelos valores*: escolhe com
+    
+    base em critérios ESG (Ambientais, Sociais e de Governança), privilegia qualidade
+    
+    sobre quantidade, e responsabiliza as plataformas pelos produtos que distribuem.
+    
+    
+    
+    A análise de dados tem valor não só pelo que os números … *Projeto Final — Data Analyst Junior *Grupo: *Dataset: *Data: *compra pelos valores
+
+[17:32] Gustavo:
+    https://markdownlivepreview.com/ https://markdownlivepreview.com/
+
+[18:04] Gustavo:
+    https://deepnote.com/ https://deepnote.com/
+
+[18:30] Gustavo:
+    # Data Treatment Log
+    
+    *Projeto Final — Data Analyst Junior*
+    
+    *Grupo:* Letícia · Ricardo · Gustavo
+    
+    *Dataset:* Sales of Summer Clothes — Wish Platform (Kaggle, agosto 2020)
+    
+    *Responsável:* Gustavo
+    
+    *Data:* 16 de maio de 2025
+    
+    
+    
+    ---
+    
+    
+    
+    ## Como usar este documento
+    
+    
+    
+    Para cada variável tratada, este log regista:
+    
+    O problema encontrado nos dados brutos
+    A decisão tomada e a coluna de correção criada (ColNameFix)
+    As alternativas consideradas e porque foram rejeitadas
+    O impacto na análise
+    
+    
+    *Regra de ouro:* os dados originais nunca são alterados.
+    
+    Todas as correções vivem em colunas novas. O ficheiro raw/ é intocável.
+    
+    
+    
+    ---
+    
+    
+    
+    ## Resumo de Decisões
+    
+    
+    
+    | Coluna Original | Problema | Coluna Fix | Decisão |
+    
+    |---|---|---|---|
+    
+    | price / retail_price | price > retail em 35% dos casos |… *Projeto Final — Data Analyst Junior *Grupo: *Dataset: *Responsável: *Data: O problema encontrado nos dados brutos A decisão tomada e a coluna de correção criada (ColNameFix) ColNameFix As alternativas consideradas e porque foram rejeitadas O impacto na análise *Regra de ouro: raw/ price retail_price
+
+[19:10] Letícia Alexandre (b4f):
+    acho que estamos indo bem pessoal.
+    
+    precisamos amanhã finalizar essa primeira etapa pra mentoria com a Bia e ir mais direto ao ponto. Já temos bastante ideias e muita informação para o nosso projeto
+
+[19:19] Gustavo:
+    topp to subindo os arquivos aq
+
+[19:27] Gustavo:
+    https://github.com/gustavocs97/wish_dataset_bytes4future https://github.com/gustavocs97/wish_dataset_bytes4future
+
+[23:16] Gustavo:
+    https://www.figma.com/slides/Zhr1Rf7EdTZ6xpUYNckEWx/Porto-Presentation--Copy-?node-id=6002-296&t=DXTLsjvNoNNilCgw-0 https://www.figma.com/slides/Zhr1Rf7EdTZ6xpUYNckEWx/Porto-Presentation--Copy-?node-id=6002-296&t=DXTLsjvNoNNilCgw-0
+
+[23:20] Gustavo:
+    https://www.kaggle.com/datasets/jmmvutu/summer-products-and-sales-in-ecommerce-wish https://www.kaggle.com/datasets/jmmvutu/summer-products-and-sales-in-ecommerce-wish
+
+════════════════════════════════════════════════════════════
+  Fim do log
+════════════════════════════════════════════════════════════
