@@ -1,38 +1,5 @@
 
 
-
-distancia do pais X consoante destino - comparar com frete medio?
-
-
-preço baixo x avaliacoes - descartavel
-
-
-inventory total x vendidos ()
-
-
-
-
-1500 - quantos kg foram lixo foram gerados 
-fora
-1 ano
-
-
-
-porque as pessoas estao dispostas a gastar mais ou senao estao dispostas a gastar mais em prol do meio ambiente?
-
-
-leis europeias existentes? é algo apenas por pais? ou toda a europa?
-
-
-
-
-paises shipped to, existem varios portanto preciso descrever pq usei a metodologia x e nao y
-
-
-calcular o n_paises_vendidos x qnt.  disponibilidade impacta?
-
-heatmappings
-
 ----------
 
 
@@ -407,7 +374,3 @@ e o que a regulação veio (tentar) corrigir."
 
 **Total estimado: 10–13 slides de análise** dentro dos 15 minutos disponíveis.
 
----
-
-*Documento vivo — subquestões podem ser refinadas conforme a análise avança.*
-*Última atualização: 16 mai 2025 — Gustavo*

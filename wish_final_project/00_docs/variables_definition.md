@@ -394,7 +394,3 @@ ECO-LABEL vs REALIDADE ───────────────────
 badge_local_product (100% CN) + countries_shipped_to    contradição mensurável
 ```
 
----
-
-*Documento vivo — atualizar se novas variáveis calculadas forem adicionadas.*
-*Última atualização: 16 mai 2025 — Gustavo*

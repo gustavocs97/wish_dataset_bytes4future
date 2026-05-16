@@ -1,12 +1,3 @@
-separador moeda
-
-
-
-shipped from origin _ seguintes subdivisões principais (ISO 3166-2):
-
-
-
-
 
 
 ----------
@@ -347,7 +338,3 @@ Excluídas por não contribuírem para o objetivo de negócio:
 | `product_picture` | URL — não analítico |
 | `merchant_info_subtitle` | Texto não estruturado em francês |
 
----
-
-*Documento vivo — atualizar se surgirem novos problemas durante a análise.*
-*Última atualização: 16 mai 2025 — Gustavo*
