@@ -30,6 +30,11 @@ comprometer o lucro.
 > ambiental negativo e definir métricas sustentáveis capazes de orientar
 > práticas mais ecológicas sem comprometer o lucro."**
 
+
+> **"Analisar os padrões de consumo na plataforma Wish que geram impacto
+> ambiental, de maneira a definir praticas e métricas sustentáveis, capazes de orientar
+> não so a empresa analisada, mas todo o ecossistema presente no supplychain. E demonstrar, diante a mudança de comportamento do consumidor europeu"**
+
 ---
 
 ## Objetivo da Análise
