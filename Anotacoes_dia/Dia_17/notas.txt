@@ -48,3 +48,39 @@ peso de cada produtid - tabela de referencia de un por produto
 
 concorrents diretos e indidiretos
 
+
+se a o ad boost for nos produtos de 4 estrelas ou mais podemos enfluenciar a qualidade do produto e assim diminuir o descarte 
+
+
+
+enquadramento.
+fonte de dados: 1573 prod, 99.5 artigos de moda, o que é moda?
+
+
+
+categorizar os produtos - como?
+
+
+ciclo de vida do produto - da compra ao descarte. (um dado por passo.)
+
+
+curiosidade: lojas que colcoam embalagem a mais, para vender mais sacolas.
+embalagem - separada/juntas, no sentido de ser uma entrega caixa com varios produtos?
+
+
+wish é marketplace - nao chega td junto pq sai de cada vendedor? ou ainda sai do mesmo armaze,?
+
+falar sobre os CDs - casos sustentaveis "shein,temu"
+
+paradoxo do produto descartavel: durar mais porem nao desfaz? ou nao dura muito e se desfaz?
+
+
+
+slide, conslusao - impacto marcante e mostrar que tiramos conclusoes. que sejam relevantes para a vida das pessoas
+
+lixo gerado em kgs
+kms percorridos
+n de peças roupas ao todo
+
+esse dataset? levariam quantos caminhoes?
+
