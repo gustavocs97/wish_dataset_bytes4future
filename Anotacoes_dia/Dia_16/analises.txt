@@ -25,7 +25,7 @@ normas ISO
 shipped from origin _ seguintes subdivisões principais (ISO 3166-2):
 
 
-
+65001 Unicode (UTF-8)
 
 
 porque as pessoas estao dispostas a gastar mais ou senao estao dispostas a gastar mais em prol do meio ambiente?

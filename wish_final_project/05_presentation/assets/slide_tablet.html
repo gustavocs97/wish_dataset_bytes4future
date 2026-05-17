@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Apoio ao Palestrante - Slide 01</title>
+    <style>
+        :root {
+            --bg-main: #121214;
+            --bg-card: #1a1a1e;
+            --bg-inner: #26262b;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --coral: #ff6b4a;
+            --border: #33333b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 12px;
+        }
+
+        /* BARRA SUPERIOR (Métricas Rápidas) */
+        .top-bar {
+            display: grid;
+            grid-template-columns: 120px 1fr 250px 100px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .slide-badge {
+            background-color: var(--coral);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 6px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+        }
+
+        .slide-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding-left: 20px;
+            color: var(--text-main);
+        }
+
+        .speaker-tag {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-align: right;
+            border-right: 2px solid var(--border);
+            padding-right: 20px;
+        }
+
+        .timer {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--coral);
+            text-align: right;
+        }
+
+        /* CORPO CENTRAL (3 Zonas de Visualização) */
+        .main-content {
+            display: grid;
+            grid-template-columns: 320px 1fr 280px;
+            grid-template-rows: 1fr;
+            gap: 12px;
+            flex: 1;
+            min-height: 0; /* Evita quebra de overflow */
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        /* ZONA ESQUERDA: Mini-Tela Visual */
+        .preview-screen {
+            background-color: #f4f4f6; /* Fundo cinza-claro do slide real */
+            border-radius: 6px;
+            flex: 1;
+            position: relative;
+            color: #000000;
+            padding: 12px;
+        }
+
+        .preview-title {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-align: right;
+            max-width: 60%;
+        }
+
+        .preview-graphic {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 80px;
+            height: 80px;
+            border: 2px dashed var(--coral);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: var(--coral);
+        }
+
+        /* ZONA CENTRAL: Cérebro do Slide (Keywords + Âncora) */
+        .center-brain {
+            justify-content: space-between;
+        }
+
+        .keywords-grid {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .keyword-pill {
+            background-color: var(--bg-inner);
+            border: 1px solid var(--border);
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .script-box {
+            background-color: var(--bg-inner);
+            border-left: 4px solid var(--coral);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .script-text {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            font-style: italic;
+            color: #e4e4e7;
+        }
+
+        /* ZONA DIREITA: Core & Gatilho */
+        .right-meta {
+            gap: 12px;
+        }
+
+        .core-box {
+            background-color: rgba(255, 107, 74, 0.1);
+            border: 2px solid var(--coral);
+            border-radius: 8px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .core-value {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--coral);
+        }
+
+        .gatilho-box {
+            background-color: #7f1d1d;
+            border: 1px solid #b91c1c;
+            border-radius: 8px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            gap: 8px;
+        }
+
+        /* BARRA INFERIOR (Comandos de Execução Automática) */
+        .bottom-bar {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+            height: 75px;
+        }
+
+        .action-indicator {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .action-indicator span {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .action-content {
+            margin-left: 12px;
+        }
+
+        .bg-red-alert {
+            border-left: 5px solid #ef4444 !important;
+        }
+        .bg-blue-alert {
+            border-left: 5px solid #3b82f6 !important;
+        }
+        .bg-purple-alert {
+            border-left: 5px solid #a855f7 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR METADADOS -->
+    <div class="top-bar">
+        <div class="slide-badge">SLIDE 01</div>
+        <div class="slide-title">VAR_AP_SL_TEMA: "Abertura e Provocação Inicial"</div>
+        <div class="speaker-tag">PALESTRANTE: <b>RICARDO</b></div>
+        <div class="timer">01:30</div>
+    </div>
+
+    <!-- CORPO CENTRAL DA UI -->
+    <div class="main-content">
+        
+        <!-- COLUNA 1: PREVIEW DO SLIDE REAL -->
+        <div class="card">
+            <div class="card-title">[VAR_AP_SL_TELA_VISUAL]</div>
+            <div class="preview-screen">
+                <div class="preview-title">IA no marketing de vendas para 2025✦</div>
+                <div class="preview-graphic">Gráfico Abstrato</div>
+            </div>
+        </div>
+
+        <!-- COLUNA 2: PALAVRAS-CHAVE E TELEPROMPTER -->
+        <div class="card center-brain">
+            <div>
+                <div class="card-title">[VAR_AP_SL_PALAVRAS_CHAVE_APOIO]</div>
+                <div class="keywords-grid">
+                    <div class="keyword-pill">✦ Impacto Ambiental</div>
+                    <div class="keyword-pill">✦ Paradoxo do Lucro</div>
+                    <div class="keyword-pill">✦ Baseline 2020</div>
+                </div>
+            </div>
+            
+            <div style="flex: 1; display: flex; flex-direction: column;">
+                <div class="card-title">[VAR_AP_SL_SCRIPT_ANCORA] (LER PALAVRA POR PALAVRA)</div>
+                <div class="script-box">
+                    <p class="script-text">"Analisar os padrões de consumo que geram impacto ambiental negativo sem comprometer o lucro... É possível equilibrar esta balança?"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUNA 3: FOCO MENTAL RETIDO -->
+        <div class="card right-meta">
+            <div class="card-title">[VAR_AP_SL_MENSAGEM_RETIDA_CORE]</div>
+            <div class="core-box">
+                <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Fixar na Mente</span>
+                <div class="core-value">PARADOXO</div>
+            </div>
+            
+            <div class="gatilho-box">
+                <span>🟥 [GATILHO]:</span>
+                <span>CHOQUE</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BARRA INFERIOR DE DIREÇÃO TÁTICA -->
+    <div class="bottom-bar">
+        <div class="action-indicator bg-red-alert">
+            <div class="action-content">
+                <span>[VAR_AP_SL_RITMO_E_TOM]</span>
+                📢 Pausa dramática de 3s na âncora. Tom grave.
+            </div>
+        </div>
+        
+        <div class="action-indicator bg-blue-alert">
+            <div class="action-content">
+                <span>[VAR_AP_SL_FOCO_DE_ATENCAO]</span>
+                👁️ Olhos fixos na audiência (Slide Limpo).
+            </div>
+        </div>
+
+        <div class="action-indicator bg-purple-alert">
+            <div class="action-content">
+                <span>[VAR_AP_SL_O_CONTRASTE]</span>
+                ⚖️ Lucro Desenfreado VS Sustentabilidade Real
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
