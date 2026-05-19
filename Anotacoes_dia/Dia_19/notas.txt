@@ -1,0 +1,72 @@
+
+
+1
+2
+5
+
+8
+9
+
+
+Sustentabilidade & Rentabilidade podem coexistir?
+
+Pergunta 1         
+
+    Com 96,4% dos produtos a ter origem na China, qual o impacto ambiental real desta concentração geográfica na pegada de carbono da plataforma — e existe vantagem competitiva em diversificar para fornecedores locais?
+
+    Contexto: Apenas 6 países de origem registados (CN, US, VE, SG, AT, GB). A China responde por 1.516 dos 1.573 produtos. Os produtos chegam a uma média de 40,5 países destino.
+
+Pergunta 2 (confirmar_leticia)
+
+    Com 69% dos produtos abaixo de 10€ e um preço mediano de 8€, estamos perante um modelo de negócio estruturalmente dependente do volume e do descarte rápido — ou existe espaço para reposicionamento premium?
+
+    Distribuição: 0–5€ → 323 produtos · 5–10€ → 762 produtos · 10–20€ → 479 produtos · 20–50€ → apenas 9 produtos. O preço máximo registado é 49€.
+
+Pergunta 3 (Qualidade Baixa | Decisão de Catálogo)
+
+    Os produtos com rating abaixo de 3 representam apenas 1,2% da receita (≈676K€) e geram desproporcionalmente reclamações, devoluções e risco reputacional. 
+
+    Rating < 3: 68 produtos · 59.772 unidades vendidas · receita estimada 676K€. Com a regulação europeia de direitos do consumidor, cada reclamação tem custo de processamento — o ROI destes produtos pode já ser negativo.
+
+
+
+Pergunta 4 (Volume & Rentabilidade)
+
+
+    Os produtos com rating ≥ 4 respondem por 36,8% da receita total com apenas 38% do catálogo. Focar o crescimento neste segmento de alta qualidade percebida aumenta a rentabilidade por produto — e ao mesmo tempo reduz o volume de devoluções e reclamações?
+
+    Receita rating ≥ 4: ~20,4M€ de 55,4M€ totais. 597 produtos de alta qualidade vs. 976 de baixa/média. Margem por produto tende a ser superior em produtos bem avaliados.
+
+Pergunta 5
+
+
+
+
+
+
+
+
+----------------
+
+
+
+1- Com 96,4% dos produtos a ter origem na China, qual o impacto ambiental real desta concentração geográfica na pegada de carbono da plataforma?
+2- Os 597 produtos com rating ≥ 4 representam 36,8% da receita estimada total (≈20,4M€). Alta qualidade e rentabilidade coexistem — mas porquê este segmento não domina a estratégia da plataforma?
+3- Os produtos com rating ≥ 4 respondem por 36,8% da receita total com apenas 38% do catálogo. Focar o crescimento neste segmento de alta qualidade percebida aumenta a rentabilidade por produto — e ao mesmo tempo reduz o volume de devoluções e reclamações?
+4- Os produtos com rating abaixo de 3 representam apenas 1,2% da receita (≈676K€) mas geram desproporcionalmente reclamações, devoluções e risco reputacional. Qual o custo operacional real destes produtos vs. o custo de os retirar do catálogo?
+5- Qual é o impacto do preço de venda na vida útil das peças de fast fashion?
+
+
+
+
+
+
+Os produtos(100) com rating ≥ 4 respondem por 36,8% da receita total com apenas 38% do catálogo. 
+
+
+100prod x 10 x 1  (4) >  36% = total_receita
+
+100un 36 un
+
+total_receita
+

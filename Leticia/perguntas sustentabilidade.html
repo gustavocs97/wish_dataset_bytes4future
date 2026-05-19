@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sustentabilidade & Rentabilidade — 10 Perguntas de Negócio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #1a6b3c;
+    --accent-light: #e8f5ee;
+    --warn: #c0392b;
+    --warn-light: #fdf0ef;
+    --gold: #b8860b;
+    --gold-light: #fdf8e1;
+    --mid: #5a5a5a;
+    --line: #d4cfc4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 80px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(245,240,232,0.1);
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 40%;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(245,240,232,0.07);
+  }
+
+  .header-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(26,107,60,0.15);
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 700px;
+    margin-bottom: 20px;
+  }
+
+  header h1 em {
+    font-style: italic;
+    color: #b5c9bd;
+  }
+
+  .header-sub {
+    font-size: 15px;
+    color: #a0a0a0;
+    max-width: 520px;
+    line-height: 1.7;
+  }
+
+  /* STATS STRIP */
+  .stats-strip {
+    background: var(--accent);
+    padding: 0 80px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+  }
+
+  .stat-item {
+    padding: 22px 40px 22px 0;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    margin-right: 40px;
+    flex-shrink: 0;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+  }
+
+  .stat-lbl {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    display: block;
+    margin-top: 3px;
+  }
+
+  /* MAIN */
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 70px 40px;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  /* QUESTION CARDS */
+  .question-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .q-card {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .q-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  .q-card:nth-child(1) { animation-delay: 0.05s; }
+  .q-card:nth-child(2) { animation-delay: 0.10s; }
+  .q-card:nth-child(3) { animation-delay: 0.15s; }
+  .q-card:nth-child(4) { animation-delay: 0.20s; }
+  .q-card:nth-child(5) { animation-delay: 0.25s; }
+  .q-card:nth-child(6) { animation-delay: 0.30s; }
+  .q-card:nth-child(7) { animation-delay: 0.35s; }
+  .q-card:nth-child(8) { animation-delay: 0.40s; }
+  .q-card:nth-child(9) { animation-delay: 0.45s; }
+  .q-card:nth-child(10) { animation-delay: 0.50s; }
+
+  .q-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 28px 0;
+  }
+
+  .q-body {
+    padding: 22px 28px;
+    border-left: 1px solid var(--line);
+    background: #fff;
+  }
+
+  .q-dimension {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  .q-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .q-insight {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.6;
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+    margin-top: 2px;
+  }
+
+  .q-insight strong {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* Tipos */
+  .type-geo    .q-num { background: #e8f0fd; color: #1a4ba8; }
+  .type-geo    .q-dimension { background: #e8f0fd; color: #1a4ba8; }
+
+  .type-warn   .q-num { background: var(--warn-light); color: var(--warn); }
+  .type-warn   .q-dimension { background: var(--warn-light); color: var(--warn); }
+
+  .type-green  .q-num { background: var(--accent-light); color: var(--accent); }
+  .type-green  .q-dimension { background: var(--accent-light); color: var(--accent); }
+
+  .type-gold   .q-num { background: var(--gold-light); color: var(--gold); }
+  .type-gold   .q-dimension { background: var(--gold-light); color: var(--gold); }
+
+  .type-neutral .q-num { background: #f0f0f0; color: #444; }
+  .type-neutral .q-dimension { background: #f0f0f0; color: #444; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--mid);
+    letter-spacing: 1px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .stats-strip { padding: 0 24px; }
+    main { padding: 40px 20px; }
+    footer { flex-direction: column; gap: 8px; padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Análise de Negócio · Summer Products Dataset</div>
+  <h1>Sustentabilidade &amp; Rentabilidade<br><em>podem coexistir?</em></h1>
+  <p class="header-sub">10 perguntas construídas a partir de dados reais de 1.573 produtos de moda de verão, vendidos na plataforma Wish em 2020.</p>
+</header>
+
+<div class="stats-strip">
+  <div class="stat-item">
+    <span class="stat-val">1.573</span>
+    <span class="stat-lbl">Produtos analisados</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">6,8M</span>
+    <span class="stat-lbl">Unidades vendidas</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">96,4%</span>
+    <span class="stat-lbl">Origem China</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">8,33€</span>
+    <span class="stat-lbl">Preço médio</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">30,1%</span>
+    <span class="stat-lbl">Com urgency banner</span>
+  </div>
+</div>
+
+<main>
+
+  <div class="section-label">Perguntas de Investigação</div>
+
+  <div class="question-grid">
+
+    <!-- Q1 -->
+    <div class="q-card type-geo">
+      <div class="q-num">01</div>
+      <div class="q-body">
+        <span class="q-dimension">Cadeia de Abastecimento</span>
+        <p class="q-text">Com 96,4% dos produtos a ter origem na China, qual o impacto ambiental real desta concentração geográfica na pegada de carbono da plataforma — e existe vantagem competitiva em diversificar para fornecedores locais?</p>
+        <p class="q-insight"><strong>Contexto:</strong> Apenas 6 países de origem registados (CN, US, VE, SG, AT, GB). A China responde por 1.516 dos 1.573 produtos. Os produtos chegam a uma média de <strong>40,5 países</strong> destino.</p>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q-card type-neutral">
+      <div class="q-num">02</div>
+      <div class="q-body">
+        <span class="q-dimension">Distribuição de Preços</span>
+        <p class="q-text">Com 69% dos produtos abaixo de 10€ e um preço mediano de 8€, estamos perante um modelo de negócio estruturalmente dependente do volume e do descarte rápido — ou existe espaço para reposicionamento premium?</p>
+        <p class="q-insight"><strong>Distribuição:</strong> 0–5€ → 323 produtos · 5–10€ → 762 produtos · 10–20€ → 479 produtos · 20–50€ → apenas 9 produtos. O preço máximo registado é <strong>49€</strong>.</p>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q-card type-neutral">
+      <div class="q-num">03</div>
+      <div class="q-body">
+        <span class="q-dimension">Volume de Vendas</span>
+        <p class="q-text">Com 6,8 milhões de unidades vendidas e uma média de 4.339 unidades por produto, que segmentos de produto concentram maior volume — e esse volume é sinal de procura genuína ou de impulso induzido?</p>
+        <p class="q-insight"><strong>Contexto:</strong> A distribuição é muito assimétrica — a mediana é muito inferior à média, indicando que poucos produtos "blockbuster" inflacionam o total.</p>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q-card type-warn">
+      <div class="q-num">04</div>
+      <div class="q-body">
+        <span class="q-dimension">Qualidade vs. Vendas</span>
+        <p class="q-text">Os produtos com rating entre 2 e 3 (baixa qualidade) representam 63 artigos com 59.552 unidades vendidas. O que motiva a compra de produtos com avaliações tão baixas — e como quantificar o desperdício gerado?</p>
+        <p class="q-insight"><strong>Breakdown:</strong> Rating 1.x → 5 produtos, 220 unidades · Rating 2.x → 63 produtos, 59.552 unidades · Rating 3.x → 908 produtos, 4.275.990 unidades vendidas.</p>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q-card type-warn">
+      <div class="q-num">05</div>
+      <div class="q-body">
+        <span class="q-dimension">Compra Impulsiva</span>
+        <p class="q-text">Existem 30 produtos com rating ≤ 3, preço abaixo de 10€ e AD Boost ativo — combinação que maximiza a compra por impulso. Qual o custo real (ambiental e financeiro para o consumidor) deste triângulo?</p>
+        <p class="q-insight"><strong>Este grupo:</strong> preço médio de <strong>4,52€</strong> · rating médio de 2,60 · 10.250 unidades vendidas. São produtos baratos, mal avaliados e ativamente promovidos.</p>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q-card type-warn">
+      <div class="q-num">06</div>
+      <div class="q-body">
+        <span class="q-dimension">Urgency Banners</span>
+        <p class="q-text">30,1% dos produtos (473 em 1.573) utilizam urgency banners do tipo "Quantité limitée !". Que relação existe entre o uso destes banners, o rating do produto e o volume de vendas — e deveria existir regulação desta prática?</p>
+        <p class="q-insight"><strong>Nota metodológica:</strong> 1.100 produtos não têm dados de banner (NaN). Dos 473 com banner ativo, qual a sobreposição com produtos de baixa qualidade?</p>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-card type-gold">
+      <div class="q-num">07</div>
+      <div class="q-body">
+        <span class="q-dimension">AD Boost & Rentabilidade</span>
+        <p class="q-text">Os produtos sem AD Boost vendem em média mais (4.470 unidades) do que os com AD Boost (4.167 unidades). O investimento em publicidade paga está efetivamente a gerar retorno — ou é um custo a eliminar?</p>
+        <p class="q-insight"><strong>Com AD Boost:</strong> 681 produtos · 2,8M unidades · <strong>Sem AD Boost:</strong> 892 produtos · 4,0M unidades. A publicidade não é garantia de maior volume.</p>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-card type-green">
+      <div class="q-num">08</div>
+      <div class="q-body">
+        <span class="q-dimension">Produtos de Alta Qualidade</span>
+        <p class="q-text">Os 597 produtos com rating ≥ 4 representam 36,8% da receita estimada total (≈20,4M€). Alta qualidade e rentabilidade coexistem — mas porquê este segmento não domina a estratégia da plataforma?</p>
+        <p class="q-insight"><strong>Receita estimada total:</strong> 55,4M€ · <strong>Rating ≥ 4:</strong> 20,4M€ (36,8%) com apenas 38% dos produtos. Relação receita/produto superior à média.</p>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-card type-green">
+      <div class="q-num">09</div>
+      <div class="q-body">
+        <span class="q-dimension">Modelo Sustentável</span>
+        <p class="q-text">Os 353 produtos com rating ≥ 4 e sem AD Boost representam 23% das vendas totais (1,57M unidades). É possível construir um modelo de negócio rentável assente exclusivamente neste perfil de produto?</p>
+        <p class="q-insight"><strong>Perfil "sustentável":</strong> boa qualidade percebida + crescimento orgânico sem publicidade paga. 23% das vendas sem investimento em AD demonstra viabilidade do modelo.</p>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-card type-gold">
+      <div class="q-num">10</div>
+      <div class="q-body">
+        <span class="q-dimension">Síntese Estratégica</span>
+        <p class="q-text">Dado que produtos de baixa qualidade (&lt;3 estrelas) geram apenas 1,2% da receita total mas representam 70+ artigos ativamente vendidos e promovidos — qual o custo de reputação e ambiental de os manter no catálogo?</p>
+        <p class="q-insight"><strong>Trade-off:</strong> receita dos rating &lt;3 → 676K€ (1,2% do total). Removê-los teria impacto mínimo na receita mas potencialmente elevado na perceção de sustentabilidade e confiança do consumidor.</p>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <span>Fonte: Summer Products Dataset · Wish Platform · 2020-08</span>
+  <span>Objetivo: Sustentabilidade &amp; Rentabilidade · 1.573 produtos · 43 variáveis</span>
+</footer>
+
+</body>
+</html>
