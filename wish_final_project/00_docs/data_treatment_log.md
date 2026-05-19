@@ -1,340 +1,530 @@
-
-
-----------
-
-
-
-
-# Data Treatment Log
-**Projeto Final — Data Analyst Junior**
-**Grupo:** Letícia · Ricardo · Gustavo
+# Relatório de Tratamento de Dados
+**Projeto Final — Data Analyst Junior · Bytes4Future**
 **Dataset:** Sales of Summer Clothes — Wish Platform (Kaggle, agosto 2020)
-**Responsável:** Gustavo
-**Data:** 16 de maio de 2025
+**Ferramenta:** Power Query (Excel / Power BI)
+**Data:** 19 de maio de 2025
 
 ---
 
-## Como usar este documento
+## O que é este documento
 
-Para cada variável tratada, este log regista:
-- O problema encontrado nos dados brutos
-- A decisão tomada e a coluna de correção criada (`ColNameFix`)
-- As alternativas consideradas e porque foram rejeitadas
-- O impacto na análise
+Explica, passo a passo, cada transformação aplicada ao dataset original.
+Para cada passo: o que foi feito, porquê foi feito, e qual coluna foi criada.
 
-**Regra de ouro:** os dados originais nunca são alterados.
-Todas as correções vivem em colunas novas. O ficheiro `raw/` é intocável.
-
----
-
-## Resumo de Decisões
-
-| Coluna Original | Problema | Coluna Fix | Decisão |
-|---|---|---|---|
-| `price` / `retail_price` | price > retail em 35% dos casos | `discount_pct_fix` | Negativos → 0 (sem desconto) |
-| `units_sold` | Buckets arredondados, não contínuo | `units_sold_tier` | Convertido para variável ordinal |
-| `has_urgency_banner` | 70% NaN — campo ausente, não nulo | `has_urgency_banner_fix` | NaN → 0 (sem banner) |
-| `product_color` | 41 NaN (2.6%) | `product_color_fix` | NaN → "unknown" |
-| `origin_country` | 17 NaN (1.1%) | `origin_country_fix` | NaN → "unknown" |
-| `rating_*_count` | 45 NaN em todos os subcampos (2.9%) | — | Excluídos da análise de breakdown |
-| `merchant_profile_picture` | 86% NaN | — | Coluna excluída da análise |
-| `product_id` | 232 duplicados | — | Duplicados identificados, decisão documentada abaixo |
-| `badge_local_product` | Badge "local" em produtos 100% chineses | — | Limitação declarada, coluna usada com ressalva |
-| `inventory_total` | 99% no máximo (50) — sem variação útil | — | Coluna excluída da análise principal |
+**Regra seguida em todos os passos:**
+Os dados originais nunca foram apagados.
+Cada correcção criou uma coluna nova com o sufixo `Fix`.
+O ficheiro `raw/` permanece intocável.
 
 ---
 
-## Tratamentos Detalhados
+## Resumo Geral — O que entrou e o que saiu
 
----
-
-### 1. `price` vs `retail_price` → `discount_pct_fix`
-
-**Problema:**
-559 registos (35.5%) têm `price` > `retail_price`.
-O `retail_price` é suposto ser o preço de referência de mercado — mas em mais
-de um terço dos casos o produto custa mais do que o "preço normal".
-193 registos (12.3%) têm `price` == `retail_price` (desconto zero).
-
-**Valores:**
-- Desconto mínimo calculado: -18.2% (price muito acima do retail)
-- Desconto máximo: 96.9%
-- Mediana do desconto: 5.8%
-
-**Decisão: Metodologia B — negativos → 0**
-Criar coluna `discount_pct_fix`:
-```
-discount_pct = (retail_price - price) / retail_price * 100
-discount_pct_fix = max(discount_pct, 0)
-```
-Produtos com desconto negativo passam a ter `discount_pct_fix = 0`
-(interpretação: sem desconto real, não preço inflacionado).
-
-**Metodologia A — excluir os 559 registos — REJEITADA**
-Perderíamos 35.5% do dataset. Dado o objetivo de analisar padrões de consumo,
-excluir um terço dos produtos distorceria a análise tanto quanto mantê-los.
-Além disso, estes produtos fazem parte do comportamento real da plataforma.
-
-**Metodologia C — ignorar retail_price — REJEITADA**
-O retail_price é usado como variável de contexto (percepção de valor pelo
-consumidor). Ignorá-lo eliminaria a possibilidade de analisar a ilusão de
-desconto como mecanismo de impulso de compra — relevante para o objetivo ESG.
-
-**Impacto na análise:**
-`discount_pct_fix` será usado para analisar se a perceção de desconto influencia
-`units_sold` independentemente da qualidade (`rating`).
-
----
-
-### 2. `units_sold` → `units_sold_tier`
-
-**Problema:**
-`units_sold` não é uma variável contínua real. Os valores são buckets
-arredondados que o Wish usa para mostrar popularidade:
-
-| Valor | Registos |
-|---|---|
-| 100 | 509 |
-| 1000 | 405 |
-| 5000 | 217 |
-| 10000 | 177 |
-| 20000 | 103 |
-| 50 | 76 |
-| outros | 79 |
-
-Tratar como contínuo geraria correlações falsas — a distância entre "100" e
-"1000" não é proporcional à distância real de vendas.
-
-**Decisão: converter para variável ordinal `units_sold_tier`**
-
-| Tier | Intervalo | Interpretação |
+| | Antes | Depois |
 |---|---|---|
-| 1 | < 100 | Volume muito baixo |
-| 2 | 100–999 | Volume baixo |
-| 3 | 1.000–4.999 | Volume médio |
-| 4 | 5.000–19.999 | Volume alto |
-| 5 | ≥ 20.000 | Volume muito alto |
-
-**Alternativa — manter contínuo — REJEITADA**
-Correlações com variável contínua de buckets produziriam resultados
-numericamente precisos mas analiticamente enganosos. A apresentação de
-resultados baseada em médias de buckets não seria defensável.
-
-**Alternativa — log transform — REJEITADA**
-Log de buckets não resolve o problema de origem — os valores não são
-medições reais, são categorias disfarçadas de números.
-
-**Impacto na análise:**
-Todas as análises de volume de vendas usarão `units_sold_tier`.
-O cálculo de kg de têxtil usará os valores originais com ressalva declarada
-de que são estimativas por excesso/defeito.
+| Linhas | 1.573 | 1.341 *(duplicados removidos)* |
+| Colunas originais | 43 | 39 *(4 removidas)* |
+| Colunas Fix criadas | 0 | 20 |
+| Colunas totais no dataset limpo | 43 | 59 |
 
 ---
 
-### 3. `has_urgency_banner` → `has_urgency_banner_fix`
+## PASSO 1 — Carregar o ficheiro
 
-**Problema:**
-1.100 registos (69.9%) têm NaN. Apenas 473 têm valor 1.0.
-O campo não tem valor 0 — quando não há banner, o campo está vazio.
+**O que foi feito:**
+O ficheiro `Summer_Products.csv` foi importado com encoding UTF-8.
 
-**Decisão: NaN → 0**
-```
-has_urgency_banner_fix = has_urgency_banner.fillna(0).astype(int)
-```
-NaN significa ausência de banner, não dado em falta. É uma decisão de
-design do dataset — campos binários de presença/ausência frequentemente
-omitem o caso negativo.
+**Porquê UTF-8:**
+O dataset foi extraído com interface francesa — contém caracteres
+não-ASCII como `é`, `à`, `ê` nos títulos e textos.
+Sem UTF-8, esses caracteres aparecem corrompidos.
 
-**Alternativa — excluir os 1.100 registos — REJEITADA**
-Eliminaria 70% do dataset. A ausência de banner é informação relevante —
-é o grupo de controlo para comparar com produtos que têm banner.
-
-**Alternativa — manter NaN — REJEITADA**
-Impossibilitaria qualquer análise de comparação entre grupos.
-Funções de agregação ignoram NaN e distorceriam contagens.
-
-**Impacto na análise:**
-`has_urgency_banner_fix` será variável central na análise de consumo por
-impulso — comparação de `units_sold_tier` entre produtos com e sem banner.
+**Resultado:** 1.573 linhas · 43 colunas carregadas correctamente.
 
 ---
 
-### 4. `product_color` → `product_color_fix`
+## PASSO 2 — Corrigir tipos de dados
 
-**Problema:**
-41 registos (2.6%) sem cor registada.
+**O que foi feito:**
+Cada coluna recebeu o tipo de dado correcto.
 
-**Decisão: NaN → "unknown"**
-```
-product_color_fix = product_color.fillna("unknown")
-```
-A ausência de cor é informação válida — pode indicar produtos sem
-variação de cor ou sellers que não preencheram o campo.
-
-**Alternativa — moda (cor mais frequente = "black") — REJEITADA**
-Imputar "black" em 41 produtos sem justificação seria inventar dados.
-A cor é uma variável categórica sem ordenação — não existe "cor média".
-
-**Alternativa — excluir os 41 registos — REJEITADA**
-2.6% do dataset por uma variável que não é central na análise.
-Impacto desproporcional ao problema.
-
-**Impacto na análise:**
-Usado apenas como variável descritiva. Categoria "unknown" excluída
-de análises de distribuição por cor.
-
----
-
-### 5. `origin_country` → `origin_country_fix`
-
-**Problema:**
-17 registos (1.1%) sem país de origem.
-
-**Decisão: NaN → "unknown"**
-```
-origin_country_fix = origin_country.fillna("unknown")
-```
-País de origem desconhecido é informação relevante para o cálculo de
-distância de frete — será tratado como caso separado, não imputado.
-
-**Alternativa — imputar "CN" (moda, 96%) — REJEITADA**
-Assumir que produtos sem origem registada são chineses seria especulação.
-Para o cálculo de distância de frete, uma imputação errada produziria
-um valor numérico falso com aparência de precisão.
-
-**Impacto na análise:**
-Registos "unknown" excluídos do cálculo de distância de frete.
-Representam apenas 1.1% — impacto negligenciável.
-
----
-
-### 6. `rating_five_count` ... `rating_one_count` — sem coluna Fix
-
-**Problema:**
-45 registos (2.9%) com NaN em todos os subcampos de rating simultaneamente.
-O `rating` principal está completo em 100% dos registos.
-
-**Decisão: manter NaN, excluir estes registos apenas das análises de breakdown**
-Os 45 registos continuam na análise principal (usam `rating`).
-Análises que requerem o breakdown por estrelas excluem estes 45 registos
-e declaram n=1.528.
-
-**Alternativa — imputar por proporção média — REJEITADA**
-Criar subcounts sintéticos a partir do rating médio introduziria variância
-artificial. As correlações entre subcounts seriam matematicamente corretas
-mas empiricamente vazias.
-
-**Impacto na análise:**
-Mínimo. 2.9% do dataset afetado apenas em análises secundárias.
-
----
-
-### 7. `merchant_profile_picture` — excluída da análise
-
-**Problema:**
-1.347 registos (85.6%) sem URL de foto de perfil.
-
-**Decisão: coluna excluída da análise**
-Com 86% de ausência, qualquer análise seria baseada em 14% do dataset —
-não representativa. A variável `merchant_has_profile_picture` (binária,
-completa) cobre o mesmo conceito de forma utilizável.
-
-**Impacto na análise:**
-Nenhum. `merchant_has_profile_picture` substitui onde relevante.
-
----
-
-### 8. `product_id` duplicados
-
-**Problema:**
-1.573 linhas totais, 1.341 `product_id` únicos → 232 duplicados (14.7%).
-
-**Contexto:**
-O dataset pode ter múltiplas linhas por produto por variações de tamanho
-ou cor (`product_variation_size_id`, `product_color`). Não são
-necessariamente erros — podem ser registos legítimos de variações.
-
-**Decisão: manter todos os registos, declarar como limitação**
-A análise opera ao nível de listing (linha), não de produto único.
-Para análises onde produto único importa (ex: contagem de produtos
-distintos), usar `product_id` com `.drop_duplicates()` e declarar n=1.341.
-
-**Alternativa — desduplicar por product_id — REJEITADA**
-Perderíamos informação de variações. Um produto com 3 tamanhos diferentes
-pode ter padrões de venda distintos por variação — relevante para análise
-de stock e desperdício.
-
-**Impacto na análise:**
-Declarado em cada análise se usa n=1.573 (listings) ou n=1.341 (produtos).
-
----
-
-### 9. `badge_local_product` — limitação declarada
-
-**Problema identificado:**
-29 produtos têm `badge_local_product = 1`.
-Desses 29, **100% têm `origin_country = CN`** (China).
-
-O badge "produto local" em produtos de origem chinesa é uma contradição.
-Pode significar: produto fabricado localmente para o mercado europeu por
-empresa de origem chinesa, ou uso indevido do badge pelo seller.
-
-**Decisão: usar a coluna com ressalva explícita**
-O badge é tratado como declaração do seller, não facto verificado.
-Análises que usem `badge_local_product` declaram esta limitação.
-
-Adicionalmente: produtos "locais" têm `countries_shipped_to` médio de
-42.86 vs 40.41 dos não-locais — contradição adicional com o conceito
-de produto local.
-
-**Impacto na análise:**
-O badge local não pode ser usado como proxy de sustentabilidade de
-transporte. Serve como indicador de estratégia de marketing do seller.
-
----
-
-### 10. `inventory_total` — excluída da análise principal
-
-**Problema:**
-1.563 dos 1.573 registos (99.4%) têm `inventory_total = 50`.
-O valor 50 é o máximo permitido pela plataforma — não é o stock real,
-é o tecto da plataforma.
-
-**Decisão: coluna excluída da análise principal**
-Sem variação real, a coluna não tem poder analítico.
-`product_variation_inventory` tem distribuição mais variada e pode ser
-usado como proxy de stock por variação onde relevante.
-
-**Impacto na análise:**
-A análise de desperdício/sobreprodução usará `product_variation_inventory`
-como proxy secundário, com limitação declarada.
-
----
-
-## Colunas Adicionadas de Fontes Externas
-
-| Coluna | Fonte | Método |
+| Coluna | Tipo atribuído | Porquê |
 |---|---|---|
-| `distance_km` | Tabela de distâncias por `origin_country_fix` até Paris (Europa Ocidental) | CN=9200km, US=8500km, VE=8300km, SG=10200km, AT=1050km, GB=340km |
-| `estimated_weight_g` | Peso médio estimado por categoria têxtil | A definir — fonte: Ellen MacArthur Foundation / literatura têxtil |
-| `units_sold_tier` | Calculada internamente | Ver secção 2 |
-| `discount_pct_fix` | Calculada internamente | Ver secção 1 |
-| `has_urgency_banner_fix` | Calculada internamente | Ver secção 3 |
+| `price` | Número decimal | Tem casas decimais (ex: €3.99) |
+| `retail_price` | Número inteiro | Sempre valor inteiro |
+| `units_sold` | Número inteiro | Buckets sem decimais |
+| `rating` | Número decimal | Ex: 3.84, 4.56 |
+| `rating_count` | Número inteiro | Contagem de avaliações |
+| `rating_*_count` | Número inteiro | Contagem por estrela |
+| `badges_count` | Número inteiro | Soma de badges (0, 1, 2 ou 3) |
+| `shipping_option_price` | Número inteiro | Preço de frete sem decimais |
+| `countries_shipped_to` | Número inteiro | Contagem de países |
+| `merchant_rating` | Número decimal | Ex: 4.03 |
+| `merchant_rating_count` | Número inteiro | Contagem de avaliações |
+| `product_id` | Texto | Identificador — não é número |
+| `merchant_id` | Texto | Identificador — não é número |
+| `crawl_month` | Data | Formato YYYY-MM |
+
+**Porquê isto importa:**
+Se `price` ficasse como Texto, não seria possível calcular descontos.
+Se `product_id` ficasse como número, zeros à esquerda seriam perdidos.
 
 ---
 
-## Colunas Irrelevantes para a Análise
+## PASSO 3 — Adicionar índice
 
-Excluídas por não contribuírem para o objetivo de negócio:
+**O que foi feito:**
+Criada coluna `Index_novo` com numeração sequencial de 1 a 1.573.
 
-| Coluna | Motivo |
+**Porquê:**
+Permite rastrear a posição original de cada linha antes de qualquer
+ordenação ou filtro. Útil para auditoria e validação de resultados.
+
+---
+
+## PASSO 4 — Remover duplicados
+
+**O que foi feito:**
+Aplicado `Table.Distinct` com base na coluna `product_id`.
+1.573 linhas → **1.341 linhas** (232 duplicados removidos).
+
+**Porquê existem duplicados:**
+O criador do dataset fez o scraping em múltiplos momentos da mesma
+pesquisa. O Wish (baseado em Elasticsearch) repete produtos ao longo
+do scroll da página. Além disso, o Wish faz testes A/B constantes —
+o mesmo produto pode aparecer com e sem urgency banner em linhas diferentes.
+
+**Regra de negócio aplicada:**
+Mantida a linha com `urgency_text` preenchido quando existe duplicado.
+Motivo: o objectivo é analisar o impacto de mecanismos de impulso de compra
+— a versão com banner é a mais relevante para esse fim.
+
+**Alternativa rejeitada:**
+Manter a primeira ocorrência sem critério — perderia informação de banners.
+
+---
+
+## PASSO 5 — `units_sold_EscalaFix` — Escala ordinal de vendas
+
+**Coluna original:** `units_sold`
+**Coluna criada:** `units_sold_EscalaFix`
+
+**Problema:**
+`units_sold` não são valores reais — são buckets que o Wish usa para
+mostrar popularidade (10, 50, 100, 1000, 10000...).
+Tratar como número contínuo geraria correlações matematicamente correctas
+mas analiticamente falsas.
+
+**O que foi feito:**
+Convertido para escala ordinal de 6 níveis:
+
+| Nível | Intervalo | Interpretação |
+|---|---|---|
+| 1. Micro(10) | ≤ 10 | Volume muito baixo |
+| 2. Baixo(100) | 11 – 100 | Volume baixo |
+| 3. Médio(1000) | 101 – 1.000 | Volume médio |
+| 4. Alto(10000) | 1.001 – 10.000 | Volume alto |
+| 5. Muito Alto(20000) | 10.001 – 20.000 | Volume muito alto |
+| 6. Crítico(>20000) | > 20.000 | Volume crítico |
+
+**Alternativa rejeitada:**
+Log transform — não resolve o problema de origem. Os valores são
+categorias disfarçadas de números, não medições reais.
+
+---
+
+## PASSO 6 — `rating_Base1000Fix` — Rating normalizado
+
+**Coluna original:** `rating`
+**Coluna criada:** `rating_Base1000Fix`
+
+**O que foi feito:**
+`rating × 100 × 2` — converte a escala de 0–5 para 0–1000.
+
+**Porquê:**
+Facilita comparações visuais em gráficos e dashboards.
+Um rating de 3.5 → 700 pontos. Mais intuitivo para o espectador
+sem conhecimento técnico.
+
+**Nota:** o `rating` original é mantido para análises directas.
+
+---
+
+## PASSO 7 — `product_color_GroupedColourFix` — Agrupamento simples de cores
+
+**Coluna original:** `product_color`
+**Coluna criada:** `product_color_GroupedColourFix`
+
+**Problema:**
+101 valores únicos de cor — impossível analisar sem agrupar.
+Exemplos: "coolblack", "offblack", "Black", "BLACK" são todos preto.
+
+**O que foi feito:**
+Agrupamento por família de cor em 12 categorias:
+
+| Grupo | Exemplos incluídos |
 |---|---|
-| `title` | Versão localizada — `title_orig` suficiente |
-| `currency_buyer` | Constante (EUR = 100%) — sem variação |
-| `theme` | Constante (summer = 100%) — sem variação |
-| `crawl_month` | Constante (2020-08 = 100%) — sem variação |
-| `merchant_profile_picture` | 86% NaN — ver secção 7 |
+| Preto | black, coolblack, offblack |
+| Branco | white, offwhite, ivory |
+| Cinzento | gray, grey, lightgray, silver |
+| Vermelho | red, wine, claret, burgundy, rosered |
+| Azul | blue, navy, darkblue, skyblue, prussianblue |
+| Verde | green, army, darkgreen, armygreen, jasper |
+| Rosa | pink, rose, rosegold, lightpink |
+| Roxo | purple, violet |
+| Laranja/Amarelo | orange, yellow, gold |
+| Tons Neutros | beige, khaki, brown, coffee, camel, tan, nude |
+| Multicor/Estampado | &, stripe, print, multicolor, floral, camouflage |
+| Não Informado | vazio ou null |
+
+---
+
+## PASSO 8 — `product_color_GroupedByImpactFix` — Agrupamento por impacto
+
+**Coluna criada:** `product_color_GroupedByImpactFix`
+
+**O que foi feito:**
+Mesmo agrupamento do Passo 7 mas com lógica mais granular —
+inclui casos específicos adicionais como `leopard`, `rainbow`, `star`.
+
+**Porquê duas colunas de cor:**
+`GroupedColourFix` — análise geral de distribuição de cores.
+`GroupedByImpactFix` — análise de impacto ambiental por cor
+(tinturaria, processos de acabamento, materiais envolvidos).
+
+---
+
+## PASSO 9 — `urgency_textTierFix` — Tipo de banner de urgência
+
+**Coluna original:** `urgency_text`
+**Coluna criada:** `urgency_textTierFix`
+
+**O que foi feito:**
+Categorizado o texto bruto do banner em 4 tipos:
+
+| Tier | Texto original | Significado |
+|---|---|---|
+| Scarcity | "Quantité limitée !" | Pressão por escassez — "quase esgotado" |
+| Bulk_Purchase | "Réduction sur les achats en gros" | Desconto por quantidade |
+| None | vazio / null | Sem banner |
+| Others | qualquer outro texto | Texto não mapeado |
+
+**Porquê:**
+O texto bruto em francês não é utilizável directamente em análises.
+A categorização permite comparar o impacto de cada tipo de pressão
+de compra no volume de vendas.
+
+---
+
+## PASSO 10 — Badges como booleanos
+
+**Colunas originais:** `badges_count`, `badge_local_product`,
+`badge_product_quality`, `badge_fast_shipping`, `uses_ad_boosts`
+
+**Colunas criadas:** `badges_countFix`, `badge_local_productFix`,
+`badge_product_qualityFix`, `badge_fast_shippingFix`, `uses_ad_boostsFix`
+
+**O que foi feito:**
+Convertidas de número inteiro (0/1) para tipo lógico (TRUE/FALSE).
+
+**Porquê:**
+Facilita filtragem e visualização em Power BI.
+Um gráfico de "% com badge" é mais imediato com booleano do que com 0/1.
+
+**Atenção documentada:**
+`badges_countFix` NÃO deve ser usado simultaneamente com as colunas
+individuais em modelos — são a mesma informação (multicolinearidade).
+`badge_fast_shipping` é atributo do merchant, não do produto.
+As outras duas são atributos do produto individual.
+
+---
+
+## PASSO 11 — `shipping_option_nameFix` — Nome do frete normalizado
+
+**Coluna original:** `shipping_option_name`
+**Coluna criada:** `shipping_option_nameFix`
+
+**Problema:**
+O mesmo tipo de frete aparece em múltiplos idiomas:
+"Livraison standard" (FR), "Spedizione standard" (IT),
+"Standardversand" (DE), "Envio padrão" (PT)...
+
+**O que foi feito:**
+Normalizado para 3 categorias em inglês:
+- `Standard Delivery` — frete padrão
+- `Express Delivery` — frete expresso
+- `Standard Shipping` — variações de padrão em outros idiomas
+
+**Porquê:**
+Sem normalização, uma análise de tipo de frete teria 15+ categorias
+para o mesmo conceito — impossível de visualizar.
+
+---
+
+## PASSO 12 — `shipping_option_priceFix` — Escalas de preço de frete
+
+**Coluna original:** `shipping_option_price`
+**Coluna criada:** `shipping_option_priceFix`
+
+**O que foi feito:**
+Preço do frete categorizado em 4 níveis:
+
+| Nível | Intervalo | Interpretação |
+|---|---|---|
+| 1. Grátis | €0 | Frete gratuito |
+| 2. Barato | €1 – €5 | Frete económico |
+| 3. Médio | €6 – €15 | Frete médio |
+| 4. Caro | > €15 | Frete premium |
+
+**Porquê:**
+Facilita comparações visuais no dashboard.
+O valor exacto do frete tem pouco significado isolado —
+a categoria comunica melhor a relação custo/distância.
+
+---
+
+## PASSO 13 — `shipping_is_expressFix` — Tipo de envio
+
+**Coluna original:** `shipping_is_express`
+**Coluna criada:** `shipping_is_expressFix`
+
+**O que foi feito:**
+Convertido de número (0/1) para texto com ordem:
+- `1. Express` — envio expresso (geralmente aéreo)
+- `2. Normal` — envio padrão
+
+**Nota:**
+Apenas 4 produtos (0.3%) têm envio expresso — estatisticamente
+irrelevante mas mantido para completude da análise.
+
+---
+
+## PASSO 14 — `product_variation_size_idFix` — Tamanhos normalizados
+
+**Coluna original:** `product_variation_size_id`
+**Coluna criada:** `product_variation_size_idFix`
+
+**Problema:**
+O mesmo tamanho aparece em dezenas de formatos:
+"S", "s", "Size S", "SIZE S", "Size-S", "S.", "S..", "US-S"...
+
+**O que foi feito:**
+Normalizado em 17 categorias ordenadas:
+
+| Categoria | Exemplos |
+|---|---|
+| 00. Não Informado | vazio, "choose a size" |
+| 01. Infantil | child, baby, years |
+| 02. Tamanho Único | one size |
+| 03. PP (XXXS) | XXXS |
+| 04. PP (XXS) | XXS, Size XXS |
+| 05. P (XS) | XS, Size-XS |
+| 06. P (S) | S, Size S, SIZE S, US-S |
+| 07. M | M, Size M |
+| 08. G (L) | L, Size-L, SizeL |
+| 09. GG (XL) | XL |
+| 10. XG (2XL) | XXL, 2XL |
+| 11. Plus Size (3XL) | 3XL, XXXL |
+| 12–14. Plus Size (4–6XL) | 4XL, 5XL, 6XL |
+| 15. Calçados/Numerações | EU35, US6, 36, 29... |
+| 16. Outros Itens | cm, pcs, ml, objetos |
+| 17. Outros | casos não mapeados |
+
+---
+
+## PASSO 15 — `tagsTypesFix` — Tipo de peça de roupa
+
+**Coluna original:** `tags`
+**Coluna criada:** `tagsTypesFix`
+
+**Problema:**
+A coluna `tags` é texto livre com múltiplas tags separadas por vírgula.
+Não existe coluna de categoria no dataset — as tags são a única forma
+de identificar o tipo de produto.
+
+**O que foi feito:**
+Dicionário de 100+ tags mapeadas para categorias de peça:
+Vestido, Camiseta, Blusa, Shorts, Biquíni, Moda Praia, Pijama,
+Cardigan, Macacão, Regata, Top, Colete, Camisa, Jeans, etc.
+
+**Lógica:**
+Para cada produto, percorre todas as suas tags e devolve
+as categorias correspondentes separadas por vírgula.
+
+**Limitação declarada:**
+Tags são preenchidas pelos sellers — podem estar incorrectas ou
+ambíguas (RFIX_002). Resultado é uma estimativa, não classificação exacta.
+
+---
+
+## PASSO 16 — `tagsMaterialFix` — Material estimado da peça
+
+**Coluna original:** `tags`
+**Coluna criada:** `tagsMaterialFix`
+
+**O que foi feito:**
+Dicionário de 200+ tags mapeadas para materiais/fibras têxteis prováveis:
+
+| Material | Tags que indicam |
+|---|---|
+| Algodão | cotton, t-shirt, casual, military |
+| Poliéster | chiffon, print, party dress, ruffled |
+| Nilon/Elastano | bikini, swimwear, sportwear, yoga |
+| Viscose | maxi dress, loose dress, kimono |
+| Denim | jeans, denim, overalls |
+| Renda | lace, lace top, lace shirts |
+| Misto | a maioria das peças — combinações |
+
+**Porquê isto é central para a análise ESG:**
+Permite estimar a composição de fibras do dataset —
+fibras sintéticas (poliéster, nilon) têm impacto ambiental
+significativamente maior na produção e no descarte.
+Esta coluna liga os dados de produto ao objectivo de negócio.
+
+**Limitação declarada:**
+É uma estimativa por tags — não é o material declarado pelo seller.
+Usado como proxy, não como facto verificado.
+
+---
+
+## PASSO 17 — `has_urgency_bannerFix` — Banner de urgência
+
+**Coluna original:** `has_urgency_banner`
+**Coluna criada:** `has_urgency_bannerFix`
+
+**O que foi feito:**
+Convertido de número (0/1/null) para booleano (TRUE/FALSE).
+Null → FALSE (ausência de banner, não dado em falta).
+
+**Porquê:**
+`has_urgency_banner` é uma flag criada pelo próprio autor do dataset
+para facilitar o tratamento de nulos de `urgency_text`.
+As duas colunas representam a mesma informação —
+não usar ambas simultaneamente em modelos.
+
+---
+
+## PASSO 18 — `origin_countryFix` — País de origem
+
+**Coluna original:** `origin_country`
+**Coluna criada:** `origin_countryFix`
+
+**O que foi feito:**
+17 registos com valor vazio → substituídos por `nao_informado`.
+
+**Porquê "nao_informado" e não "CN":**
+96% dos produtos são chineses — imputar CN seria especular.
+Para o cálculo de distância de frete, estes 17 registos são excluídos.
+
+---
+
+## PASSO 19 — `retail_price_DifFix` — Relação price vs retail_price
+
+**Colunas originais:** `price`, `retail_price`
+**Coluna criada:** `retail_price_DifFix`
+
+**O que foi feito:**
+Categorização da relação entre os dois preços:
+- `retail_maior` — retail_price > price (desconto real)
+- `price_maior` — price > retail_price (bug de moedas — RFIX_021)
+- `iguais` — sem desconto
+
+**Porquê:**
+Em 35% dos casos `price > retail_price`.
+O criador do dataset confirmou: é um bug de moedas misturadas
+durante o scraping — não é estratégia de preço nem efeito COVID.
+Esta coluna identifica claramente os três casos para que a análise
+de desconto exclua os casos de bug.
+
+---
+
+## PASSO 20 — `retail_price_DIFP_Fix` — Percentagem de diferença de preço
+
+**Coluna criada:** `retail_price_DIFP_Fix`
+
+**O que foi feito:**
+`((retail_price - price) / price) × 100`
+Calcula a percentagem de diferença entre retail e price.
+
+**Nota:**
+Diferente de `discount_pct` — aqui a base é o `price`, não o `retail_price`.
+Mede o quanto o retail_price está acima do price em termos relativos.
+Útil para analisar a magnitude da "ilusão de desconto" percebida pelo consumidor.
+
+---
+
+## PASSO 21 — Colunas removidas
+
+**O que foi feito:**
+Removidas colunas sem valor analítico para o objectivo do projecto:
+
+| Coluna removida | Motivo |
+|---|---|
+| `title` | Substituída por `title_orig` |
+| `currency_buyer` | 100% EUR — sem variação |
+| `has_urgency_banner` | Substituída por `has_urgency_bannerFix` |
+| `urgency_text` | Substituída por `urgency_textTierFix` |
+| `product_variation_size_id` | Substituída por `product_variation_size_idFix` |
+| `origin_country` | Substituída por `origin_countryFix` |
+| `merchant_info_subtitle` | Texto bruto em francês — não analítico |
+| `merchant_title` | Não relevante para a análise |
+| `merchant_name` | Não relevante para a análise |
+| `shipping_option_name` | Substituída por `shipping_option_nameFix` |
+| `badges_count` | Substituída por `badges_countFix` |
+| `badge_local_product` | Substituída por `badge_local_productFix` |
+| `badge_product_quality` | Substituída por `badge_product_qualityFix` |
+| `badge_fast_shipping` | Substituída por `badge_fast_shippingFix` |
+| `shipping_option_price` | Substituída por `shipping_option_priceFix` |
+| `shipping_is_express` | Substituída por `shipping_is_expressFix` |
+| `merchant_id` | Identificador — não analítico |
+| `merchant_has_profile_picture` | Não central para a análise |
+| `merchant_profile_picture` | 85.6% nulos — sem valor |
 | `product_url` | URL — não analítico |
 | `product_picture` | URL — não analítico |
-| `merchant_info_subtitle` | Texto não estruturado em francês |
+| `theme` | 100% "summer" — sem variação |
+| `crawl_month` | 100% "2020-08" — sem variação |
 
+---
+
+## PASSO 22 — Reordenação de colunas
+
+**O que foi feito:**
+Colunas reorganizadas em ordem lógica:
+1. Identificadores (`product_id`, `Index_novo`)
+2. Dados do produto (preço, vendas, rating)
+3. Dados de seller (merchant_rating)
+4. Tags (tipo e material)
+5. Colunas Fix (todas as correcções)
+
+**Porquê:**
+Facilita a navegação no Power BI e nas análises SQL.
+Analistas e apresentadores encontram rapidamente o que procuram.
+
+---
+
+## Resumo Final — Todas as Colunas Fix Criadas
+
+| Coluna Fix | Baseada em | O que resolve |
+|---|---|---|
+| `units_sold_EscalaFix` | `units_sold` | Buckets → escala ordinal de 6 níveis |
+| `rating_Base1000Fix` | `rating` | Escala 0-5 → escala 0-1000 |
+| `product_color_GroupedColourFix` | `product_color` | 101 cores → 12 grupos |
+| `product_color_GroupedByImpactFix` | `product_color` | 101 cores → grupos por impacto |
+| `urgency_textTierFix` | `urgency_text` | Texto bruto → 4 categorias |
+| `badges_countFix` | `badges_count` | Int → booleano |
+| `badge_local_productFix` | `badge_local_product` | Int → booleano |
+| `badge_product_qualityFix` | `badge_product_quality` | Int → booleano |
+| `badge_fast_shippingFix` | `badge_fast_shipping` | Int → booleano |
+| `uses_ad_boostsFix` | `uses_ad_boosts` | Int → booleano |
+| `shipping_option_nameFix` | `shipping_option_name` | 15+ idiomas → 3 categorias EN |
+| `shipping_option_priceFix` | `shipping_option_price` | Preço → 4 níveis |
+| `shipping_is_expressFix` | `shipping_is_express` | Int → texto ordenado |
+| `product_variation_size_idFix` | `product_variation_size_id` | Caos → 17 categorias |
+| `tagsTypesFix` | `tags` | Tags livres → tipo de peça |
+| `tagsMaterialFix` | `tags` | Tags livres → material estimado |
+| `has_urgency_bannerFix` | `has_urgency_banner` | Int/null → booleano |
+| `origin_countryFix` | `origin_country` | Null → "nao_informado" |
+| `retail_price_DifFix` | `price` + `retail_price` | Relação price vs retail |
+| `retail_price_DIFP_Fix` | `price` + `retail_price` | % diferença de preço |
+
+---

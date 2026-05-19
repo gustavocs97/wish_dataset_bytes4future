@@ -1,0 +1,47 @@
+cross border - custo de devolver mercadoria para os cds ficam mais altos
+sao enviados diretos das fabricas. pq nao tem cds?
+
+
+isso, ligado a baixa nota, podem indicar ter mais devolucoes, portanto a nota
+
+adaptacao diante as mudancas de compra.
+
+
+perguntar
+    entregas valores estranhos
+    valores tem de ser int?
+
+
+
+foco em analise e nao recomendacoes.
+
+problema > analises > recomendacoes
+
+
+graficos > conclusoes ao lado.
+
+dar inicio, contexto, logo no inicio da ap: como foram esses dados retirados
+
+datasets, de pandemia completamentas
+
+
+Neste projeto, demonstramos que a inteligência de dados pode ser utilizada para alinhar a redução do impacto ambiental à eficiência de custos operacionais.
+
+
+Sustentabilidade e rentabilidade são, de facto, conceitos incompatíveis?
+
+
+info, qnt tempo media dura uma roupa fast fashion
+
+criar faixas/escalas de preco.
+
+
+
+analise
+conclusões
+recomendações
+
+pode ser mencionada o que aconteceu em 2021 e em 2024
+Pesquisar artigo na internet que produtos com menos estrelas podem ser mais descartáveis
+pesquisar fontes de quanto tempo em média uma roupa dura em fast fashion
+

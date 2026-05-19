@@ -1,0 +1,30 @@
+Notas Estratégicas para o Dia 22/05:
+
+Foco em Soluções: Empresas presentes (Inetum, Zeiss ou Inetum) valorizam analistas que não se limitam a descrever o problema ("as vendas foram X"), mas que propõem soluções técnicas ("podemos criar um algoritmo para prever a durabilidade")
+
+
+
+A base de dados não regista as devoluções físicas, o que reflete o próprio modelo de negócio da plataforma em 2020: produtos de valor tão baixo que a devolução física é logisticamente inviável. Por isso, utilizámos a métrica rating_one_count como um proxy (indicador) de rejeição total, representando os produtos que foram descartados imediatamente ou reembolsados devido à falta de qualidade.
+
+
+Sustentabilidade e Rentabilidade não são inimigas. Neste projeto, provamos que a inteligência de dados serve precisamente para alinhar a redução da pegada ecológica com a eficiência de custos da operação.
+
+
+MUITO IMPORTANTE ⭕️⭕️⭕️
+
+
+
+a Wish passou por uma profunda reestruturação de mercado desde que estes dados de 2020 foram recolhidos. Inclusive, em abril de 2024, a Wish foi oficialmente adquirida pela gigante do e-commerce Qoo10.
+Hoje em dia, para sobreviver comercialmente e cumprir as novas e rigorosas leis da União Europeia e dos EUA, a Wish implementou estratégias que tocam exatamente nos pontos críticos que identificaste no teu projeto: qualidade (redução de descarte) e logística.
+Aqui está o que a Wish faz hoje em dia para se alinhar com as práticas de ESG:
+1. Ambiental (Environmental): A Transição Logística e Combate ao Desperdício
+A maior mudança da Wish nos últimos anos foi o combate direto à pegada ecológica de transporte e ao lixo gerado por produtos defeituosos:
+• Consolidação de Envios (A Solução que propuseste!): A plataforma reduziu drasticamente o envio de pacotes individuais soltos de avião. Hoje, a empresa utiliza o programa WishPost para consolidar as encomendas em centros de triagem na China antes do envio internacional, otimizando o espaço de carga e reduzindo as emissões de CO_2 por unidade.
+• Armazéns Regionais (Wish Express): A Wish expandiu a sua rede de armazéns parceiros na Europa e Américas. Os produtos de maior procura são enviados em massa (geralmente por via marítima, muito menos poluente) para estes centros locais, sendo depois distribuídos ao cliente em poucos dias por carrinhas elétricas ou redes postais locais.
+• Eliminação de Plásticos de Uso Único: A plataforma tem vindo a exigir que os fornecedores reduzam o excesso de embalagens plásticas nos envios internacionais.
+2. Social: Proteção do Consumidor e Direitos Laborais
+• Seleção Rigorosa de Fornecedores (Fim do Ultra-Fast de má qualidade): No passado, qualquer fábrica podia vender na plataforma. Hoje, a Wish implementou um sistema de pontuação de comerciantes. Fornecedores com taxas de rejeição elevadas ou produtos que geram muitas reclamações são banidos da plataforma. Isto reduz diretamente o desperdício têxtil que o teu estudo mapeou.
+• Auditorias de Trabalho Digno: Para vender no mercado europeu e americano, a Wish passou a exigir garantias de que os fabricantes parceiros na Ásia cumprem normas básicas de direitos humanos e não utilizam trabalho forçado, adaptando-se à Lei da Cadeia de Abastecimento da UE.
+3. Governança (Governance): Transparência e Regulamentação
+• Conformidade com a DSA (Digital Services Act): A nível de governança, a Wish teve de se adaptar obrigatoriamente às novas leis de serviços digitais da União Europeia. Isto obriga a plataforma a ter total transparência sobre a origem dos produtos, rotulagem de segurança (especialmente em roupas e brinquedos) e a remover imediatamente anúncios falsos ou enganosos.
+• Políticas de Devolução Mais Claras: Para evitar o descarte de produtos de baixa qualidade, a plataforma melhorou os sistemas de reembolso e incentiva a reciclagem local de itens danificados através de parcerias de suporte pós-venda.
