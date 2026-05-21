@@ -1,22 +1,15 @@
-
-# 02_validation — Validação dos Dados
-
-Testes e controlos de qualidade. Tudo o que prova que os dados
-estão corretos antes de a análise começar.
-
+# 02_validation — Validação e Qualidade dos Dados
+Notebooks de validação da qualidade dos dados, antes e depois da limpeza.
 ---
-
 ## Ficheiros
-
-| Ficheiro | O que contém |
+| Ficheiro | O que faz |
 |---|---|
-| `validation_report.md` | Relatório escrito: nulos, extremos, incorretos encontrados e tratados |
-| `checks.sql` | Queries de controlo — verificação de consistência lógica dos dados |
-
+| `Limpeza.ipynb` | Carrega `limpos_final.xlsm`, valida tipos de dados, verifica nulos, confirma integridade após limpeza |
+| `Notebook 1.ipynb` | Primeira vista exploratória aos dados brutos (`Summer_Products.csv`): estrutura, distribuições, anomalias iniciais |
 ---
-
-## Regra
-
-Cada query em `checks.sql` tem um comentário a explicar o que testa e o resultado esperado.
-Se os cálculos estiverem incorretos, toda a análise está incorreta.
-Verificar, reverificar, voltar a verificar.
+## Nota
+O pipeline de limpeza em si está documentado em:
+- `01_data/guiao_power_query.md` — 14 passos da limpeza no Power Query
+- `01_data/processed/01_cleaning.ipynb` — limpeza em Python
+- `01_data/lembretes_ETL.md` — notas de apoio
+- `00_docs/data_treatment_log.md` — 10 decisões de tratamento documentadas

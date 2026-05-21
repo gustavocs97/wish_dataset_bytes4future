@@ -51,9 +51,12 @@ Pergunta 5
 
 
 1- Com 96,4% dos produtos a ter origem na China, qual o impacto ambiental real desta concentração geográfica na pegada de carbono da plataforma?
-2- Os 597 produtos com rating ≥ 4 representam 36,8% da receita estimada total (≈20,4M€). Alta qualidade e rentabilidade coexistem — mas porquê este segmento não domina a estratégia da plataforma?
-3- Os produtos com rating ≥ 4 respondem por 36,8% da receita total com apenas 38% do catálogo. Focar o crescimento neste segmento de alta qualidade percebida aumenta a rentabilidade por produto — e ao mesmo tempo reduz o volume de devoluções e reclamações?
-4- Os produtos com rating abaixo de 3 representam apenas 1,2% da receita (≈676K€) mas geram desproporcionalmente reclamações, devoluções e risco reputacional. Qual o custo operacional real destes produtos vs. o custo de os retirar do catálogo?
+2- Os 518 produtos com rating ≥ 4 representam 36.5% da receita estimada total (≈19.122.555,45 €). Alta qualidade e rentabilidade coexistem — mas porquê este segmento não domina a estratégia da plataforma?
+
+3- Os produtos com rating ≥ 4 respondem por 36.52% da receita total com apenas 38.63% do catálogo. Focar o crescimento neste segmento de alta qualidade percebida aumenta a rentabilidade por produto — e ao mesmo tempo reduz o volume de devoluções e reclamações?
+
+4- Os produtos com rating abaixo de 3 (46 itens) representam apenas 1,25% da receita (≈655.814,50€) mas geram desproporcionalmente reclamações, devoluções e risco reputacional. Qual o custo operacional real destes produtos vs. o custo de os retirar do catálogo?
+
 5- Qual é o impacto do preço de venda na vida útil das peças de fast fashion?
 
 

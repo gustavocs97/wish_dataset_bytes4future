@@ -1,0 +1,107 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.wrap { padding: 16px 0; }
+h2 { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 14px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+thead tr { border-bottom: 1.5px solid var(--color-border-primary); }
+th { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-align: left; padding: 6px 10px; white-space: nowrap; }
+td { padding: 7px 10px; vertical-align: top; border-bottom: 1px solid var(--color-border-tertiary); color: var(--color-text-primary); }
+tr:last-child td { border-bottom: none; }
+.cat { font-weight: 500; font-size: 11px; padding: 3px 7px; border-radius: 5px; white-space: nowrap; display: inline-block; }
+.cat-freight  { background: #E6F1FB; color: #0C447C; }
+.cat-quality  { background: #EAF3DE; color: #27500A; }
+.cat-stock    { background: #FAEEDA; color: #633806; }
+.cat-impulse  { background: #FBEAF0; color: #72243E; }
+.cat-local    { background: #E1F5EE; color: #085041; }
+.col { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-secondary); background: var(--color-background-secondary); border-radius: 4px; padding: 2px 5px; white-space: nowrap; }
+.tag { display: inline-block; font-size: 10px; font-weight: 500; padding: 2px 6px; border-radius: 4px; margin: 1px 2px 1px 0; }
+.tag-yes  { background: #EAF3DE; color: #3B6D11; }
+.tag-part { background: #FAEEDA; color: #854F0B; }
+.tag-no   { background: #FCEBEB; color: #A32D2D; }
+.question { color: var(--color-text-secondary); font-size: 11px; font-style: italic; }
+tr:hover td { background: var(--color-background-secondary); }
+</style>
+<div class="wrap">
+  <h2>Colunas do dataset × impacto ambiental</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Categoria</th>
+          <th>Colunas usadas</th>
+          <th>Pergunta que conseguimos responder</th>
+          <th>Responde?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="cat cat-freight">🚚 Frete</span></td>
+          <td>
+            <span class="col">shipping_is_express</span><br>
+            <span class="col">shipping_option_price</span><br>
+            <span class="col">countries_shipped_to</span><br>
+            <span class="col">origin_country</span>
+          </td>
+          <td class="question">Produtos com frete expresso vêm de países mais distantes? Quantas rotas internacionais longas existem?</td>
+          <td><span class="tag tag-yes">✓ Sim</span></td>
+        </tr>
+        <tr>
+          <td><span class="cat cat-quality">🗑️ Qualidade</span></td>
+          <td>
+            <span class="col">price</span><br>
+            <span class="col">retail_price</span><br>
+            <span class="col">rating</span><br>
+            <span class="col">rating_one_count</span><br>
+            <span class="col">units_sold</span><br>
+            <span class="col">badge_product_quality</span>
+          </td>
+          <td class="question">Produtos baratos e mal avaliados vendem muito mesmo assim? Alto volume + baixo rating = muito lixo gerado?</td>
+          <td><span class="tag tag-yes">✓ Sim</span></td>
+        </tr>
+        <tr>
+          <td><span class="cat cat-stock">📦 Estoque</span></td>
+          <td>
+            <span class="col">inventory_total</span><br>
+            <span class="col">product_variation_inventory</span><br>
+            <span class="col">units_sold</span>
+          </td>
+          <td class="question">Há produtos com estoque altíssimo e poucas vendas — produção desperdiçada?</td>
+          <td><span class="tag tag-part">~ Parcial</span></td>
+        </tr>
+        <tr>
+          <td><span class="cat cat-impulse">🛒 Impulso</span></td>
+          <td>
+            <span class="col">has_urgency_banner</span><br>
+            <span class="col">urgency_text</span><br>
+            <span class="col">uses_ad_boosts</span>
+          </td>
+          <td class="question">Urgency banner aumenta vendas independente da qualidade? Ad boost empurra produtos mal avaliados?</td>
+          <td><span class="tag tag-yes">✓ Sim</span></td>
+        </tr>
+        <tr>
+          <td><span class="cat cat-local">🏠 Local vs global</span></td>
+          <td>
+            <span class="col">badge_local_product</span><br>
+            <span class="col">origin_country</span><br>
+            <span class="col">countries_shipped_to</span><br>
+            <span class="col">price</span><br>
+            <span class="col">rating</span>
+          </td>
+          <td class="question">Produtos "locais" realmente têm menos alcance de envio? Produto local tem qualidade ou preço diferente?</td>
+          <td><span class="tag tag-yes">✓ Sim</span></td>
+        </tr>
+        <tr>
+          <td><span class="cat cat-no" style="background:#F1EFE8;color:#444441">❌ Fora do dataset</span></td>
+          <td>
+            <span class="col">—</span>
+          </td>
+          <td class="question">Pegada de carbono real? Nacionalidade do comprador? Destino final do produto?</td>
+          <td><span class="tag tag-no">✗ Não temos</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

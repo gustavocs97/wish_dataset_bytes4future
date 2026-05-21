@@ -1,0 +1,10 @@
+meio_transporte,emissao_media_g_co2_pkm,fator_ocupacao_contexto
+aviao_voo_curto,244,Gasto elevado na descolagem e subida com poucos passageiros
+carro_combustao,168,Baseado na media europeia de 1.6 pessoas por veiculo
+ferry_maritimo,123,Motores navais pesados divididos por passageiros e viaturas
+autocarro_urbano,93,Media geral de frotas mistas europeias
+metro_eletrico,63,Reflete a pegada do mix energetico da rede eletrica da UE
+carro_eletrico,47,Emissoes indiretas da rede divididas por ocupacao media
+autocarro_longo_curso,31,Alta eficiencia por viajar quase sempre com lotacao cheia
+comboio_longo_curso,31,Meio motorizado mais limpo da Europa
+bicicleta_trotinete,2,Emissao direta zero considerando apenas recarga de bateria

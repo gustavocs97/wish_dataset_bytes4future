@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wish — Estratégia de Sustentabilidade Rentável</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2230;
+    --border: #2a3040;
+    --text: #e6edf3;
+    --muted: #7d8590;
+    --wish: #2b7de9;
+    --wish-dim: rgba(43,125,233,0.12);
+    --green: #3fb950;
+    --green-dim: rgba(63,185,80,0.1);
+    --amber: #d29922;
+    --amber-dim: rgba(210,153,34,0.1);
+    --red: #f85149;
+    --red-dim: rgba(248,81,73,0.1);
+    --purple: #bc8cff;
+    --purple-dim: rgba(188,140,255,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .wish-logo {
+    background: var(--wish);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 5px 12px;
+    border-radius: 4px;
+  }
+
+  .topbar-title {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .topbar-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--green);
+    background: var(--green-dim);
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(63,185,80,0.2);
+  }
+
+  /* HERO */
+  header {
+    padding: 70px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 60px;
+    align-items: end;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--wish);
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(38px, 4.5vw, 58px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+
+  header h1 em {
+    font-style: italic;
+    color: var(--green);
+  }
+
+  .hero-sub {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 520px;
+  }
+
+  /* KPI CARDS */
+  .kpi-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .kpi-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .kpi-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 1px;
+  }
+
+  .kpi-val {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .kpi-val.green { color: var(--green); }
+  .kpi-val.wish  { color: var(--wish); }
+  .kpi-val.amber { color: var(--amber); }
+  .kpi-val.red   { color: var(--red); }
+
+  /* CONTEXT BOX */
+  .context-banner {
+    margin: 0 60px 50px;
+    background: var(--wish-dim);
+    border: 1px solid rgba(43,125,233,0.25);
+    border-left: 3px solid var(--wish);
+    border-radius: 6px;
+    padding: 20px 28px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .context-icon {
+    font-size: 20px;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  .context-text {
+    font-size: 13.5px;
+    color: #a8c4e8;
+    line-height: 1.7;
+  }
+
+  .context-text strong { color: var(--text); font-weight: 600; }
+
+  /* MAIN */
+  main {
+    padding: 0 60px 80px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .section-header h2 {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* QUESTIONS */
+  .q-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 56px;
+  }
+
+  .q-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    transition: border-color 0.2s, transform 0.2s;
+    animation: rise 0.4s ease both;
+  }
+
+  .q-item:hover {
+    border-color: #3a4555;
+    transform: translateX(3px);
+  }
+
+  .q-item:nth-child(1) { animation-delay: .05s }
+  .q-item:nth-child(2) { animation-delay: .10s }
+  .q-item:nth-child(3) { animation-delay: .15s }
+  .q-item:nth-child(4) { animation-delay: .20s }
+  .q-item:nth-child(5) { animation-delay: .25s }
+  .q-item:nth-child(6) { animation-delay: .30s }
+  .q-item:nth-child(7) { animation-delay: .35s }
+  .q-item:nth-child(8) { animation-delay: .40s }
+  .q-item:nth-child(9) { animation-delay: .45s }
+  .q-item:nth-child(10){ animation-delay: .50s }
+
+  .q-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    border-right: 1px solid var(--border);
+  }
+
+  .q-content {
+    padding: 20px 26px;
+  }
+
+  .q-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+  }
+
+  .tag-wish    { background: var(--wish-dim);   color: #72aaef; border-color: rgba(43,125,233,0.2); }
+  .tag-green   { background: var(--green-dim);  color: var(--green); border-color: rgba(63,185,80,0.2); }
+  .tag-amber   { background: var(--amber-dim);  color: var(--amber); border-color: rgba(210,153,34,0.2); }
+  .tag-red     { background: var(--red-dim);    color: var(--red); border-color: rgba(248,81,73,0.2); }
+  .tag-purple  { background: var(--purple-dim); color: var(--purple); border-color: rgba(188,140,255,0.2); }
+
+  .q-index.wish-idx   { color: #72aaef; background: var(--wish-dim); }
+  .q-index.green-idx  { color: var(--green); background: var(--green-dim); }
+  .q-index.amber-idx  { color: var(--amber); background: var(--amber-dim); }
+  .q-index.red-idx    { color: var(--red); background: var(--red-dim); }
+  .q-index.purple-idx { color: var(--purple); background: var(--purple-dim); }
+
+  .q-question {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .q-data {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.65;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+
+  .q-data strong { color: #adbac7; font-weight: 500; }
+
+  .q-data .highlight {
+    display: inline-block;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1px 7px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text);
+    margin: 0 2px;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+  }
+
+  .footer-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+  }
+
+  @keyframes pulse {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 700px) {
+    .topbar, header, .context-banner, main, footer { padding-left: 20px; padding-right: 20px; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .kpi-stack { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="wish-logo">WISH</div>
+    <span class="topbar-title">Estratégia de Negócio · Summer Products 2020</span>
+  </div>
+  <div class="topbar-tag">Consultoria Interna</div>
+</div>
+
+<header>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Objetivo Estratégico</div>
+      <h1>Como a Wish se adapta às novas<br>regras ambientais <em>sem perder lucro?</em></h1>
+      <p class="hero-sub">Análise de 1.573 produtos de moda de verão para identificar onde a plataforma pode cumprir a regulação europeia emergente (Green Deal, Digital Services Act, Ecodesign Regulation) mantendo ou aumentando rentabilidade.</p>
+    </div>
+    <div class="kpi-stack">
+      <div class="kpi-card">
+        <span class="kpi-label">Receita estimada total</span>
+        <span class="kpi-val wish">55,4M€</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Rating ≥ 4 → % receita</span>
+        <span class="kpi-val green">36,8%</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Produtos origem China</span>
+        <span class="kpi-val amber">96,4%</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Com urgency banner</span>
+        <span class="kpi-val red">30,1%</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="context-banner">
+  <div class="context-icon">🧭</div>
+  <div class="context-text">
+    <strong>Enquadramento:</strong> A União Europeia está a apertar a regulação sobre fast fashion — nomeadamente a <strong>Ecodesign Regulation (2024)</strong>, o <strong>Digital Services Act</strong> e a proibição de práticas comerciais enganosas como urgency banners falsos. A Wish, com 96% de produtos de origem chinesa e preços médios de 8€, está na linha da frente desta pressão. As 10 perguntas abaixo orientam a estratégia de adaptação <strong>sem sacrificar margem</strong>.
+  </div>
+</div>
+
+<main>
+
+  <div class="section-header">
+    <h2>10 Perguntas de Negócio</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="q-list">
+
+    <div class="q-item">
+      <div class="q-index wish-idx">01</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-wish">Cadeia de Abastecimento</span>
+          <span class="tag tag-amber">Risco Regulatório</span>
+        </div>
+        <p class="q-question">Com 96,4% dos produtos de origem chinesa, que risco representa a nova regulação europeia de rastreabilidade de produto para o modelo de abastecimento da Wish — e quais os fornecedores alternativos com menor exposição regulatória?</p>
+        <p class="q-data"><strong>Dados:</strong> <span class="highlight">1.516 / 1.573</span> produtos vêm da China. Apenas <span class="highlight">5 outros países</span> de origem registados (US, VE, SG, AT, GB). A Ecodesign Regulation exige passaporte digital de produto a partir de 2026.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index amber-idx">02</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-amber">Preços & Segmentação</span>
+          <span class="tag tag-green">Oportunidade</span>
+        </div>
+        <p class="q-question">Dado que 69% dos produtos custam menos de 10€, existe potencial para introduzir uma linha de produtos "eco-certificados" a preço premium (15–30€) que aumente a margem por unidade e sinalize responsabilidade ambiental ao consumidor europeu?</p>
+        <p class="q-data"><strong>Distribuição atual:</strong> <span class="highlight">0–5€ → 323 produtos</span> · <span class="highlight">5–10€ → 762</span> · <span class="highlight">10–20€ → 479</span> · <span class="highlight">20–50€ → apenas 9</span>. O segmento premium está praticamente vazio — é uma janela de entrada.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index green-idx">03</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-green">Volume & Rentabilidade</span>
+        </div>
+        <p class="q-question">Os produtos com rating ≥ 4 respondem por 36,8% da receita total com apenas 38% do catálogo. Focar o crescimento neste segmento de alta qualidade percebida aumenta a rentabilidade por produto — e ao mesmo tempo reduz o volume de devoluções e reclamações?</p>
+        <p class="q-data"><strong>Receita rating ≥ 4:</strong> <span class="highlight">~20,4M€</span> de 55,4M€ totais. <strong>597 produtos</strong> de alta qualidade vs. 976 de baixa/média. Margem por produto tende a ser superior em produtos bem avaliados.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index red-idx">04</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-red">Risco Legal</span>
+          <span class="tag tag-amber">Urgency Banners</span>
+        </div>
+        <p class="q-question">30,1% dos produtos utilizam urgency banners ("Quantité limitée !"). A Diretiva Europeia de Práticas Comerciais Desleais (2022/2) proíbe urgência falsa. Qual o custo de compliance de remover ou reformular estes banners — e o impacto real nas conversões?</p>
+        <p class="q-data"><strong>473 produtos</strong> com banner ativo dos 1.573 analisados. A multa por incumprimento pode chegar a <span class="highlight">4% da faturação anual</span> na UE. Analisar se a remoção afeta vendas é prioritário antes da regulação entrar em vigor.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index red-idx">05</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-red">Qualidade Baixa</span>
+          <span class="tag tag-amber">Decisão de Catálogo</span>
+        </div>
+        <p class="q-question">Os produtos com rating abaixo de 3 representam apenas 1,2% da receita (≈676K€) mas geram desproporcionalmente reclamações, devoluções e risco reputacional. Qual o custo operacional real destes produtos vs. o custo de os retirar do catálogo?</p>
+        <p class="q-data"><strong>Rating &lt; 3:</strong> <span class="highlight">68 produtos</span> · <span class="highlight">59.772 unidades vendidas</span> · receita estimada <span class="highlight">676K€</span>. Com a regulação europeia de direitos do consumidor, cada reclamação tem custo de processamento — o ROI destes produtos pode já ser negativo.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index wish-idx">06</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-wish">AD Boost</span>
+          <span class="tag tag-green">Eficiência de Marketing</span>
+        </div>
+        <p class="q-question">Produtos sem AD Boost vendem em média mais (4.470 unidades) do que os com AD Boost (4.167 unidades). Redirecionar o orçamento de publicidade para promover exclusivamente produtos com rating ≥ 4 aumentaria a eficiência de marketing e melhoraria a imagem da plataforma?</p>
+        <p class="q-data"><strong>Sem AD Boost:</strong> <span class="highlight">892 produtos · 4,0M unidades</span> · <strong>Com AD Boost:</strong> <span class="highlight">681 produtos · 2,8M unidades</span>. O AD Boost não garante volume superior — mas pode ser usado estrategicamente para produtos sustentáveis.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index green-idx">07</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-green">Modelo Sustentável</span>
+          <span class="tag tag-green">Crescimento Orgânico</span>
+        </div>
+        <p class="q-question">Os 353 produtos com rating ≥ 4 e sem publicidade paga representam 23% das vendas totais (1,57M unidades) sem investimento em AD. Escalar este segmento via SEO, avaliações e programa de sellers certificados pode reduzir custos de aquisição e cumprir exigências de transparência?</p>
+        <p class="q-data"><strong>23% das vendas sem publicidade</strong> demonstra que qualidade gera procura orgânica. <span class="highlight">353 produtos · 1,57M unidades</span>. Este é o núcleo de um modelo de negócio sustentável já existente — só precisa de ser escalado.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index purple-idx">08</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-purple">Distribuição Global</span>
+          <span class="tag tag-amber">Logística</span>
+        </div>
+        <p class="q-question">Os produtos são enviados para uma média de 40,5 países. Criar hubs de distribuição regionais na Europa (para os produtos de origem europeia ou certificados) pode reduzir emissões de transporte e cumprir requisitos de pegada de carbono — com que impacto nos custos logísticos?</p>
+        <p class="q-data"><strong>Média de 40,5 países destino</strong> por produto. Com a legislação europeia de carbono nos transportes (CBAM), o custo das importações diretas da China pode aumentar entre <span class="highlight">5 a 15%</span> até 2026. Antecipar é mais barato do que reagir.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index amber-idx">09</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-amber">Posicionamento</span>
+          <span class="tag tag-green">Comunicação</span>
+        </div>
+        <p class="q-question">Que métricas do dataset podem ser usadas para criar um "Índice de Sustentabilidade Wish" visível no produto (rating, origem, certificações, preço relativo) que informe o consumidor e antecipe requisitos do Digital Product Passport europeu?</p>
+        <p class="q-data">O dataset já contém <span class="highlight">rating, origin_country, badge_product_quality, shipping_option_price</span> e outros sinais de qualidade. Construir um score composto é tecnicamente viável com os dados existentes — e seria um diferenciador competitivo face a concorrentes como Shein e Temu.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-index green-idx">10</div>
+      <div class="q-content">
+        <div class="q-tags">
+          <span class="tag tag-green">Síntese Estratégica</span>
+          <span class="tag tag-wish">Rentabilidade</span>
+        </div>
+        <p class="q-question">Qual o roadmap de transição mais rentável para a Wish — manter receita atual enquanto aumenta progressivamente a proporção de produtos de alta qualidade, reduz a dependência de práticas de venda por urgência e cumpre a regulação europeia até 2026?</p>
+        <p class="q-data"><strong>Cenário base:</strong> os <span class="highlight">36,8% de receita em produtos rating ≥ 4</span> mostram que qualidade e lucro já coexistem. Uma transição de 3 anos que eleve esta proporção para 60% manteria a receita total acima de 50M€ mesmo com catálogo mais pequeno e regulado.</p>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-left">
+    <div class="footer-dot"></div>
+    <span class="footer-text">Wish · Estratégia de Sustentabilidade · Summer Products Dataset 2020</span>
+  </div>
+  <span class="footer-text">1.573 PRODUTOS · 43 VARIÁVEIS · 6,8M UNIDADES</span>
+</footer>
+
+</body>
+</html>
