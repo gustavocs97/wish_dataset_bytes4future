@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1 — Abertura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #1a3a2a; color: #f5f0e8; height: 100vh; display: flex; flex-direction: column; padding: 16px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; background: rgba(245,240,232,0.08); border-radius: 12px; padding: 12px 20px; margin-bottom: 12px; }
+        .slide-num { background: #c75b39; color: #fff; font-weight: 700; padding: 4px 14px; border-radius: 6px; font-size: 0.9rem; }
+        .slide-title { font-size: 1.05rem; font-weight: 600; text-align: center; flex: 1; padding: 0 16px; }
+        .timer { font-size: 1rem; font-weight: 700; color: #c75b39; }
+        .main { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1; min-height: 0; }
+        @media (max-width: 768px) { .main { grid-template-columns: 1fr; } }
+        .col { display: flex; flex-direction: column; gap: 12px; }
+        .card { background: #f5f0e8; color: #1a3a2a; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; }
+        .card-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #8a7a6a; margin-bottom: 8px; }
+        .kpi-row { display: flex; gap: 12px; flex-wrap: wrap; }
+        .kpi { flex: 1; text-align: center; min-width: 80px; }
+        .kpi-num { font-size: 1.8rem; font-weight: 900; color: #c75b39; line-height: 1.2; }
+        .kpi-label { font-size: 0.7rem; color: #8a7a6a; text-transform: uppercase; letter-spacing: 0.5px; }
+        .keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+        .pill { background: rgba(26,58,42,0.1); color: #1a3a2a; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .script { background: #1a3a2a; color: #f5f0e8; border-radius: 8px; padding: 14px; font-size: 1.05rem; line-height: 1.6; flex: 1; font-style: italic; }
+        .core { background: rgba(199,91,57,0.12); border: 2px solid #c75b39; border-radius: 10px; padding: 14px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .core-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #8a7a6a; }
+        .core-text { font-size: 1.3rem; font-weight: 900; color: #c75b39; margin-top: 4px; }
+        .bottom { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+        .info-box { background: rgba(245,240,232,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.8rem; }
+        .info-box span { display: block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px; color: #a09080; margin-bottom: 2px; }
+        .highlight-num { font-size: 2rem; font-weight: 900; color: #c75b39; }
+        .sub-text { font-size: 0.75rem; color: #8a7a6a; margin-top: 4px; }
+        .big-question { font-size: 1.4rem; font-weight: 700; line-height: 1.4; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="slide-num">SLIDE 01</div>
+        <div class="slide-title">Abertura — A Grande Questão</div>
+        <div class="timer">⏱ 30s</div>
+    </div>
+
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">Pergunta Central</div>
+                <div class="big-question">Sustentabilidade e Rentabilidade podem coexistir de forma eficiente?</div>
+                <div class="sub-text" style="margin-top:12px">Análise de produtos de verão na plataforma Wish — agosto 2020</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Palavras-Chave</div>
+                <div class="keywords">
+                    <span class="pill">Sustentabilidade</span>
+                    <span class="pill">Rentabilidade</span>
+                    <span class="pill">Paradoxo</span>
+                    <span class="pill">ESG</span>
+                    <span class="pill">Fast Fashion</span>
+                    <span class="pill">Baseline 2020</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">KPIs — Visão Geral do Dataset</div>
+                <div class="kpi-row">
+                    <div class="kpi">
+                        <div class="kpi-num">1.341</div>
+                        <div class="kpi-label">Produtos Analisados</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-num">6,46M</div>
+                        <div class="kpi-label">Unidades Vendidas</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-num">52,4M€</div>
+                        <div class="kpi-label">Receita Estimada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="flex:1">
+                <div class="card-title">Script Âncora</div>
+                <div class="script">"Analisar os padrões de consumo na Wish que geram impacto ambiental negativo — e definir métricas sustentáveis capazes de orientar práticas ecológicas sem comprometer o lucro. É possível equilibrar esta balança?"</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="info-box"><span>Apresenta</span>Ricardo · Abertura</div>
+        <div class="info-box"><span>Tom</span>Pausa dramática. Grave. Provocador.</div>
+        <div class="info-box"><span>Mensagem Central</span>O paradoxo: lucro vs. planeta</div>
+    </div>
+</body>
+</html>
