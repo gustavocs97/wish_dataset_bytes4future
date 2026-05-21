@@ -1,376 +1,207 @@
-
-
-----------
-
-
 # Analysis Subquestions
 **Projeto Final — Data Analyst Junior**
 **Grupo:** Letícia · Ricardo · Gustavo
 **Dataset:** Sales of Summer Clothes — Wish Platform (Kaggle, agosto 2020)
-**Responsável:** Gustavo (estrutura e dados) · Ricardo (formulação e contexto)
-**Data:** 16 de maio de 2025
-
+**Data:** 21 de maio de 2026
 ---
-
 ## Questão Principal
-
-> **"Analisar os padrões de consumo na plataforma Wish que geram impacto
+> *"Analisar os padrões de consumo na plataforma Wish que geram impacto
 > ambiental negativo e definir métricas sustentáveis capazes de orientar
-> práticas mais ecológicas sem comprometer o lucro."**
-
-As subquestões abaixo decompõem esta questão em análises específicas,
-cada uma respondível com os dados disponíveis ou com fontes externas
-declaradas. Organizadas em dois grupos: **dados diretos** e **contexto externo**.
-
+> práticas mais ecológicas sem comprometer o lucro."*
+As 5 subquestões abaixo decompõem esta questão em análises específicas,
+cada uma respondível com os dados disponíveis e/ou fontes externas declaradas.
 ---
-
-## GRUPO A — Subquestões Respondíveis com os Dados
-
----
-
-### SQ1 — Distância de Origem × Frete Pago: o custo real está no preço?
-
+## Q1 — Qual o impacto desta concentração geográfica?
 **Pergunta:**
-*"Produtos que percorrem maior distância até ao consumidor europeu
-cobram proporcionalmente mais pelo frete — ou o impacto ambiental
-do transporte está subsidiado?"*
-
+*"96,4% dos produtos vêm da China. O que significa esta concentração
+para a cadeia de abastecimento, para o consumidor europeu e para o
+ambiente?"*
 **Hipótese:**
-O frete de longa distância (CN → Europa, ~9.200 km) custa ao consumidor
-o mesmo ou menos do que produtos de origem próxima — o custo ambiental
-real do transporte não se reflete no preço pago.
-
+A dependência quase total de um único país de origem (CN) expõe a
+plataforma a risco logístico, concentra a pegada carbónica numa rota
+única (~9.200 km) e contradiz o conceito de "produto local".
 **Colunas usadas:**
-`origin_country_fix` · `distance_km` (calculada) · `shipping_option_price`
-· `shipping_is_express` · `countries_shipped_to`
-
-**Dados de suporte:**
-- Frete médio de produtos CN (96% do dataset, 9.200 km): **€2.35**
-- Frete médio de produtos US (8.500 km): **€2.52**
-- Frete médio de produtos AT (1.050 km): **€2.00**
-- Frete médio geral: **€2.35** para percorrer em média **~9.100 km**
-- Correlação distância × preço frete: praticamente nula
-
-**Metodologia de distância — justificação:**
-Metodologia A escolhida (distância fixa por país de origem até Paris).
-`countries_shipped_to` é um número, não uma lista de países — impossível
-calcular distâncias reais por destino. Ver `data_treatment_log.md` secção
-"Destino assumido" para justificação completa.
-
-**Visualização sugerida (Letícia):**
-Gráfico de bolhas: eixo X = distância km, eixo Y = preço frete,
-tamanho da bolha = volume de produtos. Destaque: CN no canto superior
-esquerdo (longe, barato).
-
-**Conclusão esperada:**
-O preço do frete não reflete a distância percorrida. O consumidor europeu
-não paga o custo ambiental real do transporte — está implicitamente subsidiado
-pela plataforma e pelo modelo de negócio de fast fashion extremo.
-
----
-
-### SQ2 — Preço Baixo × Avaliações: o barato é descartável?
-
-**Pergunta:**
-*"Produtos com preço abaixo de €5 têm sistematicamente pior qualidade
-percebida — e ainda assim vendem em volume?"*
-
-**Hipótese:**
-Produtos baratos têm mais avaliações negativas e menor rating médio,
-mas continuam a registar alto volume de vendas — evidência de consumo
-insustentável por preço, não por qualidade.
-
-**Colunas usadas:**
-`price` · `rating` · `rating_one_count` · `units_sold_tier`
-· `badge_product_quality` · `discount_pct_fix`
-
-**Dados de suporte:**
-
-| Tier de preço | Rating médio | Avaliações 1★ médias | N produtos |
-|---|---|---|---|
-| < €5 | 3.79 | 71 | 323 |
-| €5–10 | 3.83 | 111 | 762 |
-| €10–20 | 3.82 | 89 | 479 |
-| > €20 | 3.93 | 42 | 9 |
-
-*Nota: o rating varia pouco entre tiers de preço — mas as avaliações de
-1 estrela são proporcionalmente mais altas nos produtos baratos quando
-normalizadas pelo rating_count total.*
-
-**Visualização sugerida (Letícia):**
-Scatter plot: eixo X = preço, eixo Y = rating, cor = units_sold_tier.
-Zona de risco: preço < €5 + rating < 3.5 destacada.
-
-**Conclusão esperada:**
-O rating médio varia pouco por preço — mas o volume de insatisfação
-(1 estrela) é desproporcionalmente alto nos produtos mais baratos.
-O consumidor continua a comprar apesar da insatisfação registada.
-
----
-
-### SQ3 — Stock × Vendas: existe desperdício de produção?
-
-**Pergunta:**
-*"Que proporção de produtos tem stock elevado e vendas muito baixas —
-indício de sobreprodução e potencial desperdício têxtil?"*
-
-**Hipótese:**
-Uma fração significativa dos produtos tem stock próximo do máximo (50)
-e volume de vendas muito baixo — proxy de produção em excesso.
-
-**Colunas usadas:**
-`product_variation_inventory` · `units_sold_tier` · `rating`
-· `price` · `badge_product_quality`
-
-**Dados de suporte:**
-- Produtos com `units_sold` ≤ 100 e `product_variation_inventory` ≥ 40:
-  **321 produtos (20.4% do dataset)**
-- Estes representam stock elevado com vendas mínimas — candidatos a
-  desperdício de produção
-
-**Limitação declarada:**
-`inventory_total` está no máximo (50) em 99.4% dos registos — tecto da
-plataforma, não stock real. `product_variation_inventory` tem mais variação
-mas ainda assim limitada. Os números são proxy, não medição direta.
-
-**Visualização sugerida (Letícia):**
-Heatmap: eixo X = `units_sold_tier`, eixo Y = `product_variation_inventory`
-em quintis, cor = densidade de produtos. Quadrante superior esquerdo
-(alto stock, baixas vendas) é a zona de desperdício.
-
-**Conclusão esperada:**
-1 em cada 5 produtos mostra sinais de sobreprodução. Sem dados de
-devoluções ou destruição de stock, é um limite da análise — declarado
-como estimativa conservadora.
-
----
-
-### SQ4 — Estimativa de Resíduos Têxteis: quanto lixo geraram estas vendas?
-
-**Pergunta:**
-*"Qual o volume estimado de têxtil em circulação neste dataset —
-e que proporção tem alto risco de descarte precoce?"*
-
-**Hipótese:**
-O volume total de unidades vendidas representa toneladas de têxtil,
-uma fração significativa das quais tem rating suficientemente baixo
-para indicar descarte antes do fim de vida útil esperado.
-
-**Colunas usadas:**
-`units_sold` · `rating` · `price`
-
-**Fontes externas necessárias:**
-- Peso médio por peça de roupa de verão: ~300g (t-shirt/vestido)
-  *(Ellen MacArthur Foundation — "A New Textiles Economy", 2017)*
-- Vida útil média de peça de fast fashion: ~3 anos
-  *(European Environment Agency)*
-
-**Dados de suporte:**
-
-| Métrica | Valor |
-|---|---|
-| Total de unidades vendidas (dataset) | 6.825.255 |
-| Estimativa de têxtil total | **~2.048 toneladas** |
-| Units com rating < 3.5 (risco descarte) | 780.142 (11.4%) |
-| Têxtil em risco de descarte precoce | **~234 toneladas** |
-
-*Peso médio assumido: 300g/peça. Estimativa por excesso — `units_sold`
-são buckets arredondados para cima.*
-
-**Visualização sugerida (Letícia):**
-Infográfico de impacto: "X toneladas de roupa vendidas em agosto de 2020
-— equivalente a Y caminhões cheios". Destacar a fatia em risco de descarte.
-É o slide que fica na memória do avaliador.
-
-**Conclusão esperada:**
-O dataset de um único mês numa única plataforma representa ~2.000 toneladas
-de têxtil. 11% com rating baixo indica descarte provável antes do fim de
-vida — número conservador, limitado pelos proxies disponíveis.
-
----
-
-### SQ5 — O consumidor paga mais por qualidade certificada?
-
-**Pergunta:**
-*"Produtos com badge de qualidade vendem a preço mais alto —
-e vendem mais ou menos volume?"*
-
-**Hipótese:**
-Se o consumidor europeu valoriza qualidade, produtos certificados devem
-vender a preço premium com volume competitivo. Se não — o preço continua
-a dominar a decisão de compra.
-
-**Colunas usadas:**
-`badge_product_quality` · `price` · `units_sold_tier` · `rating`
-· `uses_ad_boosts` · `discount_pct_fix`
-
-**Dados de suporte:**
-
-| Grupo | Preço médio | Units_sold médio | N |
-|---|---|---|---|
-| Com badge qualidade | €8.46 | 6.424 | 117 |
-| Sem badge qualidade | €8.31 | 4.171 | 1.456 |
-
-*Produtos com badge de qualidade vendem em média 54% mais unidades
-com apenas €0.15 de diferença de preço.*
-
-**Visualização sugerida (Letícia):**
-Gráfico de barras comparativo: com badge vs sem badge em preço médio
-e volume médio. A diferença de volume é o achado — não o preço.
-
-**Conclusão esperada:**
-O consumidor não paga significativamente mais por qualidade certificada
-— mas os produtos certificados vendem mais. A qualidade converte,
-o preço premium não. Implicação para marcas sustentáveis: focar na
-certificação e visibilidade, não no pricing.
-
----
-
-### SQ6 — Mecanismos de Impulso: ad boosts e urgency banners distorcem a qualidade?
-
-**Pergunta:**
-*"Produtos com publicidade paga e banners de urgência vendem mais
-independentemente da sua qualidade — evidência de consumo por impulso?"*
-
-**Hipótese:**
-O volume de vendas de produtos promovidos artificialmente não é explicado
-pela qualidade — é explicado pela visibilidade forçada.
-
-**Colunas usadas:**
-`uses_ad_boosts` · `has_urgency_banner_fix` · `units_sold_tier`
-· `rating` · `badge_product_quality` · `price`
-
-**Visualização sugerida (Letícia):**
-Matriz 2×2: eixo X = usa ad boost (sim/não), eixo Y = rating acima/abaixo
-de 3.5, cor = volume médio de vendas. Quadrante "boost + baixa qualidade"
-é o achado central.
-
-**Conclusão esperada:**
-Produtos com baixa qualidade e ad boost vendem comparável a produtos com
-boa qualidade sem boost — o mecanismo de plataforma neutraliza o sinal
-de qualidade. É a prova do consumo por impulso nos dados.
-
----
-
-### SQ7 — Alcance de Envio × Volume: mais países = mais vendas?
-
-**Pergunta:**
-*"Produtos enviados para mais países vendem proporcionalmente mais —
-ou o alcance global não se traduz em volume?"*
-
-**Hipótese:**
-Maior alcance geográfico não garante maior volume de vendas — e implica
-sempre maior impacto ambiental de transporte.
-
-**Colunas usadas:**
-`countries_shipped_to` · `units_sold_tier` · `origin_country_fix`
+`origin_country_fix` · `countries_shipped_to` · `badge_local_product`
 · `distance_km`
-
+**Notebook:** `Pergunta_1.ipynb`
 **Dados de suporte:**
-
-| Alcance (países) | N produtos | Units_sold médio |
+| País | % produtos | Distância até Paris |
 |---|---|---|
-| 1–10 | 18 | 5.738 |
-| 11–20 | 104 | 3.941 |
-| 21–30 | 245 | 2.516 |
-| 31–40 | 505 | 4.974 |
-| 41–50 | 539 | 4.832 |
-| 51–75 | 86 | 4.411 |
-| 76+ | 76 | 2.635 |
-
-**Correlação `countries_shipped_to` × `units_sold`: -0.014** (praticamente nula)
-
-**Metodologia — justificação obrigatória:**
-`countries_shipped_to` é uma variável numérica (contagem de países),
-não uma lista. Não é possível identificar quais países, calcular distâncias
-reais por destino, ou segmentar por região geográfica.
-
-Metodologia escolhida: tratar como proxy de **alcance global** —
-número de rotas de transporte activadas, não destinos específicos.
-
-Metodologia rejeitada: geocoding por país destino — impossível sem a lista.
-Metodologia rejeitada: assumir distribuição uniforme por continente —
-especulação sem fundamento nos dados.
-
-**Visualização sugerida (Letícia):**
-Heatmap de correlação: `countries_shipped_to` × `units_sold_tier`.
-Mostrar que a correlação é quase nula — mais alcance não compra mais vendas,
-mas acumula mais impacto ambiental de transporte.
-
+| CN | 96,4% (1.516) | 9.200 km |
+| US | 2,0% (31) | 8.500 km |
+| Outros | 1,6% (26) | Variável |
+| Desconhecido | 17 registos | N/A |
+- `countries_shipped_to` médio: 40,46 países
+- Produtos "locais" (`badge_local_product` = 1) são 100% chineses
+- Correlação `countries_shipped_to` × `units_sold`: praticamente nula
+**Métricas M relevantes:** M054 (milhas logísticas), M068 (índice
+multinações), M050 (produção local), M128 (risco falso local)
+**Visualização sugerida:**
+Gráfico de barras: % de produtos por país de origem, com destaque
+para a dominância da China. Segundo gráfico: distribuição de
+`countries_shipped_to` (alcance global).
 **Conclusão esperada:**
-Alcance global e volume de vendas são independentes. Produtos que enviam
-para 76+ países não vendem mais do que produtos de alcance regional —
-mas geram múltiplas rotas de transporte desnecessárias.
-
+A cadeia de abastecimento do Wish é mono-origem. O badge "local"
+não corresponde à realidade — é marketing, não sustentabilidade.
+O risco ambiental e logístico está concentrado numa única rota.
 ---
-
-## GRUPO B — Subquestões de Contexto Externo
-
-*Estas subquestões não são respondíveis com os dados do dataset.
-Entram na análise como contexto e nas recomendações como argumento.
-Responsável: Ricardo — pesquisa e redação.*
-
----
-
-### SQ-EXT1 — Porque é que os europeus (ainda) não pagam mais pelo ambiente?
-
+## Q2 — Qual o impacto ambiental do transporte?
 **Pergunta:**
-*"O que explica o gap entre a intenção declarada de consumo sustentável
-do público europeu e o comportamento real mostrado nos dados?"*
-
-**Fontes sugeridas:**
-- Eurobarometer — inquéritos de atitudes ambientais (2020, 2022)
-- Nielsen Global Sustainability Report
-- Ellen MacArthur Foundation — consumer behavior studies
-- Contexto pandemia 2020: pressão económica sobre decisões de consumo
-
-**Ligação aos dados:**
-Os dados mostram o comportamento (preço domina, qualidade é secundária).
-Esta subquestão explica o porquê — e é o que transforma a análise
-de "relatório de dados" em "argumento de negócio".
-
+*"Que volume de CO₂ está associado ao transporte dos produtos Wish
+até ao consumidor europeu — e como varia por modo de transporte e
+faixa de preço?"*
+**Hipótese:**
+O transporte aéreo (usado em envios expressos ou de curta distância)
+emite significativamente mais CO₂ por km do que o marítimo. O impacto
+ambiental do transporte não é homogéneo — depende do modo, da distância
+e do volume de vendas.
+**Colunas usadas:**
+`origin_country_fix` · `distance_km` · `price` · `units_sold`
+**Fonte externa:**
+`CO2_transporte.csv` — fatores de emissão por modo de transporte
+(avião: 244 g CO₂/pkm, comboio: 31 g CO₂/pkm, navio: 15 g CO₂/pkm,
+camisão: 62 g CO₂/pkm)
+**Notebook:** `Pergunta_co2.ipynb`
+**Dados de suporte:**
+- 96,4% dos produtos percorrem ~9.200 km (China → Europa)
+- Matriz CO₂ total estimado por faixa de preço × modo de transporte
+- Produtos mais baratos (< €5) tendem a usar transporte marítimo
+  (menos CO₂ por km, mas maior volume absoluto)
+**Métricas M relevantes:** M025 (preço médio frete), M026 (peso do
+frete no custo total), M051 (risco pegada carbono expresso)
+**Visualização sugerida:**
+Heatmap/matriz: faixa de preço (eixo X) × modo de transporte (eixo Y)
+com total de CO₂ em toneladas (cor). Destacar o contraste avião vs.
+marítimo dentro da mesma faixa de preço.
+**Conclusão esperada:**
+O CO₂ do transporte é dominado por uma combinação de distância
+(CN → Europa ~9.200 km) e volume de vendas. O modo de transporte
+(navio vs. avião) é o maior fator de diferenciação por kg de CO₂.
 ---
-
-### SQ-EXT2 — Que leis europeias regulam este comportamento?
-
+## Q3 — As cores que mais vendem são as mais poluentes?
 **Pergunta:**
-*"A regulação europeia existente em 2020 era suficiente para travar
-os padrões identificados — e o que mudou desde então?"*
-
-**Fontes a pesquisar (Ricardo):**
-
-| Diploma | Ano | Âmbito |
-|---|---|---|
-| EU Green Deal | 2019 | Toda a UE — meta 2050 |
-| Estratégia Têxtil Sustentável | 2022 | Toda a UE — têxteis |
-| Digital Services Act | 2022 | Toda a UE — plataformas |
-| Ecodesign Regulation | 2024 | Toda a UE — durabilidade |
-| Regulação nacional variável | — | Por país — complementar |
-
-**Nota importante:**
-Em agosto 2020 (data do dataset), nenhum destes diplomas estava em vigor.
-Os dados representam o comportamento *antes* da regulação.
-É esta distância temporal que dá valor ao dataset como baseline histórico.
-
-**Ligação à apresentação:**
-Slide de recomendações: "O que os dados mostram que acontecia antes —
-e o que a regulação veio (tentar) corrigir."
-
+*"As cores mais vendidas no Wish (preto, branco) exigem processos de
+tingimento com maior impacto ambiental — e a plataforma privilegia
+estas cores no seu catálogo?"*
+**Hipótese:**
+Cores escuras (preto) e branco dominam as vendas. O tingimento de
+preto exige mais água e produtos químicos; o branco exige mais
+branqueadores. A optimização de portfolio da plataforma favorece
+cores de alto impacto ambiental sem o refletir no preço.
+**Colunas usadas:**
+`product_color_fix` · `units_sold` · `price` · `rating`
+· `rating_one_count` · `rating_two_count`
+**Notebook:** `Pergunta_5.ipynb`
+**Dados de suporte:**
+- Top 5 cores: black (302), white (254), yellow (105), blue (99), pink (99)
+- Cores neutras/básicas (preto+branco) representam ~35% do catálogo
+- Correlação entre cor e taxa de reclamação (1★+2★)
+**Métricas M relevantes:** M030 (dominância cores catálogo), M089
+(popularidade cor preta/branca), M138 (saturação cores primárias)
+**Visualização sugerida:**
+Gráfico de barras: unidades vendidas por cor, ordenado por volume.
+Sobreposição: índice de "poluição" estimado por cor (baseado em
+literatura de tingimento têxtil).
+**Conclusão esperada:**
+As cores mais vendidas (preto, branco) estão entre as mais intensivas
+em recursos de tingimento. O portfolio da Wish está alinhado com
+produção de alto impacto ambiental — mas o consumidor não tem
+visibilidade deste custo.
 ---
-
-## Mapa de Subquestões → Slides
-
-| SQ | Tema | Slides sugeridos | Responsável visual |
+## Q4 — Produtos bem avaliados vendem mais e geram mais lucro?
+**Pergunta:**
+*"Produtos com rating elevado (≥ 4) vendem em maior volume e geram
+mais receita — ou o mercado do Wish é dominado por volume baixo
+independentemente da qualidade?"*
+**Hipótese:**
+A qualidade percebida (rating alto) está positivamente correlacionada
+com volume de vendas e receita. Produtos bem avaliados não só vendem
+mais como geram maior GMV — a qualidade compensa economicamente.
+**Colunas usadas:**
+`rating` · `units_sold` · `price` · `rating_five_count`
+· `rating_one_count` · `rating_two_count` · `badge_product_quality`
+· `badges_count` · `uses_ad_boosts`
+**Notebooks:** `Pergunta_2.ipynb`, `Pergunta_4.ipynb`, `Pergunta_badge.ipynb`
+**Dados de suporte:**
+| Faixa de rating | N produtos | Units_sold médio | Preço médio |
 |---|---|---|---|
-| SQ1 | Distância × Frete | 1–2 slides | Letícia — gráfico de bolhas |
-| SQ2 | Preço × Qualidade | 1–2 slides | Letícia — scatter plot |
-| SQ3 | Stock × Vendas | 1 slide | Letícia — heatmap |
-| SQ4 | Resíduos têxteis | 1 slide impacto | Letícia — infográfico |
-| SQ5 | Qualidade certificada | 1 slide | Letícia — barras comparativas |
-| SQ6 | Impulso de compra | 1–2 slides | Letícia — matriz 2×2 |
-| SQ7 | Alcance × Volume | 1 slide | Letícia — heatmap correlação |
-| SQ-EXT1 | Comportamento europeu | 1 slide contexto | Ricardo — texto + dado externo |
-| SQ-EXT2 | Legislação europeia | 1 slide | Ricardo — timeline regulação |
-
-**Total estimado: 10–13 slides de análise** dentro dos 15 minutos disponíveis.
-
+| < 3,0 | ~115 | ... | ... |
+| 3,0–3,9 | ~665 | ... | ... |
+| 4,0–4,5 | ~570 | ... | ... |
+| > 4,5 | ~223 | ... | ... |
+- Produtos com badge de qualidade vendem +54% que os sem badge
+- Proporção de itens "críticos" (rating < 3) vs. "saudáveis" no
+  faturamento e nos envios
+- Impacto dos badges (qualidade, local, envio rápido) nas vendas
+**Métricas M relevantes:** M014 (média rating), M018 (taxa detração),
+M043 (concentração melhores notas), M055 (densidade badge qualidade),
+M061 (lift conversão por escassez), M065 (eficácia ad boost)
+**Visualização sugerida:**
+Matriz de correlação: rating × units_sold × price × badges_count.
+Gráfico de barras comparativo: receita total de produtos com rating
+≥ 4 vs. rating < 4. Impacto incremental de cada badge nas vendas.
+**Conclusão esperada:**
+Qualidade e volume de vendas estão positivamente correlacionados.
+Produtos bem avaliados geram mais receita — a qualidade compensa.
+Badges de qualidade amplificam este efeito. O ad boost, por outro
+lado, vende volume independentemente da qualidade.
+---
+## Q5 — Preço baixo = peça descartada mais rapidamente?
+**Pergunta:**
+*"Produtos com preço inferior a €5 têm maior taxa de insatisfação
+(avaliações 1★ e 2★) — indicando menor durabilidade e descarte
+precoce — mas continuam a vender em volume?"*
+**Hipótese:**
+O preço baixo atrai compra por impulso, mas a qualidade percebida
+(proxy: rating baixo + avaliações negativas) sugere que estas peças
+são descartadas mais rapidamente, gerando mais resíduo têxtil.
+**Colunas usadas:**
+`price` · `rating` · `units_sold` · `rating_one_count`
+· `rating_two_count` · `negative_rating_pct` · `discount_pct_fix`
+· `has_urgency_banner_fix`
+**Notebooks:** `Pergunta_2.ipynb`, `Pergunta_4.ipynb`, `Pergunta_5.ipynb`
+**Dados de suporte:**
+| Faixa de preço | Rating médio | Avaliações 1★ (média) | N produtos |
+|---|---|---|---|
+| < €5 | 3,79 | 71 | 323 |
+| €5–10 | 3,83 | 111 | 762 |
+| €10–20 | 3,82 | 89 | 479 |
+| > €20 | 3,93 | 42 | 9 |
+- Taxa de reclamação (1★+2★) é desproporcionalmente alta nos
+  produtos mais baratos
+- Volume de vendas mantém-se alto mesmo com rating baixo —
+  evidência de consumo insustentável por preço
+**Métricas M relevantes:** M011 (elasticidade-preço), M018 (taxa
+detração), M044 (receita ajustada ao risco), M052 (proxy desperdício
+têxtil), M059 (frustração consumidor ponderada), M105 (intensidade
+rejeição relativa)
+**Visualização sugerida:**
+Scatter plot: preço (eixo X) × rating (eixo Y), cor = volume de
+vendas, tamanho = taxa de reclamação. Zona crítica: preço < €5 +
+rating < 3,5 destacada como "zona de descarte provável".
+**Conclusão esperada:**
+Rating médio varia pouco por faixa de preço, mas a taxa de
+insatisfação (1★+2★) é significativamente maior nos produtos
+mais baratos. O consumidor compra apesar da má qualidade —
+indicador de consumo insustentável por preço, não por necessidade.
+---
+## Mapa Perguntas → Notebooks → Slides
+| Q | Tema | Notebook(s) | Slides |
+|---|---|---|---|
+| Q1 | Concentração geográfica | `Pergunta_1.ipynb` | 1–2 |
+| Q2 | Impacto ambiental do transporte | `Pergunta_co2.ipynb` | 1–2 |
+| Q3 | Cores mais vendidas = mais poluentes? | `Pergunta_5.ipynb` | 1 |
+| Q4 | Boas avaliações = mais lucro? | `Pergunta_2.ipynb`, `Pergunta_4.ipynb`, `Pergunta_badge.ipynb` | 2–3 |
+| Q5 | Preço baixo = descarte rápido? | `Pergunta_2.ipynb`, `Pergunta_4.ipynb`, `Pergunta_5.ipynb` | 2 |
+| — | Inconsistências (suporte) | `Pergunta_inconsistencias.ipynb` | — |
+| — | Insights consolidados | `INSIGHTS.ipynb` | 1 |
+**Total estimado: 8–11 slides de análise** dentro dos 15 minutos disponíveis.
+---
+## Subquestões de Contexto Externo (SQ-EXT)
+*Não respondíveis com os dados do dataset. Entram na análise como contexto.*
+### SQ-EXT1 — Porque é que os europeus (ainda) não pagam mais pelo ambiente?
+**Fontes:** Eurobarometer, Nielsen, Ellen MacArthur Foundation
+**Ligação aos dados:** Os dados mostram o comportamento (preço domina); esta SQ explica o porquê — gap entre intenção declarada e ação real.
+### SQ-EXT2 — Que leis europeias regulam este comportamento?
+**Timeline:** EU Green Deal (2019) → Estratégia Têxtil (2022) → DSA (2022) → Ecodesign (2024)
+**Valor:** Em agosto 2020 nenhum destes diplomas estava em vigor. O dataset é baseline pré-regulação.
