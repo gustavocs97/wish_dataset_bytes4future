@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Script — Sustentabilidade & Rentabilidade · Wish 2020</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-deep: #1a3d2b;
+    --green-mid: #2d6a4f;
+    --green-light: #74c69d;
+    --cream: #f5f0e8;
+    --gold: #c9a84c;
+    --leticia: #4a9e7a;
+    --gustavo: #2d6a8a;
+    --ricardo: #7a4a9e;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--green-deep);
+    color: white;
+    padding: 2.5rem 2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .header-title span {
+    color: var(--green-light);
+  }
+
+  .timer-box {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .timer-display {
+    font-family: 'DM Sans', monospace;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--green-light);
+    min-width: 50px;
+  }
+
+  .timer-btn {
+    background: var(--green-light);
+    color: var(--green-deep);
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .timer-btn:hover { opacity: 0.85; }
+
+  /* NAV PILLS */
+  .nav-strip {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 80px;
+    z-index: 90;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-strip::-webkit-scrollbar { display: none; }
+
+  .nav-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    padding: 0 1rem;
+  }
+
+  .nav-pill {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+    color: var(--muted);
+  }
+
+  .nav-pill:hover { color: var(--text); }
+  .nav-pill.active-l { color: var(--leticia); border-bottom-color: var(--leticia); }
+  .nav-pill.active-g { color: var(--gustavo); border-bottom-color: var(--gustavo); }
+  .nav-pill.active-r { color: var(--ricardo); border-bottom-color: var(--ricardo); }
+
+  /* MAIN */
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  /* PRESENTER BLOCK */
+  .presenter-block {
+    margin-bottom: 2.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    scroll-margin-top: 130px;
+  }
+
+  .presenter-header {
+    padding: 1.4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .presenter-header.leticia { background: var(--leticia); }
+  .presenter-header.gustavo { background: var(--gustavo); }
+  .presenter-header.ricardo { background: var(--ricardo); }
+
+  .presenter-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .presenter-role {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.75);
+    margin-top: 0.1rem;
+  }
+
+  .time-badge {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+  }
+
+  /* SLIDES */
+  .slide-section {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid #e5e7eb;
+  }
+
+  .slide-section.leticia { border-left-color: var(--leticia); }
+  .slide-section.gustavo { border-left-color: var(--gustavo); }
+  .slide-section.ricardo { border-left-color: var(--ricardo); }
+
+  .slide-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .slide-label::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .slide-label.leticia { color: var(--leticia); }
+  .slide-label.gustavo { color: var(--gustavo); }
+  .slide-label.ricardo { color: var(--ricardo); }
+
+  .slide-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--green-deep);
+  }
+
+  .script-text {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #2d3748;
+  }
+
+  .script-text p {
+    margin-bottom: 0.8rem;
+  }
+
+  .script-text p:last-child { margin-bottom: 0; }
+
+  .highlight {
+    background: #fef9c3;
+    border-radius: 3px;
+    padding: 0.05rem 0.3rem;
+    font-weight: 500;
+  }
+
+  .highlight.leticia { background: #d1fae5; color: #065f46; }
+  .highlight.gustavo { background: #dbeafe; color: #1e3a5f; }
+  .highlight.ricardo { background: #ede9fe; color: #4c1d95; }
+
+  .slide-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin: 1.5rem 0;
+  }
+
+  /* STAT CARDS inline */
+  .stat-row {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+
+  .stat-card {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 0.8rem 1.1rem;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .stat-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--green-deep);
+  }
+
+  .stat-card .lbl {
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+    line-height: 1.3;
+  }
+
+  /* CLOSING */
+  .closing-block {
+    background: var(--green-deep);
+    color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .closing-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--green-light);
+  }
+
+  .closing-block p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+  }
+
+  /* PRINT */
+  @media print {
+    header, .nav-strip, .timer-box { display: none !important; }
+    .presenter-block { box-shadow: none; border: 1px solid #ccc; }
+    body { background: white; }
+    .slide-section { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 600px) {
+    .presenter-header { padding: 1rem 1.2rem; }
+    .slide-section { padding: 1.2rem 1.2rem; }
+    .presenter-name { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="header-title">Script · <span>Sustentabilidade & Rentabilidade</span></div>
+      <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.2rem">Wish Summer Products 2020 · Bytes4Future</div>
+    </div>
+    <div class="timer-box">
+      <span style="font-size:0.75rem;color:rgba(255,255,255,0.6)">⏱ Tempo</span>
+      <span class="timer-display" id="timer">00:00</span>
+      <button class="timer-btn" id="timerBtn" onclick="toggleTimer()">▶ Start</button>
+      <button class="timer-btn" style="background:rgba(255,255,255,0.2);color:white" onclick="resetTimer()">↺</button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-strip">
+  <div class="nav-inner">
+    <button class="nav-pill active-l" onclick="scrollTo('leticia')">🌿 Letícia</button>
+    <button class="nav-pill active-g" onclick="scrollTo('gustavo')">📊 Gustavo</button>
+    <button class="nav-pill active-r" onclick="scrollTo('ricardo')">🔮 Ricardo</button>
+    <button class="nav-pill" onclick="window.print()" style="margin-left:auto">🖨 Imprimir</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- LETÍCIA -->
+  <div class="presenter-block" id="leticia">
+    <div class="presenter-header leticia">
+      <div>
+        <div class="presenter-name">Letícia Alexandre</div>
+        <div class="presenter-role">Análise de Sustentabilidade</div>
+      </div>
+      <div class="time-badge">⏱ ~3 min 30 s · Slides 1, 3, 4, 5, 6</div>
+    </div>
+    <div class="slide-section leticia">
+
+      <div class="slide-label leticia">Slide 1 — Capa</div>
+      <div class="slide-title">Abertura</div>
+      <div class="script-text">
+        <p>Bom dia a todos. O nosso projeto parte de uma pergunta simples mas poderosa: <span class="highlight leticia">sustentabilidade e rentabilidade podem coexistir de forma eficiente?</span></p>
+        <p>Para responder, analisámos <strong>1.341 produtos</strong> da plataforma Wish, retirados por webscrapping em agosto de 2020, com a palavra-chave "summer". No total, representam 6,46 milhões de unidades vendidas e uma receita estimada de 52,4 milhões de euros.</p>
+      </div>
+
+      <div class="slide-divider"></div>
+
+      <div class="slide-label leticia">Slide 3 — Wish / ESG</div>
+      <div class="slide-title">Porquê a Wish?</div>
+      <div class="script-text">
+        <p>Escolhemos a Wish porque é um caso de estudo perfeito para analisar o impacto <span class="highlight leticia">ESG — Ambiental, Social e de Governança</span> — num marketplace global de fast fashion. Vou começar pela dimensão ambiental.</p>
+      </div>
+
+      <div class="slide-divider"></div>
+
+      <div class="slide-label leticia">Slide 4 — Concentração Geográfica</div>
+      <div class="slide-title">Qual o impacto desta concentração geográfica?</div>
+      <div class="script-text">
+        <p>Os dados são claros: <span class="highlight leticia">96,5% dos produtos têm origem na China</span> — 1.294 de 1.341 artigos. Os restantes vêm de países como os EUA, Venezuela ou Singapura, com representações marginais. Cada produto é enviado, em média, para 40 países destino, com uma distância média percorrida de <strong>cerca de 8.000 km</strong>.</p>
+        <p>Isto não é apenas um dado logístico. É um sinal de alerta ambiental.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card"><div class="num">96,5%</div><div class="lbl">Origem China</div></div>
+        <div class="stat-card"><div class="num">40</div><div class="lbl">Países destino médios</div></div>
+        <div class="stat-card"><div class="num">~8.000km</div><div class="lbl">Distância média</div></div>
+      </div>
+
+      <div class="slide-divider"></div>
+
+      <div class="slide-label leticia">Slide 5 — Estimativa de Carbono</div>
+      <div class="slide-title">Qual é a estimativa de carbono associada?</div>
+      <div class="script-text">
+        <p>A indústria da moda é responsável por <span class="highlight leticia">10% das emissões globais de CO₂</span> — mais do que toda a aviação e o transporte marítimo combinados.</p>
+        <p>No percurso China–Europa, os números falam por si. Por via aérea: 2.280.000g de CO₂ por envio. Por via marítima: 200.000g. Por comboio: 112.000g. E segundo a UNFCCC, as emissões têxteis podem aumentar <strong>mais 60% até 2030</strong> se nada mudar.</p>
+      </div>
+
+      <div class="slide-divider"></div>
+
+      <div class="slide-label leticia">Slide 6 — Cores e Poluição</div>
+      <div class="slide-title">As cores mais vendidas são as mais poluentes?</div>
+      <div class="script-text">
+        <p>A resposta é <strong>sim</strong>. O preto lidera com 2,3 milhões de unidades vendidas — e usa corantes sintéticos intensivos, de alto impacto ambiental. O multicor e estampado seguem com 1,9 milhões.</p>
+        <p>No total, <span class="highlight leticia">52% das unidades vendidas correspondem a cores de alto impacto</span>. Apenas 17% são de baixo impacto. O tingimento têxtil é, aliás, a <strong>segunda maior causa de poluição da água no mundo</strong>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GUSTAVO -->
+  <div class="presenter-block" id="gustavo">
+    <div class="presenter-header gustavo">
+      <div>
+        <div class="presenter-name">Gustavo Carvalho</div>
+        <div class="presenter-role">Análise de Qualidade</div>
+      </div>
+      <div class="time-badge">⏱ ~3 min · Slides 7, 8, 10</div>
+    </div>
+    <div class="slide-section gustavo">
+
+      <div class="slide-label gustavo">Slide 7 — Avaliações e Vendas</div>
+      <div class="slide-title">A avaliação dos produtos influencia as vendas?</div>
+      <div class="script-text">
+        <p>Obrigado, Letícia. Eu vou falar sobre qualidade — e sobre como ela afeta diretamente a rentabilidade.</p>
+        <p>Os dados mostram que sim, de forma muito expressiva. <span class="highlight gustavo">57,94% das unidades vendidas pertencem a produtos com avaliação de 3 estrelas</span>, e 38,63% a produtos com 4 ou 5 estrelas. Em contraste, produtos com 1 ou 2 estrelas representam menos de 4% do volume total.</p>
+        <p>E há uma diferença de preço relevante: produtos bem avaliados têm um <strong>preço médio de 8,75€</strong>, enquanto os mal avaliados ficam pelos <strong>6,80€</strong>. Qualidade e valor de venda andam juntos.</p>
+        <p>A conclusão prática é direta: <span class="highlight gustavo">focar em produtos bem avaliados aumenta o lucro e reduz devoluções e reclamações.</span></p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card"><div class="num">8,75€</div><div class="lbl">Preço médio · avaliação 3–5★</div></div>
+        <div class="stat-card"><div class="num">6,80€</div><div class="lbl">Preço médio · avaliação 1–2★</div></div>
+        <div class="stat-card"><div class="num">57,9%</div><div class="lbl">Vendas em produtos 3★</div></div>
+      </div>
+
+      <div class="slide-divider"></div>
+
+      <div class="slide-label gustavo">Slide 8 — Preço Baixo e Descarte</div>
+      <div class="slide-title">Preço baixo = peça descartada mais rapidamente?</div>
+      <div class="script-text">
+        <p>Mas há um outro lado desta equação. Os dados externos confirmam que sim. Consumimos atualmente <span class="highlight gustavo">80 mil milhões de peças por ano</span> — 400% mais do que há 20 anos. Uma peça de fast fashion tem uma <strong>vida útil média de apenas 7 a 10 usos</strong>. E 85% dos têxteis descartados acabam em aterro ou são incinerados em menos de 12 meses.</p>
+        <p>Preços baixos encorajam compras impulsivas. Produtos de qualidade inferior aceleram o descarte. É um ciclo que prejudica tanto o ambiente como a margem do negócio a longo prazo.</p>
+      </div>
+
+      <div class="slide-divider"></div>
+
+      <div class="slide-label gustavo">Slide 10 — Caso França</div>
+      <div class="slide-title">A França baniu a Wish em 2021</div>
+      <div class="script-text">
+        <p>E quando a qualidade falha, as consequências regulatórias podem ser graves. Em 2020, a agência francesa de repressão às fraudes comprou 140 produtos na Wish e testou a sua segurança. Em julho de 2021 emitiu um aviso oficial. A Wish não cumpriu — e em novembro de 2021, <span class="highlight gustavo">a França baniu a app da Google Play, da App Store e dos resultados de pesquisa.</span></p>
+        <p>A Wish foi readmitida em 2023 após correções, mas a reputação ficou permanentemente danificada. Este é o custo real de ignorar qualidade e conformidade.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RICARDO -->
+  <div class="presenter-block" id="ricardo">
+    <div class="presenter-header ricardo">
+      <div>
+        <div class="presenter-name">Ricardo Neves</div>
+        <div class="presenter-role">Análise de Fast Fashion &amp; Consumidor</div>
+      </div>
+      <div class="time-badge">⏱ ~3 min · Slides 9, 11, 12, 13</div>
+    </div>
+    <div class="slide-section ricardo">
+
+      <div class="slide-label ricardo">Slide 9 — O que os dados ensinaram</div>
+      <div class="slide-title">O que os dados nos ensinaram?</div>
+      <div class="script-text">
+        <p>Olá a todos. Vou fechar esta apresentação com o que os dados, no seu conjunto, nos ensinaram — e o que isso significa para o futuro.</p>
+        <p>Temos quatro grandes aprendizagens:</p>
+        <p><strong>1.</strong> <span class="highlight ricardo">8.000 km de distância representam um risco ambiental e logístico enorme</span>, que nenhuma plataforma pode ignorar.</p>
+        <p><strong>2.</strong> O tingimento têxtil é a segunda maior causa de poluição da água no mundo — e as cores que mais vendemos são precisamente as mais poluentes.</p>
+        <p><strong>3.</strong> <span class="highlight ricardo">Preço baixo estimula consumo impulsivo</span> sem criar valor real.</p>
+        <p><strong>4.</strong> Produtos baratos sem critério de qualidade geram devoluções, reclamações, e corroem a margem a longo prazo. O modelo de fast fashion barato funciona no curto prazo. Mas é insustentável — literalmente.</p>
+      </div>
+
+      <div class="slide-divider"></div>
+
+      <div class="slide-label ricardo">Slides 11 e 12 — Insights / Recomendações</div>
+      <div class="slide-title">O que a Wish poderia implementar?</div>
+      <div class="script-text">
+        <p>Identificámos seis recomendações concretas:</p>
+        <p><strong>🌿 Criar um Selo Eco verificado</strong> — associado a certificações reais, sem documentação sem validade.</p>
+        <p><strong>⭐ Qualidade que converte</strong> — priorizar produtos bem avaliados reduz devoluções e aumenta margem de forma consistente.</p>
+        <p><strong>🎨 Insumos verdes</strong> — fomentar o uso de pigmentos e tintas ecológicas.</p>
+        <p><strong>🔍 Rastreabilidade obrigatória dos vendedores</strong> — com bloqueio de quem não se autentique.</p>
+        <p><strong>📊 Transparência no impacto</strong> — mostrar o custo de carbono diretamente no checkout, ao momento da compra.</p>
+        <p><strong>⚖️ Adequação às novas regulamentações ambientais globais</strong> — antes de serem impostas, não depois.</p>
+      </div>
+
+      <div class="slide-divider"></div>
+
+      <div class="slide-label ricardo">Slide 13 — Encerramento</div>
+      <div class="slide-title">Fecho</div>
+      <div class="script-text">
+        <p>Deixamos com uma última imagem para reflexão.</p>
+        <p>Durante o tempo desta apresentação, cerca de <span class="highlight ricardo">900 camiões com roupas foram descarregados</span> em algum ponto do mundo.</p>
+        <p>A pergunta com que começámos — sustentabilidade e rentabilidade podem coexistir? — tem resposta: <strong>sim, mas exige escolhas deliberadas</strong>. Dados, critério e responsabilidade.</p>
+        <p><strong>Obrigado.</strong></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="closing-block">
+    <h3>Boa apresentação amanhã! 🌿</h3>
+    <p>Tempo total estimado: ~10 minutos · Letícia 3:30 · Gustavo 3:00 · Ricardo 3:00<br>
+    Pode usar Ctrl+P / ⌘+P para imprimir ou guardar como PDF.</p>
+  </div>
+
+</main>
+
+<script>
+  let seconds = 0;
+  let running = false;
+  let interval = null;
+
+  function toggleTimer() {
+    const btn = document.getElementById('timerBtn');
+    if (running) {
+      clearInterval(interval);
+      running = false;
+      btn.textContent = '▶ Start';
+    } else {
+      interval = setInterval(() => {
+        seconds++;
+        updateDisplay();
+        // Warn at 3:30 (Letícia), 6:30 (Gustavo), 9:30 (Ricardo)
+        const warns = [210, 390, 570];
+        if (warns.includes(seconds)) {
+          document.getElementById('timer').style.color = '#f59e0b';
+          setTimeout(() => document.getElementById('timer').style.color = 'var(--green-light)', 2000);
+        }
+      }, 1000);
+      running = true;
+      btn.textContent = '⏸ Pause';
+    }
+  }
+
+  function resetTimer() {
+    clearInterval(interval);
+    running = false;
+    seconds = 0;
+    document.getElementById('timerBtn').textContent = '▶ Start';
+    updateDisplay();
+    document.getElementById('timer').style.color = 'var(--green-light)';
+  }
+
+  function updateDisplay() {
+    const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+    const s = String(seconds % 60).padStart(2, '0');
+    document.getElementById('timer').textContent = m + ':' + s;
+  }
+
+  function scrollTo(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Highlight active nav based on scroll
+  const sections = ['leticia', 'gustavo', 'ricardo'];
+  const pills = document.querySelectorAll('.nav-pill');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 160) current = id;
+    });
+    pills.forEach(p => {
+      p.classList.remove('active-l', 'active-g', 'active-r');
+      if (current === 'leticia' && p.textContent.includes('Letícia')) p.classList.add('active-l');
+      if (current === 'gustavo' && p.textContent.includes('Gustavo')) p.classList.add('active-g');
+      if (current === 'ricardo' && p.textContent.includes('Ricardo')) p.classList.add('active-r');
+    });
+  });
+</script>
+
+</body>
+</html>

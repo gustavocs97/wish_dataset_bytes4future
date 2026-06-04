@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 6 — Q3 Cores e Poluição</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #1a3a2a; color: #f5f0e8; height: 100vh; display: flex; flex-direction: column; padding: 16px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; background: rgba(245,240,232,0.08); border-radius: 12px; padding: 12px 20px; margin-bottom: 12px; }
+        .slide-num { background: #c75b39; color: #fff; font-weight: 700; padding: 4px 14px; border-radius: 6px; font-size: 0.9rem; }
+        .slide-title { font-size: 1.05rem; font-weight: 600; text-align: center; flex: 1; padding: 0 16px; }
+        .timer { font-size: 1rem; font-weight: 700; color: #c75b39; }
+        .main { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1; min-height: 0; }
+        @media (max-width: 768px) { .main { grid-template-columns: 1fr; } }
+        .col { display: flex; flex-direction: column; gap: 12px; }
+        .card { background: rgba(245,240,232,0.1); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; backdrop-filter: blur(4px); }
+        .card-light { background: #f5f0e8; color: #1a3a2a; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; }
+        .card-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #a09080; margin-bottom: 8px; }
+        .card-title-dark { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #8a7a6a; margin-bottom: 8px; }
+        .impact-grid { display: flex; gap: 12px; flex: 1; }
+        .impact-block { flex: 1; border-radius: 10px; padding: 14px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+        .impact-high { background: rgba(200,60,50,0.2); border: 2px solid #c83c32; }
+        .impact-med { background: rgba(220,150,50,0.2); border: 2px solid #dc9632; }
+        .impact-low { background: rgba(60,160,80,0.2); border: 2px solid #3ca050; }
+        .impact-pct { font-size: 2.2rem; font-weight: 900; }
+        .impact-label { font-size: 0.75rem; margin-top: 4px; }
+        .color-list { font-size: 0.85rem; line-height: 1.8; }
+        .color-item { display: flex; justify-content: space-between; }
+        .keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+        .pill { background: rgba(245,240,232,0.15); color: #f5f0e8; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .script { background: rgba(26,58,42,0.9); color: #f5f0e8; border-radius: 8px; padding: 14px; font-size: 1rem; line-height: 1.6; flex: 1; font-style: italic; }
+        .core-text { font-size: 1.1rem; font-weight: 700; color: #c75b39; }
+        .bottom { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+        .info-box { background: rgba(245,240,232,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.8rem; }
+        .info-box span { display: block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px; color: #a09080; margin-bottom: 2px; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="slide-num">PERGUNTA 3</div>
+        <div class="slide-title">As cores mais vendidas são as mais poluentes?</div>
+        <div class="timer">⏱ 50s</div>
+    </div>
+
+    <div class="main">
+        <div class="col">
+            <div class="card-light" style="flex:1">
+                <div class="card-title-dark">Volume de Vendas por Cor + Nível de Impacto</div>
+                <div class="color-list">
+                    <div class="color-item"><span>⬛ Preto</span><strong>2,3M</strong></div>
+                    <div class="color-item"><span>🌈 Multicor/Estampado</span><strong>1,9M</strong></div>
+                    <div class="color-item"><span>⬜ Branco</span><strong>1,7M</strong></div>
+                    <div class="color-item"><span>🔵 Azul</span><strong>1,4M</strong></div>
+                    <div class="color-item"><span>🩷 Rosa</span><strong>1,2M</strong></div>
+                    <div class="color-item"><span>🔴 Vermelho</span><strong>1,1M</strong></div>
+                    <div class="color-item"><span>🟢 Verde</span><strong>943k</strong></div>
+                    <div class="color-item"><span>🟤 Tons Neutros</span><strong>876k</strong></div>
+                    <div class="color-item"><span>🟣 Roxo</span><strong>654k</strong></div>
+                    <div class="color-item"><span>🟠 Laranja/Amarelo</span><strong>543k</strong></div>
+                    <div class="color-item"><span>⚪ Cinzento</span><strong>432k</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">Distribuição de Impacto Ambiental</div>
+                <div class="impact-grid">
+                    <div class="impact-block impact-high">
+                        <div class="impact-pct" style="color:#c83c32">52%</div>
+                        <div class="impact-label">Alto Impacto</div>
+                        <div style="font-size:0.65rem;margin-top:4px;opacity:0.8">Corantes sintéticos intensivos</div>
+                    </div>
+                    <div class="impact-block impact-med">
+                        <div class="impact-pct" style="color:#dc9632">31%</div>
+                        <div class="impact-label">Médio Impacto</div>
+                        <div style="font-size:0.65rem;margin-top:4px;opacity:0.8">Corantes reativos moderados</div>
+                    </div>
+                    <div class="impact-block impact-low">
+                        <div class="impact-pct" style="color:#3ca050">17%</div>
+                        <div class="impact-label">Baixo Impacto</div>
+                        <div style="font-size:0.65rem;margin-top:4px;opacity:0.8">Pouco ou nenhum corante</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Palavras-Chave</div>
+                <div class="keywords">
+                    <span class="pill">Tingimento</span>
+                    <span class="pill">Poluição Água</span>
+                    <span class="pill">Preto + Branco</span>
+                    <span class="pill">Catálogo</span>
+                    <span class="pill">2ª maior poluente</span>
+                </div>
+            </div>
+            <div class="card" style="flex:1">
+                <div class="card-title">Script Âncora</div>
+                <div class="script">"52% das unidades vendidas são de alto impacto ambiental no tingimento. Preto e branco dominam o catálogo — e estão entre as cores mais intensivas em recursos. O tingimento têxtil é a 2ª maior causa de poluição da água no mundo."</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="info-box"><span>Apresenta</span>Ricardo</div>
+        <div class="info-box"><span>Tom</span>Revelador. Conexão cor → poluição real.</div>
+        <div class="info-box"><span>SMART 3</span>Cores vs. poluição de tingimento</div>
+    </div>
+</body>
+</html>

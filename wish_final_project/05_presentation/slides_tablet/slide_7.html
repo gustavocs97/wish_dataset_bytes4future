@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 7 — Q4 Rating vs Faturamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #1a3a2a; color: #f5f0e8; height: 100vh; display: flex; flex-direction: column; padding: 16px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; background: rgba(245,240,232,0.08); border-radius: 12px; padding: 12px 20px; margin-bottom: 12px; }
+        .slide-num { background: #c75b39; color: #fff; font-weight: 700; padding: 4px 14px; border-radius: 6px; font-size: 0.9rem; }
+        .slide-title { font-size: 1.05rem; font-weight: 600; text-align: center; flex: 1; padding: 0 16px; }
+        .timer { font-size: 1rem; font-weight: 700; color: #c75b39; }
+        .main { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1; min-height: 0; }
+        @media (max-width: 768px) { .main { grid-template-columns: 1fr; } }
+        .col { display: flex; flex-direction: column; gap: 12px; }
+        .card { background: #f5f0e8; color: #1a3a2a; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; }
+        .card-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #8a7a6a; margin-bottom: 8px; }
+        .chart-bars { display: flex; flex-direction: column; gap: 8px; }
+        .bar-row { display: flex; align-items: center; gap: 12px; }
+        .bar-label { width: 110px; font-size: 0.85rem; font-weight: 500; text-align: right; }
+        .bar-track { flex: 1; height: 28px; background: rgba(26,58,42,0.08); border-radius: 14px; position: relative; overflow: hidden; }
+        .bar-fill { height: 100%; background: #1a3a2a; border-radius: 14px; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; font-size: 0.75rem; font-weight: 600; color: #f5f0e8; }
+        .kpi-card { background: rgba(26,58,42,0.06); border-radius: 10px; padding: 14px; text-align: center; flex: 1; }
+        .kpi-num { font-size: 1.8rem; font-weight: 900; color: #c75b39; line-height: 1.2; }
+        .kpi-label { font-size: 0.7rem; color: #555; }
+        .kpi-row { display: flex; gap: 12px; }
+        .keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+        .pill { background: rgba(26,58,42,0.1); color: #1a3a2a; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .script { background: #1a3a2a; color: #f5f0e8; border-radius: 8px; padding: 14px; font-size: 1rem; line-height: 1.6; flex: 1; font-style: italic; }
+        .core { background: rgba(199,91,57,0.1); border: 2px solid #c75b39; border-radius: 10px; padding: 12px; text-align: center; }
+        .core-text { font-size: 1rem; font-weight: 700; color: #c75b39; line-height: 1.4; }
+        .big-question { font-size: 1.15rem; font-weight: 700; line-height: 1.4; }
+        .bottom { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+        .info-box { background: rgba(245,240,232,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.8rem; }
+        .info-box span { display: block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px; color: #a09080; margin-bottom: 2px; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="slide-num">PERGUNTA 4</div>
+        <div class="slide-title">Produtos bem avaliados vendem mais e geram mais faturamento?</div>
+        <div class="timer">⏱ 60s</div>
+    </div>
+
+    <div class="main">
+        <div class="col">
+            <div class="card">
+                <div class="card-title">% de Unidades Vendidas por Avaliação</div>
+                <div class="chart-bars">
+                    <div class="bar-row">
+                        <div class="bar-label">⭐⭐⭐⭐⭐ 4.0-5.0</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:38.63%">38,63%</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">⭐⭐⭐ 3.0</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:57.94%">57,94%</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">⭐⭐ 2.0</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:3.21%;font-size:0.6rem">3,21%</div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">⭐ 1.0</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:0.22%;font-size:0.6rem">0,22%</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="flex:1">
+                <div class="card-title">O que dizem os dados</div>
+                <div class="script">"57,94% das vendas são de produtos com rating 3 — o 'oceano do meio'. A maioria compra mediano, não o melhor. Mas quando há certificação de qualidade (badge), esses 7,4% vendem 54% mais — e o preço médio é 29% maior (€8,75 vs €6,80)."</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-title">Preço Médio × Rating</div>
+                <div class="kpi-row">
+                    <div class="kpi-card">
+                        <div class="kpi-num">€8,75</div>
+                        <div class="kpi-label">Rating 4 e 5</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-num">€6,80</div>
+                        <div class="kpi-label">Rating 1 a 3</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-num">+29%</div>
+                        <div class="kpi-label">Diferença de preço</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Palavras-Chave</div>
+                <div class="keywords">
+                    <span class="pill">Qualidade</span>
+                    <span class="pill">Rating 3</span>
+                    <span class="pill">Badge</span>
+                    <span class="pill">+54% vendas</span>
+                    <span class="pill">Prêmio Preço</span>
+                    <span class="pill">Oceano do Meio</span>
+                </div>
+            </div>
+            <div class="card" style="flex:1">
+                <div class="card-title">Mensagem Central</div>
+                <div class="core">
+                    <div class="core-text" style="font-size:0.95rem">Qualidade reconhecida (badge) converte 54% mais. Mover o catálogo do medíocre (rating 3) para o bom (rating 4-5) aumenta receita sem aumentar volume. Sustentabilidade e lucro podem coexistir.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="info-box"><span>Apresenta</span>Gustavo</div>
+        <div class="info-box"><span>Tom</span>Analítico. Contraste volume vs. valor. Badge como alavanca.</div>
+        <div class="info-box"><span>SMART 4</span>Rating elevado = mais lucro? Sim, com badge.</div>
+    </div>
+</body>
+</html>

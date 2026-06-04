@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 9 — Conclusões</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #1a3a2a; color: #f5f0e8; height: 100vh; display: flex; flex-direction: column; padding: 16px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; background: rgba(245,240,232,0.08); border-radius: 12px; padding: 12px 20px; margin-bottom: 12px; }
+        .slide-num { background: #c75b39; color: #fff; font-weight: 700; padding: 4px 14px; border-radius: 6px; font-size: 0.9rem; }
+        .slide-title { font-size: 1.05rem; font-weight: 600; text-align: center; flex: 1; padding: 0 16px; }
+        .timer { font-size: 1rem; font-weight: 700; color: #c75b39; }
+        .main { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1; min-height: 0; }
+        @media (max-width: 768px) { .main { grid-template-columns: 1fr; } }
+        .col { display: flex; flex-direction: column; gap: 12px; }
+        .card { background: rgba(245,240,232,0.1); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; }
+        .card-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #a09080; margin-bottom: 8px; }
+        .big-title { font-size: 1.6rem; font-weight: 900; line-height: 1.3; }
+        .lessons { display: flex; flex-direction: column; gap: 8px; flex: 1; justify-content: center; }
+        .lesson { background: rgba(245,240,232,0.08); border-left: 4px solid #c75b39; padding: 10px 14px; border-radius: 0 8px 8px 0; font-size: 0.9rem; line-height: 1.4; }
+        .lesson strong { color: #c75b39; }
+        .keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+        .pill { background: rgba(245,240,232,0.15); color: #f5f0e8; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .script { background: rgba(26,58,42,0.9); color: #f5f0e8; border-radius: 8px; padding: 14px; font-size: 1rem; line-height: 1.6; flex: 1; font-style: italic; }
+        .core { background: rgba(199,91,57,0.15); border: 2px solid #c75b39; border-radius: 10px; padding: 12px; text-align: center; }
+        .core-text { font-size: 1.1rem; font-weight: 700; color: #c75b39; }
+        .bottom { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+        .info-box { background: rgba(245,240,232,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.8rem; }
+        .info-box span { display: block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px; color: #a09080; margin-bottom: 2px; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="slide-num">SLIDE 09</div>
+        <div class="slide-title">Conclusões — O que os dados nos ensinaram</div>
+        <div class="timer">⏱ 45s</div>
+    </div>
+
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:0">
+                <div class="big-title">O QUE OS DADOS NOS ENSINARAM?</div>
+            </div>
+            <div class="card" style="flex:1">
+                <div class="lessons">
+                    <div class="lesson"><strong>~8.000 km</strong> de distância. Dependência gera risco ambiental e logístico enorme.</div>
+                    <div class="lesson"><strong>Preço baixo</strong> encoraja compras impulsivas e acelera o ciclo de descarte.</div>
+                    <div class="lesson"><strong>Qualidade</strong> impulsionar sem critério gera devoluções, reclamações e perda de confiança.</div>
+                    <div class="lesson"><strong>Tingimento têxtil</strong> é a 2ª maior causa de poluição da água no mundo.</div>
+                    <div class="lesson"><strong>Selo eco</strong> identificado nos dados, mas sem certificação verificável — greenwashing.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-title">Palavras-Chave</div>
+                <div class="keywords">
+                    <span class="pill">Distância</span>
+                    <span class="pill">Qualidade</span>
+                    <span class="pill">Descarte</span>
+                    <span class="pill">Poluição</span>
+                    <span class="pill">Greenwashing</span>
+                    <span class="pill">Sistema</span>
+                </div>
+            </div>
+            <div class="card" style="flex:1">
+                <div class="card-title">Script Âncora — Fechamento</div>
+                <div class="script">"Os dados mostram um sistema desenhado para volume, não para valor. A cadeia é longa, o frete é subsidiado, a qualidade é secundária, e os selos 'verdes' não são verificáveis. Mas também mostram que qualidade certificada vende mais — e que sustentabilidade e lucro podem coexistir."</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="info-box"><span>Apresenta</span>Letícia · Transição para fecho</div>
+        <div class="info-box"><span>Tom</span>Solene, reflexivo. Pausas entre cada lição.</div>
+        <div class="info-box"><span>Core</span>Sistema está desenhado para volume — mas pode ser redesenhado</div>
+    </div>
+</body>
+</html>

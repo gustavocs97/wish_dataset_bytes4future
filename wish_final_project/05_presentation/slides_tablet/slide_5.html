@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 5 — Q2 Carbono</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #d6d9ce; color: #1a3a2a; height: 100vh; display: flex; flex-direction: column; padding: 16px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; background: #1a3a2a; border-radius: 12px; padding: 12px 20px; margin-bottom: 12px; }
+        .slide-num { background: #c75b39; color: #fff; font-weight: 700; padding: 4px 14px; border-radius: 6px; font-size: 0.9rem; }
+        .slide-title { font-size: 1.05rem; font-weight: 600; text-align: center; flex: 1; padding: 0 16px; color: #f5f0e8; }
+        .timer { font-size: 1rem; font-weight: 700; color: #c75b39; }
+        .main { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1; min-height: 0; }
+        @media (max-width: 768px) { .main { grid-template-columns: 1fr; } }
+        .col { display: flex; flex-direction: column; gap: 12px; }
+        .card { background: #f5f0e8; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; }
+        .card-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #8a7a6a; margin-bottom: 8px; }
+        .big-stat { font-size: 3rem; font-weight: 900; color: #c75b39; line-height: 1; }
+        .stat-label { font-size: 0.85rem; color: #555; margin-top: 4px; }
+        .stat-sub { font-size: 0.7rem; color: #8a7a6a; font-style: italic; }
+        .kpi-row { display: flex; gap: 12px; flex-wrap: wrap; }
+        .kpi { flex: 1; text-align: center; min-width: 100px; background: rgba(26,58,42,0.06); border-radius: 10px; padding: 12px; }
+        .kpi-num { font-size: 1.3rem; font-weight: 700; color: #1a3a2a; }
+        .kpi-label { font-size: 0.7rem; color: #8a7a6a; margin-top: 4px; }
+        .keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+        .pill { background: rgba(26,58,42,0.1); color: #1a3a2a; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .script { background: #1a3a2a; color: #f5f0e8; border-radius: 8px; padding: 14px; font-size: 1rem; line-height: 1.6; flex: 1; font-style: italic; }
+        .core { background: rgba(199,91,57,0.1); border: 2px solid #c75b39; border-radius: 10px; padding: 12px; text-align: center; }
+        .core-text { font-size: 1.1rem; font-weight: 700; color: #c75b39; }
+        .bottom { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+        .info-box { background: #1a3a2a; color: #f5f0e8; border-radius: 8px; padding: 10px 14px; font-size: 0.8rem; }
+        .info-box span { display: block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px; color: #a09080; margin-bottom: 2px; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="slide-num">PERGUNTA 2</div>
+        <div class="slide-title">Qual é a estimativa de carbono associada a este modelo logístico?</div>
+        <div class="timer">⏱ 50s</div>
+    </div>
+
+    <div class="main">
+        <div class="col">
+            <div class="card">
+                <div class="card-title">Impacto Global da Moda</div>
+                <div class="big-stat">10%</div>
+                <div class="stat-label">das emissões globais de CO₂ são geradas pela indústria da moda</div>
+                <div class="stat-sub">Mais que aviação + transporte marítimo combinados (Earth.Org, 2026)</div>
+            </div>
+            <div class="card" style="flex:1">
+                <div class="card-title">Script Âncora</div>
+                <div class="script">"O avião emite 2.280.000g de CO₂ no percurso China-Europa. O navio, 200.000g — 11 vezes menos. Mas o frete médio é de apenas €2,35. O custo ambiental está subisidiado, invisível para o consumidor. E a projeção é de +60% nas emissões têxteis até 2030."</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-title">Emissões por Meio de Transporte (CN → Europa)</div>
+                <div class="kpi-row">
+                    <div class="kpi">
+                        <div class="kpi-num">✈️ 2.280.000g</div>
+                        <div class="kpi-label">Avião</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-num">🚢 200.000g</div>
+                        <div class="kpi-label">Navio</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-num">🚂 112.000g</div>
+                        <div class="kpi-label">Trem</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Palavras-Chave</div>
+                <div class="keywords">
+                    <span class="pill">CO₂</span>
+                    <span class="pill">Transporte</span>
+                    <span class="pill">Avião 16× Navio</span>
+                    <span class="pill">Frete Subsidiado</span>
+                    <span class="pill">+60% até 2030</span>
+                </div>
+            </div>
+            <div class="card" style="flex:1">
+                <div class="card-title">Mensagem Central</div>
+                <div class="core">
+                    <div class="core-text">O maior poluidor não é o produto — é a jornada até aqui. Modo de transporte é o maior fator de diferenciação de CO₂.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="info-box"><span>Apresenta</span>Letícia</div>
+        <div class="info-box"><span>Tom</span>Impactante. Comparar modais. Mostrar contradição frete vs. custo real.</div>
+        <div class="info-box"><span>SMART 2</span>CO₂ por modo e faixa de preço</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+﻿
+GUIÃO DE APRESENTAÇÃO
+Sustentabilidade e Rentabilidade podem coexistir?
+Análise Wish · Agosto 2020 · Apresentação de 10 minutos
+
+
+Visão geral
+Letícia Alexandre
+Sustentabilidade
+~3 min 30 sGustavo Carvalho
+Qualidade & Regulatory
+~3 minRicardo Neves
+Fast Fashion & Consumidor
+~3 min 30 s
+Duração total: 10 minutos  |  12 slides  |  Presença de empresas recrutadoras
+
+
+
+
+Letícia Alexandre
+Parte 1 - Abertura + Sustentabilidade  |  ~3 min 30 s
+💡  Dica anti-nervosismo: Começa com um sorriso e uma respiração funda antes de falar. O público quer que corras bem.
+Slide 1  Capa - Abertura⏱ ~30 s
+O que dizes:  Apresenta a equipa e lança a questão central.
+
+"Boa tarde a todos. Somos a Letícia, o Gustavo e o Ricardo, do programa Data Analyst da Bytes4Future. A pergunta que nos trouxe aqui hoje é: Sustentabilidade e Rentabilidade podem coexistir de forma eficiente? Para responder, analisámos 1.341 produtos de verão na plataforma Wish, em agosto de 2020 - 6,46 milhões de unidades vendidas e 52,4 milhões de euros em receita estimada."
+
+Slide 2  Equipa⏱ ~20 s
+O que dizes:  Apresenta brevemente cada elemento e o seu foco de análise.
+
+"O Gustavo focou-se na qualidade dos produtos; o Ricardo analisou os padrões de fast fashion e o comportamento do consumidor; e eu, Letícia, fiz a análise de sustentabilidade. Vamos partilhar o que descobrimos."
+
+Slide 3  Plataforma Wish / Metodologia⏱ ~30 s
+O que dizes:  Explica de onde vieram os dados e o enquadramento ESG.
+
+"Os dados foram retirados por webscraping usando a palavra-chave 'summer'. A nossa análise seguiu os três pilares ESG: Ambiental, Social e Governança. É um dataset real, com implicações reais - e os números falam por si."
+
+Slide 4  Concentração geográfica de origem⏱ ~50 s
+O que dizes:  Apresenta o dado de 96,5% e o impacto ambiental da distância.
+
+"96,5% dos produtos - 1.294 de 1.341 - têm origem na China. A distância média percorrida até ao consumidor final é de aproximadamente 8.000 km, com destino a uma média de 40 países por produto. Esta dependência quase total de um único país representa um risco ambiental e logístico enorme."
+
+Slide 5  Estimativa de carbono⏱ ~55 s
+O que dizes:  Compara os modos de transporte e contextualiza com os 10% da moda.
+
+"A indústria da moda é responsável por 10% das emissões globais de CO₂ - mais do que a aviação e o transporte marítimo combinados. Para este percurso de 8.000 km da China à Europa, o avião emite cerca de 2.280.000g por envio, o navio 200.000g e o comboio 112.000g. E se nada mudar, as emissões têxteis vão aumentar mais 60% até 2030. O modelo logístico do Wish amplifica diretamente este problema."
+
+💡  Dica anti-nervosismo: Se sentires que estás a falar depressa, pausa um segundo antes de avançar para o slide 6. Esse silêncio transmite confiança.
+
+
+
+
+Gustavo Carvalho
+Parte 2 - Qualidade, Cores & Caso França  |  ~3 min
+💡  Dica anti-nervosismo: Quando a Letícia terminar, espera 2 segundos antes de começar. Isso ajuda-te a centrares-te.
+Slide 6  Cores mais vendidas vs. mais poluentes⏱ ~55 s
+O que dizes:  Liga o dado das cores ao impacto ambiental do tingimento.
+
+"Os dados mostram que os produtos com cores de médio e alto impacto ambiental são os mais vendidos - são muito poucas as vendas de produtos de baixo impacto. O tingimento têxtil é a segunda maior causa de poluição industrial da água no mundo, responsável por 20% dessa poluição. Na China, rios inteiros mudam de cor devido ao descarte indevido de químicos. E os corantes sintéticos não são biodegradáveis - permanecem no ambiente durante décadas."
+
+Slide 7  Produtos bem avaliados vendem mais e geram mais lucro?⏱ ~55 s
+O que dizes:  Apresenta a distribuição de vendas por rating e a diferença de preço.
+
+"Aqui surge algo interessante: 57,94% das unidades vendidas têm rating 3, e 38,63% têm rating 4 e 5. Apenas 0,22% têm rating 1. Os produtos com avaliação 4 ou 5 têm um preço médio de 8,75€, contra 6,80€ para os produtos com rating inferior a 3. Ou seja: apostar em produtos de qualidade não só reduz devoluções e reclamações, como gera mais receita por unidade."
+
+Slide 8  A França baniu a Wish em 2021⏱ ~55 s
+O que dizes:  Conta a cronologia do caso e liga ao dataset de 2020.
+
+"Este é um slide que torna tudo mais concreto. Em 2020, a DGCCRF - a autoridade francesa de repressão às fraudes - comprou 140 produtos na Wish e testou a sua segurança. Em julho de 2021, a Wish recebeu um aviso oficial com dois meses para cumprir a legislação europeia. Não cumpriu. Em novembro de 2021, a app foi banida das stores e dos resultados de pesquisa. Em 2023, a Wish foi readmitida após correções, mas a reputação ficou permanentemente danificada. Os nossos dados de 2020 já antecipavam estes problemas."
+
+💡  Dica anti-nervosismo: Se gaguejares ou perderes o fio, respira e olha para o slide. O slide está lá para te apoiar, não para te substituir.
+
+
+
+
+Ricardo Neves
+Parte 3 - Fast Fashion, Conclusões & Recomendações  |  ~3 min 30 s
+💡  Dica anti-nervosismo: Assume uma postura aberta - ombros para trás, mãos visíveis. Isso transmite segurança mesmo quando ainda não a sentes.
+Slide 9  Preço baixo = peça descartada mais rapidamente?⏱ ~55 s
+O que dizes:  Contextualiza o ciclo do fast fashion com os dados globais.
+
+"São consumidas 80 mil milhões de peças de roupa por ano - 400% mais do que há 20 anos. Uma peça de fast fashion tem uma vida útil média de apenas 7 a 10 usos. E 85% dos têxteis descartados vão para aterro ou são incinerados em menos de 12 meses. O preço baixo - que é a proposta de valor central do Wish - encoraja compras impulsivas e acelera este ciclo. Produtos de qualidade inferior são descartados mais depressa, gerando mais resíduos e mais emissões."
+
+Slide 10  O que os dados nos ensinaram?⏱ ~40 s
+O que dizes:  Sintetiza os quatro grandes aprendizados.
+
+"Quatro grandes lições emergem desta análise: a concentração geográfica de 96,5% na China cria ~8.000 km de distância média e um risco ambiental e logístico enorme; as emissões do setor da moda superam a aviação e o transporte marítimo combinados; o tingimento têxtil é a segunda maior causa de poluição da água industrial; e o preço baixo alimenta compras impulsivas que aceleram o descarte. Sustentabilidade e rentabilidade podem coexistir - mas exigem escolhas deliberadas."
+
+Slide 11  Insights e Recomendações⏱ ~50 s
+O que dizes:  Apresenta as seis recomendações concretas para a plataforma.
+
+"Com base nesta análise, identificámos seis medidas concretas que a Wish poderia implementar: criar um Eco Badge para identificar produtos sustentáveis e locais; consolidar envios para reduzir frete e embalagens; penalizar produtos de baixa qualidade com menos visibilidade; promover o uso de insumos verdes - pigmentos e tintas ecológicas; mostrar o impacto de carbono diretamente no checkout; e adequar-se às regulamentações ambientais globais. Negócios conscientes constroem um futuro mais justo e equilibrado."
+
+Slide 12  Slide de impacto final⏱ ~20 s
+O que dizes:  Fecha com o dado de impacto e abre para perguntas.
+
+"Para terminar, deixamos esta imagem: durante os 10 minutos desta apresentação, cerca de 900 camiões de roupa foram descarregados em todo o mundo. Obrigado pela atenção - ficamos disponíveis para responder às vossas perguntas."
+
+💡  Dica anti-nervosismo: Se houver perguntas e não souberes a resposta, diz: 'Essa é uma boa pergunta - posso confirmar o dado e partilhar depois.' Isso é profissionalismo, não fraqueza.
+
+
+
+
+Checklist antes de entrar
+
+☐  Cada pessoa leu o seu guião em voz alta pelo menos 2 vezes☐  Cronometrámos a apresentação completa - deve ficar entre 9 min 30 s e 10 min☐  Cada pessoa sabe quem fala antes e depois dela☐  Temos um plano se o computador falhar (PDF de backup no telemóvel)☐  Decidimos quem responde a perguntas técnicas de cada área☐  Antes de entrar, respiramos fundo 3 vezes juntos - funciona!
+Dicas gerais para os três
+
+VelocidadeQuando estamos nervosos falamos mais rápido. Imagina que estás a explicar a um amigo - essa velocidade é a certa.
+Contacto visualEscolhe 2-3 pessoas na sala e alterna o olhar entre elas. Não fixes o ecrã.
+ErrosSe te enganares, continua. O público não tem o guião e não vai notar. Parar para te desculpares chama mais atenção ao erro.
+PosturaFica de pé (ou sentado) com os ombros levantados. A linguagem corporal confiante ajuda o cérebro a sentir-se confiante.
+O nervosismo é normalAté oradores experientes ficam nervosos. A adrenalina ajuda-te a focar. Usa-a a teu favor.
+
+Vão correr muito bem. O trabalho é sólido e os dados falam por si.
+Boa sorte!   🌿

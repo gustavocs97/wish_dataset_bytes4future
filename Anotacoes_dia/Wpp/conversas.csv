@@ -1,5 +1,5 @@
 ﻿Nome de usuário,Número de telefone,Mensagem enviada,Mensagem recebida,Tipo de mensagem,Hora da mensagem,Link do anexo
-Letícia Alexandre (b4f),+351 932 346 557,,"Quanto vai vender?  Previsão / regressão
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Quanto vai vender?  Previsão / regressão
 
 O que faz um produto vender mais? Correlação / importância de variáveis
 
@@ -8,13 +8,13 @@ Vale a pena anunciar? Comparação com/sem ad boost
 Que tipo de produto tem melhor avaliação? Segmentação / clustering
 
 Como precificar melhor? Análise de preço vs. volume",chat,2026/05/15 12:46:43,
-Ricardo Neves (b4f),+351 939 837 512,,"Pessoal eu hoje não vou conseguir comparecer pessoalmente pois estou passando mal , mas posso participar de boa de qualquer outra forma que não seja presencialmente",chat,2026/05/16 07:27:09,
-Letícia Alexandre (b4f),+351 932 346 557,,as melhoras amigo,chat,2026/05/16 11:10:20,
-Letícia Alexandre (b4f),+351 932 346 557,,faz-nos uma vídeo chamada,chat,2026/05/16 11:10:26,
+Ricardo Neves (b4f),Ricardo Neves,,"Pessoal eu hoje não vou conseguir comparecer pessoalmente pois estou passando mal , mas posso participar de boa de qualquer outra forma que não seja presencialmente",chat,2026/05/16 07:27:09,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,as melhoras amigo,chat,2026/05/16 11:10:20,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,faz-nos uma vídeo chamada,chat,2026/05/16 11:10:26,
 Você,,Salve,,chat,2026/05/16 12:00:26,
 Você,,"Melhoras mano, a gente liga pelo discord?",,chat,2026/05/16 12:01:19,
-Letícia Alexandre (b4f),+351 932 346 557,,@118300696686814 vc chega aqui 13h msm?,chat,2026/05/16 12:39:59,
-Letícia Alexandre (b4f),+351 932 346 557,,"ia te falar se era de boa as 14h pq tô bem cansada
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,@118300696686814 vc chega aqui 13h msm?,chat,2026/05/16 12:39:59,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"ia te falar se era de boa as 14h pq tô bem cansada
 vou comer agora",chat,2026/05/16 12:41:12,
 Você,,"Eai, kkkkkkkkk melhor por acaso senão já ia atrasar",,chat,2026/05/16 12:50:04,
 Você,,"Tô arrumando aq só por agora tbm, q não vi as horas passarem",,chat,2026/05/16 12:51:31,
@@ -147,65 +147,65 @@ mkdir -p wish_final_project/{00_docs,01_data/{raw,processed},02_validation,03_an
 ---
 
 O diferencial real não está em quem faz o quê — está em que **nenhuma fase termina sem as três perspetivas terem passado por ela**. O Gustavo não entrega um resultado sem o Ricardo lhe ter dado linguagem e a Letícia ter pensado como vai aparecer. É isso que separa uma análise correta de uma análise que convence.",,chat,2026/05/16 13:00:47,
-Letícia Alexandre (b4f),+351 932 346 557,,"vamos vendo isso pessoalmente 
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"vamos vendo isso pessoalmente 
 vou tentar fazer o meu máximo, e sinceramente to pensando como aplicar cultura a essa loja tendo os dados que temos, que é produtos como bikini blusas e etc 
 mas eu vou agr dar uma olhada melhor nos produtos e tbm na história da empresa",chat,2026/05/16 13:18:14,
 Você,,"Pra mim é sobre isso, como juntamos o que cada um agrega pra, entregar algo com diferençial e impacto",,chat,2026/05/16 13:41:38,
 Você,,Tô saindo por agr daq de casa,,chat,2026/05/16 13:42:05,
-Letícia Alexandre (b4f),+351 932 346 557,,sim tá certo,chat,2026/05/16 13:42:28,
-Letícia Alexandre (b4f),+351 932 346 557,,beleza,chat,2026/05/16 13:42:33,
-Letícia Alexandre (b4f),+351 932 346 557,,você conseguiu consertar aquela coluna?,chat,2026/05/16 13:43:12,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,sim tá certo,chat,2026/05/16 13:42:28,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,beleza,chat,2026/05/16 13:42:33,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,você conseguiu consertar aquela coluna?,chat,2026/05/16 13:43:12,
 Você,,Qual? Coluna? Agora boiei,,chat,2026/05/16 13:47:57,
 Você,,Ahhh,,chat,2026/05/16 13:48:02,
-Letícia Alexandre (b4f),+351 932 346 557,,desculpa,chat,2026/05/16 13:48:03,
-Letícia Alexandre (b4f),+351 932 346 557,,linha,chat,2026/05/16 13:48:04,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,desculpa,chat,2026/05/16 13:48:03,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,linha,chat,2026/05/16 13:48:04,
 Você,,Kkkkkk pensei coluna de coluna de som,,chat,2026/05/16 13:48:11,
-Letícia Alexandre (b4f),+351 932 346 557,,ignorar quebra de linhas,image,2026/05/16 13:51:04,"=HYPERLINK(""./media/1778935864_3A8B86F4381146128768.jpeg"", ""./media/1778935864_3A8B86F4381146128768.jpeg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,fiz isso dentro do power BI msm,chat,2026/05/16 13:51:10,
-Letícia Alexandre (b4f),+351 932 346 557,,parece q deu certo,image,2026/05/16 13:51:48,"=HYPERLINK(""./media/1778935908_3A8A96E98E0131964CA6.jpeg"", ""./media/1778935908_3A8A96E98E0131964CA6.jpeg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,@36266703892659 tas melhor?,chat,2026/05/16 13:57:38,
-Ricardo Neves (b4f),+351 939 837 512,,Nem por isso,chat,2026/05/16 13:58:20,
-Ricardo Neves (b4f),+351 939 837 512,,mas ja estou a ver a base de dados,chat,2026/05/16 13:58:37,
-Letícia Alexandre (b4f),+351 932 346 557,,deve ter sido de ontem,chat,2026/05/16 13:58:44,
-Letícia Alexandre (b4f),+351 932 346 557,,a fumaça do cigarro,chat,2026/05/16 13:58:47,
-Letícia Alexandre (b4f),+351 932 346 557,,sinto muito,chat,2026/05/16 13:58:49,
-Ricardo Neves (b4f),+351 939 837 512,,quem me dera que fosse  isso,chat,2026/05/16 13:59:01,
-Ricardo Neves (b4f),+351 939 837 512,,acho que algo que comi me fez mal pois as dores de barriga não me deixaram dormir,chat,2026/05/16 13:59:28,
-Letícia Alexandre (b4f),+351 932 346 557,,o que vc tem?,chat,2026/05/16 13:59:30,
-Letícia Alexandre (b4f),+351 932 346 557,,eita,chat,2026/05/16 13:59:37,
-Letícia Alexandre (b4f),+351 932 346 557,,será a comida do asilo?,chat,2026/05/16 13:59:44,
-Ricardo Neves (b4f),+351 939 837 512,,ns mas algo consegui me fazer ficar acordado a noite toda,chat,2026/05/16 14:00:10,
-Ricardo Neves (b4f),+351 939 837 512,,e agora estou a viver a base de cha e bolachas,chat,2026/05/16 14:00:27,
-Ricardo Neves (b4f),+351 939 837 512,,Letícia consegues mandar a base de dados arrumada?,chat,2026/05/16 14:08:39,
-Letícia Alexandre (b4f),+351 932 346 557,,sim amor,chat,2026/05/16 14:09:10,
-Letícia Alexandre (b4f),+351 932 346 557,,1 min,chat,2026/05/16 14:09:14,
-Letícia Alexandre (b4f),+351 932 346 557,,desculpa eu fechei aqui sem querer to procurando,chat,2026/05/16 14:18:56,
-Letícia Alexandre (b4f),+351 932 346 557,,@118300696686814 kd vc,chat,2026/05/16 14:19:02,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ignorar quebra de linhas,image,2026/05/16 13:51:04,"=HYPERLINK(""./media/1778935864_3A8B86F4381146128768.jpeg"", ""./media/1778935864_3A8B86F4381146128768.jpeg"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,fiz isso dentro do power BI msm,chat,2026/05/16 13:51:10,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,parece q deu certo,image,2026/05/16 13:51:48,"=HYPERLINK(""./media/1778935908_3A8A96E98E0131964CA6.jpeg"", ""./media/1778935908_3A8A96E98E0131964CA6.jpeg"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,@36266703892659 tas melhor?,chat,2026/05/16 13:57:38,
+Ricardo Neves (b4f),Ricardo Neves,,Nem por isso,chat,2026/05/16 13:58:20,
+Ricardo Neves (b4f),Ricardo Neves,,mas ja estou a ver a base de dados,chat,2026/05/16 13:58:37,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,deve ter sido de ontem,chat,2026/05/16 13:58:44,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,a fumaça do cigarro,chat,2026/05/16 13:58:47,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,sinto muito,chat,2026/05/16 13:58:49,
+Ricardo Neves (b4f),Ricardo Neves,,quem me dera que fosse  isso,chat,2026/05/16 13:59:01,
+Ricardo Neves (b4f),Ricardo Neves,,acho que algo que comi me fez mal pois as dores de barriga não me deixaram dormir,chat,2026/05/16 13:59:28,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,o que vc tem?,chat,2026/05/16 13:59:30,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eita,chat,2026/05/16 13:59:37,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,será a comida do asilo?,chat,2026/05/16 13:59:44,
+Ricardo Neves (b4f),Ricardo Neves,,ns mas algo consegui me fazer ficar acordado a noite toda,chat,2026/05/16 14:00:10,
+Ricardo Neves (b4f),Ricardo Neves,,e agora estou a viver a base de cha e bolachas,chat,2026/05/16 14:00:27,
+Ricardo Neves (b4f),Ricardo Neves,,Letícia consegues mandar a base de dados arrumada?,chat,2026/05/16 14:08:39,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,sim amor,chat,2026/05/16 14:09:10,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,1 min,chat,2026/05/16 14:09:14,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,desculpa eu fechei aqui sem querer to procurando,chat,2026/05/16 14:18:56,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,@118300696686814 kd vc,chat,2026/05/16 14:19:02,
 Você,,[Foto],,image,2026/05/16 14:19:32,"=HYPERLINK(""./media/1778937572_AC28224DF041C0DCF27B3A82493DB96F.jpeg"", ""./media/1778937572_AC28224DF041C0DCF27B3A82493DB96F.jpeg"")"
 Você,,Agarrado no trânsito,,chat,2026/05/16 14:19:42,
-Ricardo Neves (b4f),+351 939 837 512,,no google sheet não acontece o erro,chat,2026/05/16 14:20:40,
-Letícia Alexandre (b4f),+351 932 346 557,,sério?,chat,2026/05/16 14:21:06,
-Letícia Alexandre (b4f),+351 932 346 557,,é a linha 1555,chat,2026/05/16 14:21:14,
-Ricardo Neves (b4f),+351 939 837 512,,[Foto],image,2026/05/16 14:21:30,"=HYPERLINK(""./media/1778937690_3EB0B0067E2119AAB7F5C9.jpeg"", ""./media/1778937690_3EB0B0067E2119AAB7F5C9.jpeg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,então só tava bugado msm,chat,2026/05/16 14:21:56,
-Letícia Alexandre (b4f),+351 932 346 557,,realmente,chat,2026/05/16 14:25:02,
-Letícia Alexandre (b4f),+351 932 346 557,,acabei de abrir no sheets tbm,chat,2026/05/16 14:25:09,
-Letícia Alexandre (b4f),+351 932 346 557,,perdemos tempo com isso,chat,2026/05/16 14:25:17,
-Ricardo Neves (b4f),+351 939 837 512,,Summer.xlsx,document,2026/05/16 14:25:25,"=HYPERLINK(""./media/1778937925_3EB0B43C511575174B0CC0.xlsx"", ""./media/1778937925_3EB0B43C511575174B0CC0.xlsx"")"
-Ricardo Neves (b4f),+351 939 837 512,,ai esta a base arrumada,chat,2026/05/16 14:25:32,
-Ricardo Neves (b4f),+351 939 837 512,,da para colocar no power bi sem problema,chat,2026/05/16 14:25:49,
-Letícia Alexandre (b4f),+351 932 346 557,,vc mexeu em algo?,chat,2026/05/16 14:25:57,
-Letícia Alexandre (b4f),+351 932 346 557,,só pra saber,chat,2026/05/16 14:25:59,
-Ricardo Neves (b4f),+351 939 837 512,,nop,chat,2026/05/16 14:26:03,
-Ricardo Neves (b4f),+351 939 837 512,,so importei em arquivo de xlsx no google sheet,chat,2026/05/16 14:26:24,
-Letícia Alexandre (b4f),+351 932 346 557,,"eu abri aqui tbm diretamente e a coluna tá certa, foi só bug msm ou alguma configuração",chat,2026/05/16 14:26:29,
-Ricardo Neves (b4f),+351 939 837 512,,e uma configuração do power bi de dividir por virgula acho eu,chat,2026/05/16 14:27:06,
-Letícia Alexandre (b4f),+351 932 346 557,,simm,chat,2026/05/16 14:27:26,
-Letícia Alexandre (b4f),+351 932 346 557,,eu fiz isso aqui dps e deu certo,chat,2026/05/16 14:27:36,
-Ricardo Neves (b4f),+351 939 837 512,,https://teams.microsoft.com/meet/351097655855028?p=RrCNWnjW84lIOuXrWJ,chat,2026/05/16 14:28:58,
-Ricardo Neves (b4f),+351 939 837 512,,estou no teams caso precisem de algo,chat,2026/05/16 14:29:43,
-Ricardo Neves (b4f),+351 939 837 512,,[Foto],image,2026/05/16 14:33:12,"=HYPERLINK(""./media/1778938392_3EB0BBD1A074D103DF3A5B.jpeg"", ""./media/1778938392_3EB0BBD1A074D103DF3A5B.jpeg"")"
-Ricardo Neves (b4f),+351 939 837 512,,"Acho bom nos seguirmos pelos 3 pontos :
+Ricardo Neves (b4f),Ricardo Neves,,no google sheet não acontece o erro,chat,2026/05/16 14:20:40,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,sério?,chat,2026/05/16 14:21:06,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,é a linha 1555,chat,2026/05/16 14:21:14,
+Ricardo Neves (b4f),Ricardo Neves,,[Foto],image,2026/05/16 14:21:30,"=HYPERLINK(""./media/1778937690_3EB0B0067E2119AAB7F5C9.jpeg"", ""./media/1778937690_3EB0B0067E2119AAB7F5C9.jpeg"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,então só tava bugado msm,chat,2026/05/16 14:21:56,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,realmente,chat,2026/05/16 14:25:02,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,acabei de abrir no sheets tbm,chat,2026/05/16 14:25:09,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,perdemos tempo com isso,chat,2026/05/16 14:25:17,
+Ricardo Neves (b4f),Ricardo Neves,,Summer.xlsx,document,2026/05/16 14:25:25,"=HYPERLINK(""./media/1778937925_3EB0B43C511575174B0CC0.xlsx"", ""./media/1778937925_3EB0B43C511575174B0CC0.xlsx"")"
+Ricardo Neves (b4f),Ricardo Neves,,ai esta a base arrumada,chat,2026/05/16 14:25:32,
+Ricardo Neves (b4f),Ricardo Neves,,da para colocar no power bi sem problema,chat,2026/05/16 14:25:49,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,vc mexeu em algo?,chat,2026/05/16 14:25:57,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,só pra saber,chat,2026/05/16 14:25:59,
+Ricardo Neves (b4f),Ricardo Neves,,nop,chat,2026/05/16 14:26:03,
+Ricardo Neves (b4f),Ricardo Neves,,so importei em arquivo de xlsx no google sheet,chat,2026/05/16 14:26:24,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"eu abri aqui tbm diretamente e a coluna tá certa, foi só bug msm ou alguma configuração",chat,2026/05/16 14:26:29,
+Ricardo Neves (b4f),Ricardo Neves,,e uma configuração do power bi de dividir por virgula acho eu,chat,2026/05/16 14:27:06,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,simm,chat,2026/05/16 14:27:26,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eu fiz isso aqui dps e deu certo,chat,2026/05/16 14:27:36,
+Ricardo Neves (b4f),Ricardo Neves,,https://teams.microsoft.com/meet/351097655855028?p=RrCNWnjW84lIOuXrWJ,chat,2026/05/16 14:28:58,
+Ricardo Neves (b4f),Ricardo Neves,,estou no teams caso precisem de algo,chat,2026/05/16 14:29:43,
+Ricardo Neves (b4f),Ricardo Neves,,[Foto],image,2026/05/16 14:33:12,"=HYPERLINK(""./media/1778938392_3EB0BBD1A074D103DF3A5B.jpeg"", ""./media/1778938392_3EB0BBD1A074D103DF3A5B.jpeg"")"
+Ricardo Neves (b4f),Ricardo Neves,,"Acho bom nos seguirmos pelos 3 pontos :
 O que queremos melhorar?
 
 Por quê isso importa para o negócio?
@@ -214,51 +214,51 @@ Como saberemos que deu certo?",chat,2026/05/16 14:33:58,
 Você,,Tô parando agr na república,,chat,2026/05/16 14:37:49,
 Você,,Tá sem vaga nenhuma nessa cidade,,chat,2026/05/16 14:39:20,
 Você,,Tá loco,,chat,2026/05/16 14:39:23,
-Letícia Alexandre (b4f),+351 932 346 557,,"eu vi que existe uma coisa que a temu tem que da mto sucesso que a wish não tem
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"eu vi que existe uma coisa que a temu tem que da mto sucesso que a wish não tem
 que é consumer-to-manufacturer",chat,2026/05/16 14:39:49,
 Você,,Sim eu vi isso era o 200 linhas acho pq a quebra tava dps,,chat,2026/05/16 14:40:09,
-Letícia Alexandre (b4f),+351 932 346 557,,que é basicamente fabricar de acordo com o que o consumidor quer,chat,2026/05/16 14:40:17,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,que é basicamente fabricar de acordo com o que o consumidor quer,chat,2026/05/16 14:40:17,
 Você,,Aquele no import msm,,chat,2026/05/16 14:40:19,
-Letícia Alexandre (b4f),+351 932 346 557,,hoje tem festa do porto,chat,2026/05/16 14:40:26,
-Letícia Alexandre (b4f),+351 932 346 557,,"vao fechar os aliados, os jogadores vão se apresentar dps de chegar de barco da ribeira",chat,2026/05/16 14:40:53,
-Letícia Alexandre (b4f),+351 932 346 557,,uma palhaçada de macho que atrapalha td mundo q transita na cidade,chat,2026/05/16 14:41:17,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,hoje tem festa do porto,chat,2026/05/16 14:40:26,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"vao fechar os aliados, os jogadores vão se apresentar dps de chegar de barco da ribeira",chat,2026/05/16 14:40:53,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,uma palhaçada de macho que atrapalha td mundo q transita na cidade,chat,2026/05/16 14:41:17,
 Você,,"Assim, isso é qnd tira as linhas de autocarro",,chat,2026/05/16 14:43:06,
 Você,,Deve ser pior ainda,,chat,2026/05/16 14:43:10,
-Letícia Alexandre (b4f),+351 932 346 557,,eles vão tirar no aliados,chat,2026/05/16 14:43:39,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eles vão tirar no aliados,chat,2026/05/16 14:43:39,
 Você,,Mas pelo menos acho q a aqui promove cultura e tals,,chat,2026/05/16 14:44:06,
-Ricardo Neves (b4f),+351 939 837 512,,Ao que da para ver o site mostra a diferença de preço dele para o preço de retalho,image,2026/05/16 14:48:09,"=HYPERLINK(""./media/1778939289_3EB05FA4BF58A2A47CE837.jpeg"", ""./media/1778939289_3EB05FA4BF58A2A47CE837.jpeg"")"
+Ricardo Neves (b4f),Ricardo Neves,,Ao que da para ver o site mostra a diferença de preço dele para o preço de retalho,image,2026/05/16 14:48:09,"=HYPERLINK(""./media/1778939289_3EB05FA4BF58A2A47CE837.jpeg"", ""./media/1778939289_3EB05FA4BF58A2A47CE837.jpeg"")"
 Você,,Tá impossível não tem,,chat,2026/05/16 14:48:30,
 Você,,Tô rodando dnv kkkkkk,,chat,2026/05/16 14:48:38,
-Ricardo Neves (b4f),+351 939 837 512,,tambem mostra quantos produtos foram vendidos,chat,2026/05/16 14:48:41,
+Ricardo Neves (b4f),Ricardo Neves,,tambem mostra quantos produtos foram vendidos,chat,2026/05/16 14:48:41,
 Você,,Pq pessoal já tá parando onde nem pode msm,,chat,2026/05/16 14:48:46,
-Letícia Alexandre (b4f),+351 932 346 557,,eu pensei numa ideia,chat,2026/05/16 14:49:12,
-Letícia Alexandre (b4f),+351 932 346 557,,tenta no silo auto,chat,2026/05/16 14:49:41,
-Letícia Alexandre (b4f),+351 932 346 557,,é um estacionamento,chat,2026/05/16 14:49:46,
-Ricardo Neves (b4f),+351 939 837 512,,o as ad boosts e para ser jogado para a frente e assim aparecer mais,chat,2026/05/16 14:49:48,
-Letícia Alexandre (b4f),+351 932 346 557,,eu pensei se a gente fizesse algo voltado para reduzir o impacto ambiental,chat,2026/05/16 14:50:47,
-Letícia Alexandre (b4f),+351 932 346 557,,"por exemplo a wish não usa o msm sistema da temu de levar tds os pedidos para uma fábrica e serem embalados de uma vez só
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eu pensei numa ideia,chat,2026/05/16 14:49:12,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,tenta no silo auto,chat,2026/05/16 14:49:41,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,é um estacionamento,chat,2026/05/16 14:49:46,
+Ricardo Neves (b4f),Ricardo Neves,,o as ad boosts e para ser jogado para a frente e assim aparecer mais,chat,2026/05/16 14:49:48,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eu pensei se a gente fizesse algo voltado para reduzir o impacto ambiental,chat,2026/05/16 14:50:47,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"por exemplo a wish não usa o msm sistema da temu de levar tds os pedidos para uma fábrica e serem embalados de uma vez só
 
 eles embalam um de cada vez e são enviados separadamente",chat,2026/05/16 14:52:11,
-Letícia Alexandre (b4f),+351 932 346 557,,ou seja embalagens individuais em excesso,chat,2026/05/16 14:52:21,
-Letícia Alexandre (b4f),+351 932 346 557,,a gente pode analisar se tbm existem outros impactos no sistema deles e quais possíveis melhorias,chat,2026/05/16 14:52:55,
-Letícia Alexandre (b4f),+351 932 346 557,,é só uma ideia,chat,2026/05/16 14:52:59,
-Letícia Alexandre (b4f),+351 932 346 557,,com certeza vamos encontrar mts furos com essa base de dados com bastante informação,chat,2026/05/16 14:53:40,
-Letícia Alexandre (b4f),+351 932 346 557,,como cada país se comporta a partir disso,chat,2026/05/16 14:56:13,
-Letícia Alexandre (b4f),+351 932 346 557,,como fatores culturais influenciam padrões de consumo pouco sustentável na plataforma wish?,chat,2026/05/16 14:56:45,
-Letícia Alexandre (b4f),+351 932 346 557,,a minha parte eu posso estudar a cultura de cada país e estudar sobre o consumo baseado no que temos nos dados,chat,2026/05/16 15:01:03,
-Letícia Alexandre (b4f),+351 932 346 557,,é uma ideia,chat,2026/05/16 15:01:08,
-Letícia Alexandre (b4f),+351 932 346 557,,@36266703892659 @118300696686814 o que acham?,chat,2026/05/16 15:01:16,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ou seja embalagens individuais em excesso,chat,2026/05/16 14:52:21,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,a gente pode analisar se tbm existem outros impactos no sistema deles e quais possíveis melhorias,chat,2026/05/16 14:52:55,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,é só uma ideia,chat,2026/05/16 14:52:59,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,com certeza vamos encontrar mts furos com essa base de dados com bastante informação,chat,2026/05/16 14:53:40,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,como cada país se comporta a partir disso,chat,2026/05/16 14:56:13,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,como fatores culturais influenciam padrões de consumo pouco sustentável na plataforma wish?,chat,2026/05/16 14:56:45,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,a minha parte eu posso estudar a cultura de cada país e estudar sobre o consumo baseado no que temos nos dados,chat,2026/05/16 15:01:03,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,é uma ideia,chat,2026/05/16 15:01:08,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,@36266703892659 @118300696686814 o que acham?,chat,2026/05/16 15:01:16,
 Você,,"Calma tô lendo, tô andando prai",,chat,2026/05/16 15:02:45,
-Ricardo Neves (b4f),+351 939 837 512,,"Eu gosto da ideia, mas falta como gerar lucro para a empresa",chat,2026/05/16 15:06:40,
+Ricardo Neves (b4f),Ricardo Neves,,"Eu gosto da ideia, mas falta como gerar lucro para a empresa",chat,2026/05/16 15:06:40,
 Você,,ESG,,chat,2026/05/16 15:07:51,
 Você,,Social ambiental e econômico,,chat,2026/05/16 15:08:09,
-Letícia Alexandre (b4f),+351 932 346 557,,isso pode ser um truque para gerar lucro,chat,2026/05/16 15:08:24,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,isso pode ser um truque para gerar lucro,chat,2026/05/16 15:08:24,
 Você,,Eai,,chat,2026/05/16 15:08:34,
 Você,,E tô na rua aq,,chat,2026/05/16 15:08:41,
 Você,,Abre aq pf?,,chat,2026/05/16 15:08:52,
-Letícia Alexandre (b4f),+351 932 346 557,,abro,chat,2026/05/16 15:09:00,
-Letícia Alexandre (b4f),+351 932 346 557,,pera,chat,2026/05/16 15:09:01,
-Ricardo Neves (b4f),+351 939 837 512,,"Excelente — aqui já estás a dar um salto de nível 💡 (passar de análise de vendas → estratégia sustentável).
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,abro,chat,2026/05/16 15:09:00,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,pera,chat,2026/05/16 15:09:01,
+Ricardo Neves (b4f),Ricardo Neves,,"Excelente — aqui já estás a dar um salto de nível 💡 (passar de análise de vendas → estratégia sustentável).
 
 Vou mostrar-te passo a passo como **integrar impacto ambiental no teu objetivo de negócio** usando o teu dataset.
 
@@ -475,12 +475,12 @@ Para juntares sustentabilidade ao negócio:
 👉 e usas os teus dados para provar isso (envio, rating, preço)
 
 ***",chat,2026/05/16 15:11:37,
-Ricardo Neves (b4f),+351 939 837 512,,tentei pedir a ai para fazer o objetivo de negocio algo mais voltado para reduzir o impacto ambiental,chat,2026/05/16 15:12:51,
+Ricardo Neves (b4f),Ricardo Neves,,tentei pedir a ai para fazer o objetivo de negocio algo mais voltado para reduzir o impacto ambiental,chat,2026/05/16 15:12:51,
 Você,,https://tm-code-server.tuamarca.com.br/,,chat,2026/05/16 15:35:55,
 Você,,JDvpRgyU~M7Tuqfu@U,,chat,2026/05/16 15:36:30,
-Letícia Alexandre (b4f),+351 932 346 557,,"Identificar padrões de consumo na plataforma Wish que contribuem para impacto ambiental negativo, e propor métricas que poderiam orientar práticas mais sustentáveis.",chat,2026/05/16 15:36:37,
-Letícia Alexandre (b4f),+351 932 346 557,,"Empresas eco-friendly geram lucro unindo responsabilidade ambiental e estratégia comercial. A rentabilidade vem da redução de custos operacionais (diminuição de desperdícios, reciclagem e eficiência energética), da atração de consumidores conscientes dispostos a pagar mais por produtos sustentáveis e da facilidade de captar investimentos globais focados em práticas ESG.",chat,2026/05/16 15:38:17,
-Ricardo Neves (b4f),+351 939 837 512,,"🌍 A. Impacto do envio (logística)
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Identificar padrões de consumo na plataforma Wish que contribuem para impacto ambiental negativo, e propor métricas que poderiam orientar práticas mais sustentáveis.",chat,2026/05/16 15:36:37,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Empresas eco-friendly geram lucro unindo responsabilidade ambiental e estratégia comercial. A rentabilidade vem da redução de custos operacionais (diminuição de desperdícios, reciclagem e eficiência energética), da atração de consumidores conscientes dispostos a pagar mais por produtos sustentáveis e da facilidade de captar investimentos globais focados em práticas ESG.",chat,2026/05/16 15:38:17,
+Ricardo Neves (b4f),Ricardo Neves,,"🌍 A. Impacto do envio (logística)
 👉 Pergunta de negócio:
 
 “Envio expresso aumenta vendas mas também impacto ambiental?”
@@ -537,11 +537,11 @@ origin_country
 distâncias longas → mais emissões
 
 oque que acham destes topicos?",chat,2026/05/16 15:46:15,
-Ricardo Neves (b4f),+351 939 837 512,,e tambem da para criar um score de sustentabilidade,chat,2026/05/16 15:47:20,
-Letícia Alexandre (b4f),+351 932 346 557,,você gosta dessa ideia?,chat,2026/05/16 15:55:20,
-Ricardo Neves (b4f),+351 939 837 512,,A B e D são interessantes na minha visão e a pergunta da A  pode ser interessante pois o envio tambem influencia no impacto ambiental,chat,2026/05/16 16:00:05,
-Ricardo Neves (b4f),+351 939 837 512,,Tipo se venderem produtos de melhor qualidade eles vão durar mais então vai gerar um impacto menor no ambiente,chat,2026/05/16 16:02:57,
-Letícia Alexandre (b4f),+351 932 346 557,,"Perfeito! Vamos à **Etapa 1** então. Com base nas colunas que você me mandou, vou verificar coluna por coluna o que conseguimos responder sobre o impacto ambiental.
+Ricardo Neves (b4f),Ricardo Neves,,e tambem da para criar um score de sustentabilidade,chat,2026/05/16 15:47:20,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,você gosta dessa ideia?,chat,2026/05/16 15:55:20,
+Ricardo Neves (b4f),Ricardo Neves,,A B e D são interessantes na minha visão e a pergunta da A  pode ser interessante pois o envio tambem influencia no impacto ambiental,chat,2026/05/16 16:00:05,
+Ricardo Neves (b4f),Ricardo Neves,,Tipo se venderem produtos de melhor qualidade eles vão durar mais então vai gerar um impacto menor no ambiente,chat,2026/05/16 16:02:57,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Perfeito! Vamos à **Etapa 1** então. Com base nas colunas que você me mandou, vou verificar coluna por coluna o que conseguimos responder sobre o impacto ambiental.
 
 ---
 
@@ -636,17 +636,17 @@ Letícia Alexandre (b4f),+351 932 346 557,,"Perfeito! Vamos à **Etapa 1** entã
 ---
 
 Quer passar pra **Etapa 2 — Formular o objetivo** com base no que temos? Posso te ajudar a escolher **uma pergunta principal** e duas ou três secundárias pra guiar o projeto inteiro.",chat,2026/05/16 16:08:30,
-Letícia Alexandre (b4f),+351 932 346 557,,Assim fica bem mais fácil de ver de relance o que o dataset cobre. Quer passar para a **Etapa 2 — Formular o objetivo principal** do projeto com base nisso?,chat,2026/05/16 16:09:46,
-Ricardo Neves (b4f),+351 939 837 512,,Acho que podemos usar todas as que aparecem com o ✅,chat,2026/05/16 16:12:21,
-Letícia Alexandre (b4f),+351 932 346 557,,dataset_ambiental_side_by_side.html,document,2026/05/16 16:12:42,"=HYPERLINK(""./media/1778944362_3EB013F11C38FE222AE5AA.html"", ""./media/1778944362_3EB013F11C38FE222AE5AA.html"")"
-Ricardo Neves (b4f),+351 939 837 512,,Estão a ler o html em que aplicação ?,chat,2026/05/16 16:21:45,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,Assim fica bem mais fácil de ver de relance o que o dataset cobre. Quer passar para a **Etapa 2 — Formular o objetivo principal** do projeto com base nisso?,chat,2026/05/16 16:09:46,
+Ricardo Neves (b4f),Ricardo Neves,,Acho que podemos usar todas as que aparecem com o ✅,chat,2026/05/16 16:12:21,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,dataset_ambiental_side_by_side.html,document,2026/05/16 16:12:42,"=HYPERLINK(""./media/1778944362_3EB013F11C38FE222AE5AA.html"", ""./media/1778944362_3EB013F11C38FE222AE5AA.html"")"
+Ricardo Neves (b4f),Ricardo Neves,,Estão a ler o html em que aplicação ?,chat,2026/05/16 16:21:45,
 Você,,"HTML baixa, e arrasta pra uma aba do Chrome",,chat,2026/05/16 16:51:41,
 Você,,"Ele abre, vê se deu certo",,chat,2026/05/16 16:51:51,
-Ricardo Neves (b4f),+351 939 837 512,,deu certo sim,chat,2026/05/16 16:52:16,
+Ricardo Neves (b4f),Ricardo Neves,,deu certo sim,chat,2026/05/16 16:52:16,
 Você,,Boaaa,,chat,2026/05/16 16:53:40,
-Ricardo Neves (b4f),+351 939 837 512,,Vou arrumar em texto aquilo que ja fizemos do que foi pedido pode ser ?,chat,2026/05/16 16:57:56,
-Letícia Alexandre (b4f),+351 932 346 557,,ricardo atende ai,chat,2026/05/16 16:59:47,
-Ricardo Neves (b4f),+351 939 837 512,,"Passo 1: Definir um Objetivo de Negócio (Business Goal)
+Ricardo Neves (b4f),Ricardo Neves,,Vou arrumar em texto aquilo que ja fizemos do que foi pedido pode ser ?,chat,2026/05/16 16:57:56,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ricardo atende ai,chat,2026/05/16 16:59:47,
+Ricardo Neves (b4f),Ricardo Neves,,"Passo 1: Definir um Objetivo de Negócio (Business Goal)
 Examinar o conjunto de dados e compreender o significado das colunas e as
 relações entre elas
 Formular uma questão de objetivo de negócio, tendo em conta os seguintes
@@ -662,7 +662,7 @@ Que valor pode o potencial cliente de negócio obter dos resultados da
 análise?
 Resposta: O cliente alvo desse tema poderá pagar mais pelo produto, assim gerando maior lucro para empresa e menos desperdício",chat,2026/05/16 17:07:59,
 Você,,enunciado_slides_PT.pdf,,document,2026/05/16 17:20:12,"=HYPERLINK(""./media/1778948412_3B9DF7F29595C9445E54.pdf"", ""./media/1778948412_3B9DF7F29595C9445E54.pdf"")"
-Ricardo Neves (b4f),+351 939 837 512,,“Analisar os padrões de consumo na plataforma Wish que geram impacto ambiental negativo e definir métricas sustentáveis capazes de orientar práticas mais ecológicas sem comprometer o lucro.”,chat,2026/05/16 17:22:03,
+Ricardo Neves (b4f),Ricardo Neves,,“Analisar os padrões de consumo na plataforma Wish que geram impacto ambiental negativo e definir métricas sustentáveis capazes de orientar práticas mais ecológicas sem comprometer o lucro.”,chat,2026/05/16 17:22:03,
 Você,,"# Business Goal
 **Projeto Final — Data Analyst Junior**
 **Grupo:** Letícia · Ricardo · Gustavo
@@ -1183,72 +1183,72 @@ Excluídas por não contribuírem para o objetivo de negócio:
 
 *Documento vivo — atualizar se surgirem novos problemas durante a análise.*
 *Última atualização: 16 mai 2025 — Gustavo*",,chat,2026/05/16 18:30:29,
-Letícia Alexandre (b4f),+351 932 346 557,,"acho que estamos indo bem pessoal.
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"acho que estamos indo bem pessoal.
 precisamos amanhã finalizar essa primeira etapa pra mentoria com a Bia e ir mais direto ao ponto. Já temos bastante ideias e muita informação para o nosso projeto 🙏🏽",chat,2026/05/16 19:10:33,
 Você,,topp to subindo os arquivos aq,,chat,2026/05/16 19:19:21,
 Você,,https://github.com/gustavocs97/wish_dataset_bytes4future,,chat,2026/05/16 19:27:40,
 Você,,https://www.figma.com/slides/Zhr1Rf7EdTZ6xpUYNckEWx/Porto-Presentation--Copy-?node-id=6002-296&t=DXTLsjvNoNNilCgw-0,,chat,2026/05/16 23:16:38,
 Você,,https://www.kaggle.com/datasets/jmmvutu/summer-products-and-sales-in-ecommerce-wish,,chat,2026/05/16 23:20:17,
-Letícia Alexandre (b4f),+351 932 346 557,,"não consegui ver direito hoje por conta do jogo do porto, inclusive tô jantando só agora
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"não consegui ver direito hoje por conta do jogo do porto, inclusive tô jantando só agora
 se for de boa pra vcs virem um pouco mais tarde amanhã agradeço mto 
 tipo umas 16h",chat,2026/05/17 04:13:26,
-Letícia Alexandre (b4f),+351 932 346 557,,amanhã não trabalho então podemos ficar até tarde tipo umas 20h/21h,chat,2026/05/17 04:13:54,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,amanhã não trabalho então podemos ficar até tarde tipo umas 20h/21h,chat,2026/05/17 04:13:54,
 Você,,Eaii,,chat,2026/05/17 12:30:34,
 Você,,Por mim tranquilo,,chat,2026/05/17 12:30:57,
 Você,,Tô acordando agr,,chat,2026/05/17 12:31:03,
 Você,,"Eu ontem kkkkkk fiquei pensando na estrutura da doc que nem um maníaco, Claudio ficou até sem palavras",,chat,2026/05/17 12:32:57,
-Letícia Alexandre (b4f),+351 932 346 557,,"acordei agr tambem 
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"acordei agr tambem 
 mas preciso descansar",chat,2026/05/17 12:34:45,
-Letícia Alexandre (b4f),+351 932 346 557,,pq?,chat,2026/05/17 12:34:51,
-Letícia Alexandre (b4f),+351 932 346 557,,@118300696686814 toma o remédio,chat,2026/05/17 12:35:18,
-Letícia Alexandre (b4f),+351 932 346 557,,com algo proteico,chat,2026/05/17 12:35:26,
-Letícia Alexandre (b4f),+351 932 346 557,,n esquece,chat,2026/05/17 12:35:35,
-Letícia Alexandre (b4f),+351 932 346 557,,haha,chat,2026/05/17 12:35:38,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,pq?,chat,2026/05/17 12:34:51,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,@118300696686814 toma o remédio,chat,2026/05/17 12:35:18,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,com algo proteico,chat,2026/05/17 12:35:26,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,n esquece,chat,2026/05/17 12:35:35,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,haha,chat,2026/05/17 12:35:38,
 Você,,Pq eu empolguei kkkkkk e não foquei no que realmente precisava fazer,,chat,2026/05/17 12:35:51,
 Você,,Kkkkkkkkkkk,,chat,2026/05/17 12:35:58,
 Você,,Pseee,,chat,2026/05/17 12:36:17,
 Você,,"Vou tomar aq agr, bem lembrando",,chat,2026/05/17 12:36:27,
-Letícia Alexandre (b4f),+351 932 346 557,,normal kkkkkkkkkkk eu vi la no github q tu deixou tudo arrumadinho,chat,2026/05/17 12:36:32,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,normal kkkkkkkkkkk eu vi la no github q tu deixou tudo arrumadinho,chat,2026/05/17 12:36:32,
 Você,,"Tem mais, ainda não dei push",,chat,2026/05/17 12:36:43,
-Letícia Alexandre (b4f),+351 932 346 557,,@36266703892659 vc ta melhor?,chat,2026/05/17 13:41:26,
-Ricardo Neves (b4f),+351 939 837 512,,+/-,chat,2026/05/17 13:42:04,
-Ricardo Neves (b4f),+351 939 837 512,,Estou a me aguentar se tiver medicado,chat,2026/05/17 13:44:26,
-Letícia Alexandre (b4f),+351 932 346 557,,achas que consegues vir hoje?,chat,2026/05/17 13:47:17,
-Ricardo Neves (b4f),+351 939 837 512,,Acho que sim,chat,2026/05/17 13:53:46,
-Ricardo Neves (b4f),+351 939 837 512,,E para estar aí às 16 h?,chat,2026/05/17 14:09:42,
-Letícia Alexandre (b4f),+351 932 346 557,,sim sim,chat,2026/05/17 14:15:46,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,@36266703892659 vc ta melhor?,chat,2026/05/17 13:41:26,
+Ricardo Neves (b4f),Ricardo Neves,,+/-,chat,2026/05/17 13:42:04,
+Ricardo Neves (b4f),Ricardo Neves,,Estou a me aguentar se tiver medicado,chat,2026/05/17 13:44:26,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,achas que consegues vir hoje?,chat,2026/05/17 13:47:17,
+Ricardo Neves (b4f),Ricardo Neves,,Acho que sim,chat,2026/05/17 13:53:46,
+Ricardo Neves (b4f),Ricardo Neves,,E para estar aí às 16 h?,chat,2026/05/17 14:09:42,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,sim sim,chat,2026/05/17 14:15:46,
 Você,,eai,,chat,2026/05/17 15:38:13,
 Você,,vou arrumar aqui pra sair,,chat,2026/05/17 15:38:22,
-Letícia Alexandre (b4f),+351 932 346 557,,vai chegar atrasado né haha,chat,2026/05/17 15:45:00,
-Letícia Alexandre (b4f),+351 932 346 557,,vc tá onde @36266703892659 ?,chat,2026/05/17 15:55:20,
-Ricardo Neves (b4f),+351 939 837 512,,Estou no metro,chat,2026/05/17 16:01:55,
-Ricardo Neves (b4f),+351 939 837 512,,Não sabia que domingo os horários eram diferentes,chat,2026/05/17 16:02:19,
-Letícia Alexandre (b4f),+351 932 346 557,,eu vim aqui na esquina tomar café,chat,2026/05/17 16:07:19,
-Letícia Alexandre (b4f),+351 932 346 557,,minha máquina de café avariou,chat,2026/05/17 16:07:27,
-Ricardo Neves (b4f),+351 939 837 512,,O metro também,chat,2026/05/17 16:08:50,
-Letícia Alexandre (b4f),+351 932 346 557,,sério?,chat,2026/05/17 16:13:20,
-Ricardo Neves (b4f),+351 939 837 512,,"Yup, acho que estava com um problema em alguma roda tanto que estava a fazer bastante barulho",chat,2026/05/17 16:16:21,
-Letícia Alexandre (b4f),+351 932 346 557,,mds e ce tá aonde?,chat,2026/05/17 16:20:58,
-Ricardo Neves (b4f),+351 939 837 512,,Estou a chegar a trindade,chat,2026/05/17 16:24:44,
-Letícia Alexandre (b4f),+351 932 346 557,,minha rua é;,chat,2026/05/17 16:27:07,
-Letícia Alexandre (b4f),+351 932 346 557,,rua das oliveiras 53,chat,2026/05/17 16:27:11,
-Ricardo Neves (b4f),+351 939 837 512,,Estou a 4 min daí,chat,2026/05/17 16:29:25,
-Letícia Alexandre (b4f),+351 932 346 557,,"ok 
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,vai chegar atrasado né haha,chat,2026/05/17 15:45:00,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,vc tá onde @36266703892659 ?,chat,2026/05/17 15:55:20,
+Ricardo Neves (b4f),Ricardo Neves,,Estou no metro,chat,2026/05/17 16:01:55,
+Ricardo Neves (b4f),Ricardo Neves,,Não sabia que domingo os horários eram diferentes,chat,2026/05/17 16:02:19,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eu vim aqui na esquina tomar café,chat,2026/05/17 16:07:19,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,minha máquina de café avariou,chat,2026/05/17 16:07:27,
+Ricardo Neves (b4f),Ricardo Neves,,O metro também,chat,2026/05/17 16:08:50,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,sério?,chat,2026/05/17 16:13:20,
+Ricardo Neves (b4f),Ricardo Neves,,"Yup, acho que estava com um problema em alguma roda tanto que estava a fazer bastante barulho",chat,2026/05/17 16:16:21,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,mds e ce tá aonde?,chat,2026/05/17 16:20:58,
+Ricardo Neves (b4f),Ricardo Neves,,Estou a chegar a trindade,chat,2026/05/17 16:24:44,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,minha rua é;,chat,2026/05/17 16:27:07,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,rua das oliveiras 53,chat,2026/05/17 16:27:11,
+Ricardo Neves (b4f),Ricardo Neves,,Estou a 4 min daí,chat,2026/05/17 16:29:25,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"ok 
 vou andando pra casa",chat,2026/05/17 16:29:36,
-Ricardo Neves (b4f),+351 939 837 512,,Já cheguei,chat,2026/05/17 16:34:55,
-Letícia Alexandre (b4f),+351 932 346 557,,1min,chat,2026/05/17 16:36:05,
+Ricardo Neves (b4f),Ricardo Neves,,Já cheguei,chat,2026/05/17 16:34:55,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,1min,chat,2026/05/17 16:36:05,
 Você,,Tô a 7 min,,chat,2026/05/17 16:37:50,
 Você,,Já tô no porto,,chat,2026/05/17 16:37:55,
 Você,,Eai,,chat,2026/05/17 16:58:20,
 Você,,Consegue abrir? Tô aqui em baixo,,chat,2026/05/17 16:58:33,
 Você,,https://youtubetotranscript.com/,,chat,2026/05/17 17:50:39,
-Letícia Alexandre (b4f),+351 932 346 557,,Analise_Dados_Impacto_Ambiental_Wish.pdf,document,2026/05/18 01:56:10,"=HYPERLINK(""./media/1779065770_4AEE909711C4AA286490.pdf"", ""./media/1779065770_4AEE909711C4AA286490.pdf"")"
-Letícia Alexandre (b4f),+351 932 346 557,,"Notas Estratégicas para o Dia 22/05:
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,Analise_Dados_Impacto_Ambiental_Wish.pdf,document,2026/05/18 01:56:10,"=HYPERLINK(""./media/1779065770_4AEE909711C4AA286490.pdf"", ""./media/1779065770_4AEE909711C4AA286490.pdf"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Notas Estratégicas para o Dia 22/05:
   Foco em Soluções: Empresas presentes (Inetum, Zeiss ou Inetum) valorizam analistas que não se limitam a descrever o problema (""as vendas foram X""), mas que propõem soluções técnicas (""podemos criar um algoritmo para prever a durabilidade"")",chat,2026/05/18 02:47:41,
-Letícia Alexandre (b4f),+351 932 346 557,,"A base de dados não regista as devoluções físicas, o que reflete o próprio modelo de negócio da plataforma em 2020: produtos de valor tão baixo que a devolução física é logisticamente inviável. Por isso, utilizámos a métrica rating_one_count como um proxy (indicador) de rejeição total, representando os produtos que foram descartados imediatamente ou reembolsados devido à falta de qualidade.",chat,2026/05/18 02:54:07,
-Letícia Alexandre (b4f),+351 932 346 557,,"Sustentabilidade e Rentabilidade não são inimigas. Neste projeto, provamos que a inteligência de dados serve precisamente para alinhar a redução da pegada ecológica com a eficiência de custos da operação.",chat,2026/05/18 03:44:51,
-Letícia Alexandre (b4f),+351 932 346 557,,MUITO IMPORTANTE ⭕️⭕️⭕️,chat,2026/05/18 03:56:24,
-Letícia Alexandre (b4f),+351 932 346 557,,"a Wish passou por uma profunda reestruturação de mercado desde que estes dados de 2020 foram recolhidos. Inclusive, em abril de 2024, a Wish foi oficialmente adquirida pela gigante do e-commerce Qoo10.
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"A base de dados não regista as devoluções físicas, o que reflete o próprio modelo de negócio da plataforma em 2020: produtos de valor tão baixo que a devolução física é logisticamente inviável. Por isso, utilizámos a métrica rating_one_count como um proxy (indicador) de rejeição total, representando os produtos que foram descartados imediatamente ou reembolsados devido à falta de qualidade.",chat,2026/05/18 02:54:07,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Sustentabilidade e Rentabilidade não são inimigas. Neste projeto, provamos que a inteligência de dados serve precisamente para alinhar a redução da pegada ecológica com a eficiência de custos da operação.",chat,2026/05/18 03:44:51,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,MUITO IMPORTANTE ⭕️⭕️⭕️,chat,2026/05/18 03:56:24,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"a Wish passou por uma profunda reestruturação de mercado desde que estes dados de 2020 foram recolhidos. Inclusive, em abril de 2024, a Wish foi oficialmente adquirida pela gigante do e-commerce Qoo10.
 Hoje em dia, para sobreviver comercialmente e cumprir as novas e rigorosas leis da União Europeia e dos EUA, a Wish implementou estratégias que tocam exatamente nos pontos críticos que identificaste no teu projeto: qualidade (redução de descarte) e logística.
 Aqui está o que a Wish faz hoje em dia para se alinhar com as práticas de ESG:
 1. Ambiental (Environmental): A Transição Logística e Combate ao Desperdício
@@ -1264,32 +1264,32 @@ A maior mudança da Wish nos últimos anos foi o combate direto à pegada ecoló
 • Políticas de Devolução Mais Claras: Para evitar o descarte de produtos de baixa qualidade, a plataforma melhorou os sistemas de reembolso e incentiva a reciclagem local de itens danificados através de parcerias de suporte pós-venda.",chat,2026/05/18 03:56:28,
 Você,,"boa, vou colocar aq nas docs isso",,chat,2026/05/18 04:11:49,
 Você,,Eai,,chat,2026/05/18 08:09:28,
-Letícia Alexandre (b4f),+351 932 346 557,,bom dia,chat,2026/05/18 08:35:01,
-Letícia Alexandre (b4f),+351 932 346 557,,vc já tá a caminho? @118300696686814,chat,2026/05/18 08:35:21,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,bom dia,chat,2026/05/18 08:35:01,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,vc já tá a caminho? @118300696686814,chat,2026/05/18 08:35:21,
 Você,,Ss waze tá 30,,chat,2026/05/18 08:42:53,
-Letícia Alexandre (b4f),+351 932 346 557,,to um pouco atrasada,chat,2026/05/18 08:49:25,
-Letícia Alexandre (b4f),+351 932 346 557,,preciso de mais 15min,chat,2026/05/18 08:49:46,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,to um pouco atrasada,chat,2026/05/18 08:49:25,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,preciso de mais 15min,chat,2026/05/18 08:49:46,
 Você,,Rlx eu tbm,,chat,2026/05/18 08:50:06,
-Letícia Alexandre (b4f),+351 932 346 557,,saindo agr de casa,chat,2026/05/18 09:04:52,
-Ricardo Neves (b4f),+351 939 837 512,,Eu já estou a ir para a trindade,chat,2026/05/18 09:05:43,
-Letícia Alexandre (b4f),+351 932 346 557,,chego lá em 2min,chat,2026/05/18 09:08:50,
-Letícia Alexandre (b4f),+351 932 346 557,,e vcs?,chat,2026/05/18 09:08:53,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,saindo agr de casa,chat,2026/05/18 09:04:52,
+Ricardo Neves (b4f),Ricardo Neves,,Eu já estou a ir para a trindade,chat,2026/05/18 09:05:43,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,chego lá em 2min,chat,2026/05/18 09:08:50,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,e vcs?,chat,2026/05/18 09:08:53,
 Você,,8,,chat,2026/05/18 09:09:17,
-Ricardo Neves (b4f),+351 939 837 512,,6 min,chat,2026/05/18 09:10:50,
-Letícia Alexandre (b4f),+351 932 346 557,,cheguei,chat,2026/05/18 09:15:10,
-Letícia Alexandre (b4f),+351 932 346 557,,ce vai parar aonde gustavo?,chat,2026/05/18 09:15:16,
+Ricardo Neves (b4f),Ricardo Neves,,6 min,chat,2026/05/18 09:10:50,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,cheguei,chat,2026/05/18 09:15:10,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ce vai parar aonde gustavo?,chat,2026/05/18 09:15:16,
 Você,,[Foto],,image,2026/05/18 09:17:08,"=HYPERLINK(""./media/1779092228_AC316DF6933DBD89353C8F2AEE1F22FC.jpeg"", ""./media/1779092228_AC316DF6933DBD89353C8F2AEE1F22FC.jpeg"")"
 Você,,Tô aq do outro lado,,chat,2026/05/18 09:18:13,
-Letícia Alexandre (b4f),+351 932 346 557,,eu tô mais embaixo,chat,2026/05/18 09:18:40,
-Letícia Alexandre (b4f),+351 932 346 557,,e vc @36266703892659,chat,2026/05/18 09:18:46,
-Ricardo Neves (b4f),+351 939 837 512,,Já estou aqui na trindade,chat,2026/05/18 09:19:12,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eu tô mais embaixo,chat,2026/05/18 09:18:40,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,e vc @36266703892659,chat,2026/05/18 09:18:46,
+Ricardo Neves (b4f),Ricardo Neves,,Já estou aqui na trindade,chat,2026/05/18 09:19:12,
 Você,,Conseguem vir pra cá?,,chat,2026/05/18 09:19:21,
 Você,,Eu tô parado atrás do caminhão,,chat,2026/05/18 09:19:28,
-Letícia Alexandre (b4f),+351 932 346 557,,"Sustentabilidade e rentabilidade são, de fato, conceitos incompatíveis? Neste projeto, demonstramos que a inteligência de dados pode ser utilizada para alinhar a redução do impacto ambiental à eficiência de custos operacionais.",chat,2026/05/18 11:48:20,
-Letícia Alexandre (b4f),+351 932 346 557,,"Sustentabilidade e rentabilidade são, de facto, conceitos incompatíveis?",chat,2026/05/18 11:49:53,
-Letícia Alexandre (b4f),+351 932 346 557,,Sustentabilidade e rentabilidade podem coexistir de forma eficiente?,chat,2026/05/18 11:51:45,
-Letícia Alexandre (b4f),+351 932 346 557,,subquestoes 4/5,chat,2026/05/18 11:52:30,
-Ricardo Neves (b4f),+351 939 837 512,,"Em 2020, as entregas da Wish utilizavam uma combinação de quatro meios de transporte principais para mover as mercadorias da China até à casa dos clientes:
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Sustentabilidade e rentabilidade são, de fato, conceitos incompatíveis? Neste projeto, demonstramos que a inteligência de dados pode ser utilizada para alinhar a redução do impacto ambiental à eficiência de custos operacionais.",chat,2026/05/18 11:48:20,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Sustentabilidade e rentabilidade são, de facto, conceitos incompatíveis?",chat,2026/05/18 11:49:53,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,Sustentabilidade e rentabilidade podem coexistir de forma eficiente?,chat,2026/05/18 11:51:45,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,subquestoes 4/5,chat,2026/05/18 11:52:30,
+Ricardo Neves (b4f),Ricardo Neves,,"Em 2020, as entregas da Wish utilizavam uma combinação de quatro meios de transporte principais para mover as mercadorias da China até à casa dos clientes:
 ## 1. Aviões Comerciais e de Carga (Frete Aéreo)
 
 * Como funcionava: Era o meio usado para os envios prioritários ou standard mais rápidos.
@@ -1309,26 +1309,26 @@ Ricardo Neves (b4f),+351 939 837 512,,"Em 2020, as entregas da Wish utilizavam u
 
 * Como funcionava: Usado em duas fases críticas. Primeiro, na China, para recolher os produtos das fábricas e levá-los até aos centros de triagem da WishPost. Segundo, no país de destino (a ""última milha""), onde os veículos dos correios nacionais (como CTT em Portugal ou Correios no Brasil) faziam a entrega na morada final do cliente.",chat,2026/05/18 12:21:51,
 Você,,Separar em lista de valores únicos as chaves,,chat,2026/05/18 14:24:17,
-Letícia Alexandre (b4f),+351 932 346 557,,"analise
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"analise
 conclusões
 recomendações",chat,2026/05/18 15:42:11,
-Letícia Alexandre (b4f),+351 932 346 557,,pode ser mencionada o que aconteceu em 2021 e em 2024,chat,2026/05/18 15:42:11,
-Letícia Alexandre (b4f),+351 932 346 557,,Pesquisar artigo na internet que produtos com menos estrelas podem ser mais descartáveis,chat,2026/05/18 15:42:12,
-Letícia Alexandre (b4f),+351 932 346 557,,pesquisar fontes de quanto tempo em média uma roupa dura em fast fashion,chat,2026/05/18 15:42:12,
-Ricardo Neves (b4f),+351 939 837 512,,Fonte: National Institutes of Health (.gov) https://share.google/eKLbprlEoUfttAEIZ,chat,2026/05/18 16:56:43,
-Letícia Alexandre (b4f),+351 932 346 557,,[Foto],image,2026/05/18 17:02:10,"=HYPERLINK(""./media/1779120130_3A94C68EAF7C59793836.jpeg"", ""./media/1779120130_3A94C68EAF7C59793836.jpeg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,"tirei essa do parlamento europeu, agência europeia do ambiente",chat,2026/05/18 17:03:11,
-Letícia Alexandre (b4f),+351 932 346 557,,gostei mto,chat,2026/05/18 17:03:13,
-Letícia Alexandre (b4f),+351 932 346 557,,https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1781,chat,2026/05/18 17:09:03,
-Letícia Alexandre (b4f),+351 932 346 557,,"Excesso de stock?
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,pode ser mencionada o que aconteceu em 2021 e em 2024,chat,2026/05/18 15:42:11,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,Pesquisar artigo na internet que produtos com menos estrelas podem ser mais descartáveis,chat,2026/05/18 15:42:12,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,pesquisar fontes de quanto tempo em média uma roupa dura em fast fashion,chat,2026/05/18 15:42:12,
+Ricardo Neves (b4f),Ricardo Neves,,Fonte: National Institutes of Health (.gov) https://share.google/eKLbprlEoUfttAEIZ,chat,2026/05/18 16:56:43,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,[Foto],image,2026/05/18 17:02:10,"=HYPERLINK(""./media/1779120130_3A94C68EAF7C59793836.jpeg"", ""./media/1779120130_3A94C68EAF7C59793836.jpeg"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"tirei essa do parlamento europeu, agência europeia do ambiente",chat,2026/05/18 17:03:11,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,gostei mto,chat,2026/05/18 17:03:13,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1781,chat,2026/05/18 17:09:03,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Excesso de stock?
 O inventory_total está limitado a 50 unidades em quase todos os produtos — isto é provavelmente um cap da plataforma Wish na forma como reporta o stock, não o valor real. Por isso, este campo não é fiável para medir excesso de stock verdadeiro.
 O que é revelador é a comparação com units_sold:
 
 Há produtos com inventory_total = 50 mas units_sold = 20.000 ou até 50.000
 Isso confirma que o campo está truncado — não reflete o stock real",chat,2026/05/18 17:19:44,
-Letícia Alexandre (b4f),+351 932 346 557,,"Isto é urgência artificial, uma prática de greenwashing comercial que o ESPR e a Diretiva das Práticas Comerciais Desleais visam combater.",chat,2026/05/18 17:20:21,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Isto é urgência artificial, uma prática de greenwashing comercial que o ESPR e a Diretiva das Práticas Comerciais Desleais visam combater.",chat,2026/05/18 17:20:21,
 Você,,https://www.figma.com/slides/Zhr1Rf7EdTZ6xpUYNckEWx/Porto-Presentation--Copy-?node-id=0-1&p=f&t=wMvHHZoLkc4Dtkwa-0,,chat,2026/05/18 17:22:05,
-Letícia Alexandre (b4f),+351 932 346 557,,"Quase nenhum badge de qualidade
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Quase nenhum badge de qualidade
 O ESPR exige durabilidade e reparabilidade.",chat,2026/05/18 17:22:48,
 Você,,https://clipdrop.co/relight,,chat,2026/05/18 18:29:55,
 Você,,"shipping_option_name
@@ -1347,15 +1347,15 @@ Envío normal
 Standart Gönderi
 Standardowa wysyłka
 ការដឹកជញ្ជូនតាមស្តង់ដារ",,chat,2026/05/18 19:08:41,
-Letícia Alexandre (b4f),+351 932 346 557,,"[14/05, 22:54] João: 22 de maio, sexta-feira, 19h – 1h
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"[14/05, 22:54] João: 22 de maio, sexta-feira, 19h – 1h
 
 23 de maio, sábado, 18h – 1h
 
 24 de maio, domingo, 15h – 20h
 [14/05, 22:58] João: Mais ou menos estes horários, isto não é para seguir á risca.",chat,2026/05/18 19:18:33,
-Letícia Alexandre (b4f),+351 932 346 557,,"Olá, desculpa só te responder hoje, 160€ sem recibos.",chat,2026/05/18 19:18:33,
-Letícia Alexandre (b4f),+351 932 346 557,,Se ela quiser fazer extra. É so servir cerveja numa bancada,chat,2026/05/18 19:18:34,
-Ricardo Neves (b4f),+351 939 837 512,,"A diferença principal está no foco do processo: Shipping refere-se ao envio (a saída do armazém) e Delivery refere-se à entrega (a chegada à sua porta).
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Olá, desculpa só te responder hoje, 160€ sem recibos.",chat,2026/05/18 19:18:33,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,Se ela quiser fazer extra. É so servir cerveja numa bancada,chat,2026/05/18 19:18:34,
+Ricardo Neves (b4f),Ricardo Neves,,"A diferença principal está no foco do processo: Shipping refere-se ao envio (a saída do armazém) e Delivery refere-se à entrega (a chegada à sua porta).
 Apesar de indicarem o mesmo nível de serviço económico, o cálculo do tempo é diferente:
 ## 📦 Standard Shipping (Envio Padrão)
 
@@ -1372,84 +1372,84 @@ Apesar de indicarem o mesmo nível de serviço económico, o cálculo do tempo �
 ## 🔄 Resumo Prático
 Muitas lojas online usam estes termos como sinónimos no carrinho de compras. No entanto, se uma loja disser ""Standard Shipping: 3 dias"", a sua encomenda pode demorar 5 dias a chegar se o armazém demorar 2 dias a processar o pacote. Se disser ""Standard Delivery: 3 dias"", o pacote deverá estar na sua porta no prazo de 3 dias após a compra.
 Se quiser saber o tempo total de espera, partilhe o nome da loja ou o país de origem da encomenda. Posso ajudar a prever a data de chegada?",chat,2026/05/18 20:00:27,
-Letícia Alexandre (b4f),+351 932 346 557,,[Foto],image,2026/05/18 21:47:54,"=HYPERLINK(""./media/1779137274_3A11B375716F24C61E75.jpeg"", ""./media/1779137274_3A11B375716F24C61E75.jpeg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,[Foto],image,2026/05/18 21:48:06,"=HYPERLINK(""./media/1779137286_3A66CBC55D3A8103231D.jpeg"", ""./media/1779137286_3A66CBC55D3A8103231D.jpeg"")"
-Ricardo Neves (b4f),+351 939 837 512,,Olha nois trabalho,chat,2026/05/18 21:50:16,
-Letícia Alexandre (b4f),+351 932 346 557,,vou documentar que foram dias e noites mal dormidas sonhando com rating_one,chat,2026/05/18 21:53:23,
-Ricardo Neves (b4f),+351 939 837 512,,"@259128329019637 a Bea disse isto ""Claro que sim! Podem aparecer quando vos der mais jeito""",chat,2026/05/18 22:09:28,
-Letícia Alexandre (b4f),+351 932 346 557,,opa então 11h30?,chat,2026/05/18 22:11:16,
-Letícia Alexandre (b4f),+351 932 346 557,,ou melhor 11h?,chat,2026/05/18 22:11:49,
-Letícia Alexandre (b4f),+351 932 346 557,,pra gente começar cedo,chat,2026/05/18 22:11:59,
-Ricardo Neves (b4f),+351 939 837 512,,Eu e o Gustavo achamos melhor 11h 30 na trindade,chat,2026/05/18 22:13:28,
-Letícia Alexandre (b4f),+351 932 346 557,,blz combinado,chat,2026/05/18 22:13:37,
-Ricardo Neves (b4f),+351 939 837 512,,Ok,chat,2026/05/18 22:14:20,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,[Foto],image,2026/05/18 21:47:54,"=HYPERLINK(""./media/1779137274_3A11B375716F24C61E75.jpeg"", ""./media/1779137274_3A11B375716F24C61E75.jpeg"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,[Foto],image,2026/05/18 21:48:06,"=HYPERLINK(""./media/1779137286_3A66CBC55D3A8103231D.jpeg"", ""./media/1779137286_3A66CBC55D3A8103231D.jpeg"")"
+Ricardo Neves (b4f),Ricardo Neves,,Olha nois trabalho,chat,2026/05/18 21:50:16,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,vou documentar que foram dias e noites mal dormidas sonhando com rating_one,chat,2026/05/18 21:53:23,
+Ricardo Neves (b4f),Ricardo Neves,,"@259128329019637 a Bea disse isto ""Claro que sim! Podem aparecer quando vos der mais jeito""",chat,2026/05/18 22:09:28,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,opa então 11h30?,chat,2026/05/18 22:11:16,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ou melhor 11h?,chat,2026/05/18 22:11:49,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,pra gente começar cedo,chat,2026/05/18 22:11:59,
+Ricardo Neves (b4f),Ricardo Neves,,Eu e o Gustavo achamos melhor 11h 30 na trindade,chat,2026/05/18 22:13:28,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,blz combinado,chat,2026/05/18 22:13:37,
+Ricardo Neves (b4f),Ricardo Neves,,Ok,chat,2026/05/18 22:14:20,
 Você,,Nossa tava precisando dormir,,chat,2026/05/19 10:28:05,
 Você,,"Sorte quê, não sonhei que era uma tabela kkkkkkk",,chat,2026/05/19 10:29:04,
-Letícia Alexandre (b4f),+351 932 346 557,,nossa dormi bastante tbm,chat,2026/05/19 10:41:41,
-Letícia Alexandre (b4f),+351 932 346 557,,vcs foram embora eu deitei nem jantei,chat,2026/05/19 10:41:54,
-Letícia Alexandre (b4f),+351 932 346 557,,só acordei agr,chat,2026/05/19 10:42:00,
-Ricardo Neves (b4f),+351 939 837 512,,Opa bom dia pessoal acabei de acordar,chat,2026/05/19 11:08:02,
-Ricardo Neves (b4f),+351 939 837 512,,Se me atrasar 5 min e por isso aí,chat,2026/05/19 11:08:51,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,nossa dormi bastante tbm,chat,2026/05/19 10:41:41,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,vcs foram embora eu deitei nem jantei,chat,2026/05/19 10:41:54,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,só acordei agr,chat,2026/05/19 10:42:00,
+Ricardo Neves (b4f),Ricardo Neves,,Opa bom dia pessoal acabei de acordar,chat,2026/05/19 11:08:02,
+Ricardo Neves (b4f),Ricardo Neves,,Se me atrasar 5 min e por isso aí,chat,2026/05/19 11:08:51,
 Você,,Eu vou sair de casa agr,,chat,2026/05/19 11:21:43,
 Você,,"Tava tomando banho, e tive que conversar um pouco aqui em casa com meus pais",,chat,2026/05/19 11:22:03,
 Você,,"Desculpa, acho q vou atrasar um pouco",,chat,2026/05/19 11:22:14,
-Letícia Alexandre (b4f),+351 932 346 557,,tbm tô atrasada,chat,2026/05/19 11:25:27,
-Ricardo Neves (b4f),+351 939 837 512,,Eu também estou atrasada,chat,2026/05/19 11:31:34,
-Letícia Alexandre (b4f),+351 932 346 557,,alguém já a cainho?,chat,2026/05/19 11:43:38,
-Letícia Alexandre (b4f),+351 932 346 557,,@118300696686814 eu queria te pedir um favor,chat,2026/05/19 11:45:12,
-Letícia Alexandre (b4f),+351 932 346 557,,se vc já tiver a caminho,chat,2026/05/19 11:45:15,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,tbm tô atrasada,chat,2026/05/19 11:25:27,
+Ricardo Neves (b4f),Ricardo Neves,,Eu também estou atrasada,chat,2026/05/19 11:31:34,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,alguém já a cainho?,chat,2026/05/19 11:43:38,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,@118300696686814 eu queria te pedir um favor,chat,2026/05/19 11:45:12,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,se vc já tiver a caminho,chat,2026/05/19 11:45:15,
 Você,,Diga diga,,chat,2026/05/19 11:50:10,
-Letícia Alexandre (b4f),+351 932 346 557,,ce tá vindo?,chat,2026/05/19 11:50:25,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ce tá vindo?,chat,2026/05/19 11:50:25,
 Você,,[Áudio],,ptt,2026/05/19 11:50:55,"=HYPERLINK(""./media/1779187855_ACB06DF22915F1B08C388297E3A09706.ogg"", ""./media/1779187855_ACB06DF22915F1B08C388297E3A09706.ogg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,ah então,chat,2026/05/19 11:51:15,
-Letícia Alexandre (b4f),+351 932 346 557,,vc pode me buscar no mercadona da boa vista?,chat,2026/05/19 11:51:33,
-Letícia Alexandre (b4f),+351 932 346 557,,pq tô indo agr buscar um bolo pra pri,chat,2026/05/19 11:51:49,
-Letícia Alexandre (b4f),+351 932 346 557,,eh niver dela hj,chat,2026/05/19 11:51:55,
-Letícia Alexandre (b4f),+351 932 346 557,,ou então já pego o autocarro ali msm,chat,2026/05/19 11:52:11,
-Letícia Alexandre (b4f),+351 932 346 557,,tô indo agr de metrô,chat,2026/05/19 11:52:21,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ah então,chat,2026/05/19 11:51:15,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,vc pode me buscar no mercadona da boa vista?,chat,2026/05/19 11:51:33,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,pq tô indo agr buscar um bolo pra pri,chat,2026/05/19 11:51:49,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eh niver dela hj,chat,2026/05/19 11:51:55,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ou então já pego o autocarro ali msm,chat,2026/05/19 11:52:11,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,tô indo agr de metrô,chat,2026/05/19 11:52:21,
 Você,,[Áudio],,ptt,2026/05/19 11:52:50,"=HYPERLINK(""./media/1779187970_ACB66CA01461F7E664DCEEE42F0F8AEB.ogg"", ""./media/1779187970_ACB66CA01461F7E664DCEEE42F0F8AEB.ogg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,eu tava pensando em buscar tbm refri e sumo,chat,2026/05/19 11:53:34,
-Letícia Alexandre (b4f),+351 932 346 557,,cola zero,chat,2026/05/19 11:53:36,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eu tava pensando em buscar tbm refri e sumo,chat,2026/05/19 11:53:34,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,cola zero,chat,2026/05/19 11:53:36,
 Você,,[Áudio],,ptt,2026/05/19 11:53:52,"=HYPERLINK(""./media/1779188032_ACC566528940A630A45B6F379084251B.ogg"", ""./media/1779188032_ACC566528940A630A45B6F379084251B.ogg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,tu compra então 2L de cola zero e tipo uns 2 sumos de laranja ou pêssego,chat,2026/05/19 11:54:06,
-Letícia Alexandre (b4f),+351 932 346 557,,então vamo junto,chat,2026/05/19 11:54:21,
-Letícia Alexandre (b4f),+351 932 346 557,,blz,chat,2026/05/19 11:54:25,
-Letícia Alexandre (b4f),+351 932 346 557,,eu cheguei na estação trindade agr,chat,2026/05/19 11:54:33,
-Ricardo Neves (b4f),+351 939 837 512,,E para se encontrar onde ?,chat,2026/05/19 11:54:55,
-Letícia Alexandre (b4f),+351 932 346 557,,vem pro mercadona tbm,chat,2026/05/19 11:55:11,
-Letícia Alexandre (b4f),+351 932 346 557,,melhor né,chat,2026/05/19 11:55:16,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,tu compra então 2L de cola zero e tipo uns 2 sumos de laranja ou pêssego,chat,2026/05/19 11:54:06,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,então vamo junto,chat,2026/05/19 11:54:21,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,blz,chat,2026/05/19 11:54:25,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,eu cheguei na estação trindade agr,chat,2026/05/19 11:54:33,
+Ricardo Neves (b4f),Ricardo Neves,,E para se encontrar onde ?,chat,2026/05/19 11:54:55,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,vem pro mercadona tbm,chat,2026/05/19 11:55:11,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,melhor né,chat,2026/05/19 11:55:16,
 Você,,[Áudio],,ptt,2026/05/19 11:55:29,"=HYPERLINK(""./media/1779188129_AC228512649682081D2C5195D795011E.ogg"", ""./media/1779188129_AC228512649682081D2C5195D795011E.ogg"")"
-Ricardo Neves (b4f),+351 939 837 512,,Qual mercadona ?,chat,2026/05/19 11:55:55,
-Letícia Alexandre (b4f),+351 932 346 557,,a ana só pediu pra eu levar cola zero,chat,2026/05/19 11:56:00,
-Letícia Alexandre (b4f),+351 932 346 557,,boa vista,chat,2026/05/19 11:56:03,
-Letícia Alexandre (b4f),+351 932 346 557,,acho que mais ngm vai levar nada pra ser sincera,chat,2026/05/19 11:56:11,
-Letícia Alexandre (b4f),+351 932 346 557,,"tbm preciso comprar algo pra comer 
+Ricardo Neves (b4f),Ricardo Neves,,Qual mercadona ?,chat,2026/05/19 11:55:55,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,a ana só pediu pra eu levar cola zero,chat,2026/05/19 11:56:00,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,boa vista,chat,2026/05/19 11:56:03,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,acho que mais ngm vai levar nada pra ser sincera,chat,2026/05/19 11:56:11,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"tbm preciso comprar algo pra comer 
 não comi nada até agr",chat,2026/05/19 11:58:24,
-Letícia Alexandre (b4f),+351 932 346 557,,nem jantei ontem kkkkk,chat,2026/05/19 11:58:30,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,nem jantei ontem kkkkk,chat,2026/05/19 11:58:30,
 Você,,Encontramos todos lá mercadona boa vista então?,,chat,2026/05/19 12:01:32,
-Ricardo Neves (b4f),+351 939 837 512,,Eu vou apanhar o metro agora,chat,2026/05/19 12:03:19,
-Letícia Alexandre (b4f),+351 932 346 557,,sim,chat,2026/05/19 12:04:30,
-Letícia Alexandre (b4f),+351 932 346 557,,já tô aqui na boa vista,chat,2026/05/19 12:04:39,
-Letícia Alexandre (b4f),+351 932 346 557,,andando pro mercadona,chat,2026/05/19 12:04:43,
+Ricardo Neves (b4f),Ricardo Neves,,Eu vou apanhar o metro agora,chat,2026/05/19 12:03:19,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,sim,chat,2026/05/19 12:04:30,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,já tô aqui na boa vista,chat,2026/05/19 12:04:39,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,andando pro mercadona,chat,2026/05/19 12:04:43,
 Você,,Tô com 5% bat se eu parar de resp,,chat,2026/05/19 12:07:56,
-Letícia Alexandre (b4f),+351 932 346 557,,"ta bom kkkkk 
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"ta bom kkkkk 
 me encontra então dentro do mercadona",chat,2026/05/19 12:08:20,
 Você,,Cabei de estacionar,,chat,2026/05/19 12:22:00,
-Letícia Alexandre (b4f),+351 932 346 557,,tô no corredor de refrigerante,chat,2026/05/19 12:23:09,
-Ricardo Neves (b4f),+351 939 837 512,,Já cheguei,chat,2026/05/19 12:38:19,
-Letícia Alexandre (b4f),+351 932 346 557,,ta aonde?,chat,2026/05/19 12:39:06,
-Letícia Alexandre (b4f),+351 932 346 557,,tamo aqui perto da padaria,chat,2026/05/19 12:39:12,
-Letícia Alexandre (b4f),+351 932 346 557,,dentro,chat,2026/05/19 12:39:16,
-Letícia Alexandre (b4f),+351 932 346 557,,https://ecoporto.portoambiente.pt/events/sessao-de-capacitacao-em-diagnostico-e-reparacao-de-computadores,chat,2026/05/19 14:02:10,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,tô no corredor de refrigerante,chat,2026/05/19 12:23:09,
+Ricardo Neves (b4f),Ricardo Neves,,Já cheguei,chat,2026/05/19 12:38:19,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ta aonde?,chat,2026/05/19 12:39:06,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,tamo aqui perto da padaria,chat,2026/05/19 12:39:12,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,dentro,chat,2026/05/19 12:39:16,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,https://ecoporto.portoambiente.pt/events/sessao-de-capacitacao-em-diagnostico-e-reparacao-de-computadores,chat,2026/05/19 14:02:10,
 Você,,Cheguei no imt,,chat,2026/05/19 15:09:42,
-Ricardo Neves (b4f),+351 939 837 512,,Fonte: European Youth Portal https://share.google/SoWDfIODfbGh04JZ2,chat,2026/05/19 15:12:13,
-Letícia Alexandre (b4f),+351 932 346 557,,acha q demora?,chat,2026/05/19 15:19:15,
+Ricardo Neves (b4f),Ricardo Neves,,Fonte: European Youth Portal https://share.google/SoWDfIODfbGh04JZ2,chat,2026/05/19 15:12:13,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,acha q demora?,chat,2026/05/19 15:19:15,
 Você,,Não pq não tira lá kkkkk já tô voltando,,chat,2026/05/19 15:22:58,
 Você,,Tem q ser no registros,,chat,2026/05/19 15:23:08,
-Letícia Alexandre (b4f),+351 932 346 557,,"Objetivo de negócio:
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Objetivo de negócio:
 
 Sustentabilidade e rentabilidade podem coexistir de forma eficiente?",chat,2026/05/19 15:33:20,
-Letícia Alexandre (b4f),+351 932 346 557,,"subquestoes
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"subquestoes
 
 1- quanto que gasta de CO2
 (1 ou 2 gráficos)
@@ -1481,7 +1481,7 @@ Recomendações
 não precisamos de colocar o link da fonte na apresentação, apenas no relatório.
 
 relatório de tudo a parte",chat,2026/05/19 15:42:39,
-Letícia Alexandre (b4f),+351 932 346 557,,"1- porcentagem de produtos vindos da China
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"1- porcentagem de produtos vindos da China
 
 2- média de países 
 
@@ -1549,55 +1549,55 @@ Estas colunas estão totalmente limpas e prontas para cruzamentos estatísticos 
 | 42 | `crawl_month` | object |
 
 > **💡 Insight para o Relatório:** Repare que `has_urgency_banner` e `urgency_text` possuem exatamente o mesmo número de nulos (1.100). Isso prova a consistência do banco de dados: quando o banner não existe, o texto também fica vazio. Além disso, as 45 linhas vazias nas contagens de avaliações (`rating_X_count`) provavelmente são de produtos que nunca receberam nenhuma avaliação na plataforma.",,chat,2026/05/19 16:59:30,
-Letícia Alexandre (b4f),+351 932 346 557,,perguntas sustentabilidade.pdf,document,2026/05/19 19:07:57,"=HYPERLINK(""./media/1779214077_4A6C22A02C6666E86232.pdf"", ""./media/1779214077_4A6C22A02C6666E86232.pdf"")"
-Letícia Alexandre (b4f),+351 932 346 557,,perguntas sustentabilidade.html,document,2026/05/19 19:08:15,"=HYPERLINK(""./media/1779214095_4A562A3349F0556894D6.html"", ""./media/1779214095_4A562A3349F0556894D6.html"")"
-Letícia Alexandre (b4f),+351 932 346 557,,perguntas_wish_estrategia.html,document,2026/05/19 20:16:54,"=HYPERLINK(""./media/1779218214_3EB00B74A79365084635D8.html"", ""./media/1779218214_3EB00B74A79365084635D8.html"")"
-Ricardo Neves (b4f),+351 939 837 512,,https://1drv.ms/w/c/3d15a923000720be/IQBZmom9FCzSQI0PfI8iFwumAYx6NO8fK9yVbhqdSTTmVJw?e=IIy8bW,chat,2026/05/19 21:31:27,
-Letícia Alexandre (b4f),+351 932 346 557,,"Com 96,4% dos produtos a ter origem na China, qual o impacto ambiental real desta concentração geográfica na pegada de carbono da plataforma?
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,perguntas sustentabilidade.pdf,document,2026/05/19 19:07:57,"=HYPERLINK(""./media/1779214077_4A6C22A02C6666E86232.pdf"", ""./media/1779214077_4A6C22A02C6666E86232.pdf"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,perguntas sustentabilidade.html,document,2026/05/19 19:08:15,"=HYPERLINK(""./media/1779214095_4A562A3349F0556894D6.html"", ""./media/1779214095_4A562A3349F0556894D6.html"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,perguntas_wish_estrategia.html,document,2026/05/19 20:16:54,"=HYPERLINK(""./media/1779218214_3EB00B74A79365084635D8.html"", ""./media/1779218214_3EB00B74A79365084635D8.html"")"
+Ricardo Neves (b4f),Ricardo Neves,,https://1drv.ms/w/c/3d15a923000720be/IQBZmom9FCzSQI0PfI8iFwumAYx6NO8fK9yVbhqdSTTmVJw?e=IIy8bW,chat,2026/05/19 21:31:27,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"Com 96,4% dos produtos a ter origem na China, qual o impacto ambiental real desta concentração geográfica na pegada de carbono da plataforma?
 
 Os produtos com rating ≥ 4 respondem por 36,8% da receita total com apenas 38% do catálogo. Focar o crescimento neste segmento de alta qualidade percebida aumenta a rentabilidade por produto — e ao mesmo tempo reduz o volume de devoluções e reclamações?
 
 Os produtos com rating abaixo de 3 representam apenas 1,2% da receita (≈676K€) mas geram desproporcionalmente reclamações, devoluções e risco reputacional. Qual o custo operacional real destes produtos vs. o custo de os retirar do catálogo?
 
 Qual é o impacto do preço de venda na vida útil das peças de fast fashion?",chat,2026/05/19 21:50:36,
-Letícia Alexandre (b4f),+351 932 346 557,,https://davidsuzuki.org/living-green/the-environmental-cost-of-fast-fashion/?gad_source=1&gad_campaignid=19750400107&gbraid=0AAAAAD4OMJHQw9PlC8WRnjaX4-brFKCFZ&gclid=Cj0KCQjwlLDQBhDjARIsAPlIefGhfEoEQ6eUaYiOkrCa-3QPo0dZVZNfwxcvkt5FPMIwmSeAVlBcibwaAt3WEALw_wcB (artigo que responde a ultima pergunta),chat,2026/05/19 21:54:08,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,https://davidsuzuki.org/living-green/the-environmental-cost-of-fast-fashion/?gad_source=1&gad_campaignid=19750400107&gbraid=0AAAAAD4OMJHQw9PlC8WRnjaX4-brFKCFZ&gclid=Cj0KCQjwlLDQBhDjARIsAPlIefGhfEoEQ6eUaYiOkrCa-3QPo0dZVZNfwxcvkt5FPMIwmSeAVlBcibwaAt3WEALw_wcB (artigo que responde a ultima pergunta),chat,2026/05/19 21:54:08,
 Você,,Trazer tablet,,chat,2026/05/19 22:48:43,
 Você,,Gente vou no registros agr tirar o doc do carro,,chat,2026/05/20 10:37:33,
 Você,,"Aí dps já começamos, ficou 11:30 né?",,chat,2026/05/20 10:38:20,
-Letícia Alexandre (b4f),+351 932 346 557,,sim,chat,2026/05/20 10:42:45,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,sim,chat,2026/05/20 10:42:45,
 Você,,https://www.instagram.com/reel/DYf1Tu6pjZG/?igsh=OWg1cWhuOGdwOXFr,,chat,2026/05/20 11:44:35,
-Letícia Alexandre (b4f),+351 932 346 557,,e entao gente,chat,2026/05/20 12:53:02,
-Ricardo Neves (b4f),+351 939 837 512,,eu ja estou a acabar de fazer o relatório,chat,2026/05/20 12:53:39,
-Ricardo Neves (b4f),+351 939 837 512,,foi mal não ter falado nada estava consentrado,chat,2026/05/20 12:53:58,
-Ricardo Neves (b4f),+351 939 837 512,,https://1drv.ms/w/c/3d15a923000720be/IQBZmom9FCzSQI0PfI8iFwumAaHGwu_-eRfSRKiMkO7EitU?e=1MpFOH,chat,2026/05/20 12:54:13,
-Ricardo Neves (b4f),+351 939 837 512,,quem quiser ver como esta a ficar,chat,2026/05/20 12:54:30,
-Ricardo Neves (b4f),+351 939 837 512,,se virem algo que acham que esta errado avisem por favor,chat,2026/05/20 12:58:34,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,e entao gente,chat,2026/05/20 12:53:02,
+Ricardo Neves (b4f),Ricardo Neves,,eu ja estou a acabar de fazer o relatório,chat,2026/05/20 12:53:39,
+Ricardo Neves (b4f),Ricardo Neves,,foi mal não ter falado nada estava consentrado,chat,2026/05/20 12:53:58,
+Ricardo Neves (b4f),Ricardo Neves,,https://1drv.ms/w/c/3d15a923000720be/IQBZmom9FCzSQI0PfI8iFwumAaHGwu_-eRfSRKiMkO7EitU?e=1MpFOH,chat,2026/05/20 12:54:13,
+Ricardo Neves (b4f),Ricardo Neves,,quem quiser ver como esta a ficar,chat,2026/05/20 12:54:30,
+Ricardo Neves (b4f),Ricardo Neves,,se virem algo que acham que esta errado avisem por favor,chat,2026/05/20 12:58:34,
 Você,,Eai,,chat,2026/05/20 13:00:13,
 Você,,https://github.com/gustavocs97/wish_dataset_bytes4future,,chat,2026/05/20 13:04:46,
-Ricardo Neves (b4f),+351 939 837 512,,Depois se poderem me mandar os links de onde tiramos as informações agradecia.,chat,2026/05/20 13:09:49,
-Letícia Alexandre (b4f),+351 932 346 557,,FastFashion_Etapas (1).pptx,document,2026/05/20 13:17:32,"=HYPERLINK(""./media/1779279452_3EB02DAB53DC67C4BF90E9.pptx"", ""./media/1779279452_3EB02DAB53DC67C4BF90E9.pptx"")"
-Letícia Alexandre (b4f),+351 932 346 557,,qual?,chat,2026/05/20 13:17:45,
-Ricardo Neves (b4f),+351 939 837 512,,o que falava dos kilos de roupa que era jogada fora,chat,2026/05/20 13:18:27,
-Ricardo Neves (b4f),+351 939 837 512,,esse ja e o finalizado?,chat,2026/05/20 13:21:09,
-Letícia Alexandre (b4f),+351 932 346 557,,nao nao,chat,2026/05/20 13:25:02,
+Ricardo Neves (b4f),Ricardo Neves,,Depois se poderem me mandar os links de onde tiramos as informações agradecia.,chat,2026/05/20 13:09:49,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,FastFashion_Etapas (1).pptx,document,2026/05/20 13:17:32,"=HYPERLINK(""./media/1779279452_3EB02DAB53DC67C4BF90E9.pptx"", ""./media/1779279452_3EB02DAB53DC67C4BF90E9.pptx"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,qual?,chat,2026/05/20 13:17:45,
+Ricardo Neves (b4f),Ricardo Neves,,o que falava dos kilos de roupa que era jogada fora,chat,2026/05/20 13:18:27,
+Ricardo Neves (b4f),Ricardo Neves,,esse ja e o finalizado?,chat,2026/05/20 13:21:09,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,nao nao,chat,2026/05/20 13:25:02,
 Você,,limpos_final_csv.csv,,document,2026/05/20 13:25:10,"=HYPERLINK(""./media/1779279910_3B62320DA829E88C37C0.csv"", ""./media/1779279910_3B62320DA829E88C37C0.csv"")"
 Você,,limpos_final.xlsm,,document,2026/05/20 13:25:10,"=HYPERLINK(""./media/1779279910_3BE09E6B377344EC874F.xlsm"", ""./media/1779279910_3BE09E6B377344EC874F.xlsm"")"
-Letícia Alexandre (b4f),+351 932 346 557,,foi so pro gustavo tirar uma informacao,chat,2026/05/20 13:25:12,
-Letícia Alexandre (b4f),+351 932 346 557,,#1E2920 CODIGO COR VERDE,chat,2026/05/20 13:28:52,
-Letícia Alexandre (b4f),+351 932 346 557,,apresentação final em construção: https://canva.link/f35kiviqvxb2ope,chat,2026/05/20 13:33:24,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,foi so pro gustavo tirar uma informacao,chat,2026/05/20 13:25:12,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,#1E2920 CODIGO COR VERDE,chat,2026/05/20 13:28:52,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,apresentação final em construção: https://canva.link/f35kiviqvxb2ope,chat,2026/05/20 13:33:24,
 Você,,[Foto],,image,2026/05/20 14:04:04,"=HYPERLINK(""./media/1779282244_3B54413E20D70CA81BE2.jpeg"", ""./media/1779282244_3B54413E20D70CA81BE2.jpeg"")"
 Você,,[Foto],,image,2026/05/20 14:04:19,"=HYPERLINK(""./media/1779282259_3B4D32ABDAB473840E24.jpeg"", ""./media/1779282259_3B4D32ABDAB473840E24.jpeg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,ta vindo @36266703892659 ?,chat,2026/05/20 14:25:28,
-Ricardo Neves (b4f),+351 939 837 512,,Estou a ir a acabei de sair,chat,2026/05/20 14:44:28,
-Ricardo Neves (b4f),+351 939 837 512,,Foi mal a demora tive uma discussão aqui,chat,2026/05/20 14:45:15,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,ta vindo @36266703892659 ?,chat,2026/05/20 14:25:28,
+Ricardo Neves (b4f),Ricardo Neves,,Estou a ir a acabei de sair,chat,2026/05/20 14:44:28,
+Ricardo Neves (b4f),Ricardo Neves,,Foi mal a demora tive uma discussão aqui,chat,2026/05/20 14:45:15,
 Você,,[Foto],,image,2026/05/20 15:08:18,"=HYPERLINK(""./media/1779286098_3B6FFE102179B6FBDD86.jpeg"", ""./media/1779286098_3B6FFE102179B6FBDD86.jpeg"")"
 Você,,[Foto],,image,2026/05/20 15:08:29,"=HYPERLINK(""./media/1779286109_3B95003AEF54233FDF2D.jpeg"", ""./media/1779286109_3B95003AEF54233FDF2D.jpeg"")"
 Você,,[Foto],,image,2026/05/20 15:08:43,"=HYPERLINK(""./media/1779286123_3BC4FECA1BDF191F2179.jpeg"", ""./media/1779286123_3BC4FECA1BDF191F2179.jpeg"")"
-Ricardo Neves (b4f),+351 939 837 512,,Estou cá em baixo,chat,2026/05/20 15:18:29,
-Letícia Alexandre (b4f),+351 932 346 557,,1min,chat,2026/05/20 15:18:59,
-Ricardo Neves (b4f),+351 939 837 512,,SustentabilidadeRentabilidade.html.pdf,document,2026/05/20 15:22:29,"=HYPERLINK(""./media/1779286949_AC7FEAABCE1493ED7EF095B3B1026611.pdf"", ""./media/1779286949_AC7FEAABCE1493ED7EF095B3B1026611.pdf"")"
-Ricardo Neves (b4f),+351 939 837 512,,[Esta mensagem foi apagada],revoked,2026/05/20 16:14:14,
-Ricardo Neves (b4f),+351 939 837 512,,"## Novas Subquestões de Negócio
+Ricardo Neves (b4f),Ricardo Neves,,Estou cá em baixo,chat,2026/05/20 15:18:29,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,1min,chat,2026/05/20 15:18:59,
+Ricardo Neves (b4f),Ricardo Neves,,SustentabilidadeRentabilidade.html.pdf,document,2026/05/20 15:22:29,"=HYPERLINK(""./media/1779286949_AC7FEAABCE1493ED7EF095B3B1026611.pdf"", ""./media/1779286949_AC7FEAABCE1493ED7EF095B3B1026611.pdf"")"
+Ricardo Neves (b4f),Ricardo Neves,,[Esta mensagem foi apagada],revoked,2026/05/20 16:14:14,
+Ricardo Neves (b4f),Ricardo Neves,,"## Novas Subquestões de Negócio
 
 ### 1. O Impacto Ecológico das Cores e Tinturarias vs. Performance de Vendas
 
@@ -1624,11 +1624,11 @@ Ricardo Neves (b4f),+351 939 837 512,,"## Novas Subquestões de Negócio
 * **A questão:** Os produtos que conquistaram crachás de qualidade ou envio rápido (`badge_product_qualityFix`, `badge_local_productFix`) conseguem sustentar preços mais altos (`price`) e maior rentabilidade, reduzindo a necessidade de volume massivo para gerar lucro?
 * **O que a base responde:** Validar se a presença de `badges_countFix` permite praticar um preço médio mais elevado sem sacrificar as `units_sold`, provando que o investimento em qualidade/logística local é economicamente viável.",chat,2026/05/20 16:15:54,
 Você,,Hackathon-Setup-guide-EDTH.pdf,,document,2026/05/20 16:17:12,"=HYPERLINK(""./media/1779290232_3B9D07DEC777614BE4C7.pdf"", ""./media/1779290232_3B9D07DEC777614BE4C7.pdf"")"
-Letícia Alexandre (b4f),+351 932 346 557,,[Foto],image,2026/05/20 16:30:19,"=HYPERLINK(""./media/1779291019_3EB0026A14BC7C355CDCA5.jpeg"", ""./media/1779291019_3EB0026A14BC7C355CDCA5.jpeg"")"
-Ricardo Neves (b4f),+351 939 837 512,,https://edition.cnn.com/style/article/dyeing-pollution-fashion-intl-hnk-dst-sept/index.html,chat,2026/05/20 16:56:30,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,[Foto],image,2026/05/20 16:30:19,"=HYPERLINK(""./media/1779291019_3EB0026A14BC7C355CDCA5.jpeg"", ""./media/1779291019_3EB0026A14BC7C355CDCA5.jpeg"")"
+Ricardo Neves (b4f),Ricardo Neves,,https://edition.cnn.com/style/article/dyeing-pollution-fashion-intl-hnk-dst-sept/index.html,chat,2026/05/20 16:56:30,
 Você,,https://green-forum.ec.europa.eu/green-business/environmental-footprint-methods/pef-method_en,,chat,2026/05/20 17:59:33,
-Ricardo Neves (b4f),+351 939 837 512,,[Esta mensagem foi apagada],revoked,2026/05/20 18:00:43,
-Ricardo Neves (b4f),+351 939 837 512,,https://www.economie.gouv.fr/files/files/directions_services/dgccrf/media-document/dgccrf_presse_CP_Wish.pdf,chat,2026/05/20 18:02:13,
+Ricardo Neves (b4f),Ricardo Neves,,[Esta mensagem foi apagada],revoked,2026/05/20 18:00:43,
+Ricardo Neves (b4f),Ricardo Neves,,https://www.economie.gouv.fr/files/files/directions_services/dgccrf/media-document/dgccrf_presse_CP_Wish.pdf,chat,2026/05/20 18:02:13,
 Você,,"Classificação de Impacto AmbientalGrupo / Cor PadronizadaCores e Termos Originais Incluídos (product_color)0. Não InformadoNão Informadovazio ou null1. Baixo ImpactoBrancowhite, offwhite, ivory2. Baixo a Médio ImpactoCinzento, Tons Neutrosgray, grey, lightgray, lightgrey, silver, beige, khaki, lightkhaki, brown, coffee, camel, tan, apricot, nude3. Médio ImpactoAzul, Verde, Rosa, Roxo, Laranja/Amarelo, Outrosblue, darkblue, denimblue, lakeblue, lightblue, navy, skyblue, prussianblue, green, darkgreen, lightgreen, applegreen, mintgreen, fluorescentgreen, army, jasper, pink, lightpink, dustypink, rose, rosegold, purple, lightpurple, violet, orange, yellow, lightyellow, gold, Qualquer outra cor nova que aparecer e não estiver na lista4. Alto ImpactoPreto, Vermelho, Multicor/Estampadoblack, coolblack, offblack, red, lightred, orange-red, rose red, coralred, watermelonred, wine, claret, burgundy, Termos de estampas ou misturas: &, stripe, print, multicolor, floral, camouflage, rainbow, star, leopard, blackwhite",,chat,2026/05/20 18:49:14,
 Você,,"| Classificação de Impacto Ambiental | Grupo / Cor Padronizada | Cores e Termos Originais Incluídos (product_color) |
 | :--- | :--- | :--- |
@@ -1637,20 +1637,20 @@ Você,,"| Classificação de Impacto Ambiental | Grupo / Cor Padronizada | Cores
 | 2. Baixo a Médio Impacto | Cinzento, Tons Neutros | gray, grey, lightgray, lightgrey, silver, beige, khaki, lightkhaki, brown, coffee, camel, tan, apricot, nude |
 | 3. Médio Impacto | Azul, Verde, Rosa, Roxo, Laranja/Amarelo, Outros | blue, darkblue, denimblue, lakeblue, lightblue, navy, skyblue, prussianblue, green, darkgreen, lightgreen, applegreen, mintgreen, fluorescentgreen, army, jasper, pink, lightpink, dustypink, rose, rosegold, purple, lightpurple, violet, orange, yellow, lightyellow, gold, Qualquer outra cor nova que aparecer e não estiver na lista |
 | 4. Alto Impacto | Preto, Vermelho, Multicor/Estampado | black, coolblack, offblack, red, lightred, orange-red, rose red, coralred, watermelonred, wine, claret, burgundy, Termos de estampas ou misturas: &, stripe, print, multicolor, floral, camouflage, rainbow, star, leopard, blackwhite |",,chat,2026/05/20 18:49:31,
-Letícia Alexandre (b4f),+351 932 346 557,,FastFashion_Ambiental.pptx,document,2026/05/20 19:54:16,"=HYPERLINK(""./media/1779303256_3EB0012E46A95769776F2A.pptx"", ""./media/1779303256_3EB0012E46A95769776F2A.pptx"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,FastFashion_Ambiental.pptx,document,2026/05/20 19:54:16,"=HYPERLINK(""./media/1779303256_3EB0012E46A95769776F2A.pptx"", ""./media/1779303256_3EB0012E46A95769776F2A.pptx"")"
 Você,,[Foto],,image,2026/05/20 20:18:12,"=HYPERLINK(""./media/1779304692_3B3B125D5525B525C8E8.jpeg"", ""./media/1779304692_3B3B125D5525B525C8E8.jpeg"")"
 Você,,[Foto],,image,2026/05/20 20:18:32,"=HYPERLINK(""./media/1779304712_3BB63029D1B22148FD14.jpeg"", ""./media/1779304712_3BB63029D1B22148FD14.jpeg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,"1 Qual o impacto desta concentração geográfica?
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,"1 Qual o impacto desta concentração geográfica?
 2 Qual o impacto ambiental do transporte?
 3 As cores que mais vendem são as mais poluentes?
 4 Produtos bem avaliados vendem mais e geram mais lucro?
 5 Preço baixo = peça descartada mais rapidamente?",chat,2026/05/20 20:24:42,
 Você,,[Foto],,image,2026/05/20 20:31:35,"=HYPERLINK(""./media/1779305495_3BC8AB1A43164714FD0F.jpeg"", ""./media/1779305495_3BC8AB1A43164714FD0F.jpeg"")"
 Você,,[Foto],,image,2026/05/20 20:31:54,"=HYPERLINK(""./media/1779305514_3BE5A80C681F5AE33FC3.jpeg"", ""./media/1779305514_3BE5A80C681F5AE33FC3.jpeg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,https://canva.link/f35kiviqvxb2ope,chat,2026/05/20 20:53:59,
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,https://canva.link/f35kiviqvxb2ope,chat,2026/05/20 20:53:59,
 Você,,"[INSIRA O SEU OBJETO AQUI], minimalista, fotografia editorial, paleta de cores [COR 1] e [COR 2], iluminação suave de estúdio, fundo limpo e neutro, estilo consistente, alta resolução, 8k --ar 1:1",,chat,2026/05/20 21:10:43,
 Você,,";  <- Grego (U+037E)
 ;  <- Latino (U+003B)",,chat,2026/05/20 22:19:06,
-Letícia Alexandre (b4f),+351 932 346 557,,[Foto],image,2026/05/20 22:25:16,"=HYPERLINK(""./media/1779312316_3EB0D75B3DE0ABA88E6D73.jpeg"", ""./media/1779312316_3EB0D75B3DE0ABA88E6D73.jpeg"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,[Foto],image,2026/05/20 22:25:16,"=HYPERLINK(""./media/1779312316_3EB0D75B3DE0ABA88E6D73.jpeg"", ""./media/1779312316_3EB0D75B3DE0ABA88E6D73.jpeg"")"
 Você,,Screenshot_20260519_113628_Gallery.jpg,,document,2026/05/20 22:32:38,"=HYPERLINK(""./media/1779312758_3B83AA3038E8922860CA.jpg"", ""./media/1779312758_3B83AA3038E8922860CA.jpg"")"
-Letícia Alexandre (b4f),+351 932 346 557,,[Foto],image,2026/05/20 22:38:57,"=HYPERLINK(""./media/1779313137_3A9767261F1D6750C9F5.jpeg"", ""./media/1779313137_3A9767261F1D6750C9F5.jpeg"")"
+Letícia Alexandre (b4f),Letícia Alexandre (b4f),,[Foto],image,2026/05/20 22:38:57,"=HYPERLINK(""./media/1779313137_3A9767261F1D6750C9F5.jpeg"", ""./media/1779313137_3A9767261F1D6750C9F5.jpeg"")"

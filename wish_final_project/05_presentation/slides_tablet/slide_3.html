@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 3 — Contexto Wish + ESG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #1a3a2a; color: #f5f0e8; height: 100vh; display: flex; flex-direction: column; padding: 16px; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; background: rgba(245,240,232,0.08); border-radius: 12px; padding: 12px 20px; margin-bottom: 12px; }
+        .slide-num { background: #c75b39; color: #fff; font-weight: 700; padding: 4px 14px; border-radius: 6px; font-size: 0.9rem; }
+        .slide-title { font-size: 1.05rem; font-weight: 600; text-align: center; flex: 1; padding: 0 16px; }
+        .timer { font-size: 1rem; font-weight: 700; color: #c75b39; }
+        .main { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1; min-height: 0; }
+        @media (max-width: 768px) { .main { grid-template-columns: 1fr; } }
+        .card { background: #f5f0e8; color: #1a3a2a; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; }
+        .card-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #8a7a6a; margin-bottom: 8px; }
+        .esg-grid { display: flex; gap: 12px; flex: 1; }
+        .esg-block { flex: 1; background: rgba(26,58,42,0.06); border-radius: 10px; padding: 14px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+        .esg-letter { font-size: 2rem; font-weight: 900; color: #1a3a2a; }
+        .esg-name { font-size: 0.85rem; font-weight: 600; margin-top: 4px; }
+        .esg-desc { font-size: 0.7rem; color: #8a7a6a; margin-top: 4px; }
+        .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .pill { background: rgba(26,58,42,0.1); color: #1a3a2a; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .wish-block { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .wish-title { font-size: 1.6rem; font-weight: 700; color: #1a3a2a; }
+        .wish-sub { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #8a7a6a; margin-bottom: 8px; }
+        .wish-info { font-size: 0.85rem; color: #555; line-height: 1.6; }
+        .bottom { margin-top: 12px; background: rgba(245,240,232,0.08); border-radius: 8px; padding: 10px 16px; display: flex; justify-content: space-between; font-size: 0.8rem; }
+        .bottom span { color: #a09080; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="slide-num">SLIDE 03</div>
+        <div class="slide-title">Contexto — Wish & Pilares ESG</div>
+        <div class="timer">⏱ 25s</div>
+    </div>
+
+    <div class="main">
+        <div class="card">
+            <div class="card-title">A Plataforma</div>
+            <div class="wish-block">
+                <div class="wish-sub">Marketplace · Dados de 2020</div>
+                <div class="wish-title">Wish</div>
+                <div class="wish-info" style="margin-top:8px">Dados retirados por web scraping com a palavra-chave "summer". Dataset de agosto 2020 — pré-regulação têxtil europeia.</div>
+                <div class="keywords" style="margin-top:12px">
+                    <span class="pill">Web Scraping</span>
+                    <span class="pill">Summer</span>
+                    <span class="pill">2020</span>
+                    <span class="pill">Pré-Regulação</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Pilares ESG — Lente de Análise</div>
+            <div class="esg-grid">
+                <div class="esg-block">
+                    <div class="esg-letter">E</div>
+                    <div class="esg-name">Ambiental</div>
+                    <div class="esg-desc">CO₂, recursos, poluição</div>
+                </div>
+                <div class="esg-block">
+                    <div class="esg-letter">S</div>
+                    <div class="esg-name">Social</div>
+                    <div class="esg-desc">Consumo, qualidade, confiança</div>
+                </div>
+                <div class="esg-block">
+                    <div class="esg-letter">G</div>
+                    <div class="esg-name">Governança</div>
+                    <div class="esg-desc">Transparência, dark patterns, regulação</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div><span>Apresenta:</span> Letícia</div>
+        <div><span>Tom:</span> Expositivo, contextual</div>
+        <div><span>Core:</span> ESG como framework da análise</div>
+    </div>
+</body>
+</html>

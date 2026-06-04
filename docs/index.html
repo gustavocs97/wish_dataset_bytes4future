@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish Sustainability | Analytics Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Bytes4Future</span>
+                </div>
+                <p class="project-tag">Wish Sustentabilidade ESG</p>
+            </div>
+
+            <div class="contacts-section">
+                <h3>Equipe de Análise</h3>
+                <div id="contacts-list"></div>
+            </div>
+
+            <div class="sidebar-footer">
+                <p class="footer-note">Bytes4Future © 2026</p>
+            </div>
+        </aside>
+
+        <main class="viewer-main">
+            <div class="viewer-canvas">
+                <div class="slide-wrapper">
+                    <img id="slide-display" src="" alt="Carregando apresentação...">
+                </div>
+            </div>
+
+            <footer class="viewer-controls">
+                <div class="pagination">
+                    <button id="prev-btn" class="nav-btn" title="Anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <span id="page-indicator">01 / 12</span>
+                    <button id="next-btn" class="nav-btn" title="Próximo">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="viewer-actions">
+                    <button id="fullscreen-btn" class="icon-btn" title="Tela Cheia">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

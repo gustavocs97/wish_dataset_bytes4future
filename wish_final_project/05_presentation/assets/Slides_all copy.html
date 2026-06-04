@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wish ESG — Guião de Apresentação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #1a3a2a; overflow: hidden; height: 100vh; }
+
+        .slide { display: none; height: 100vh; padding: 10px; flex-direction: column; }
+        .slide.active { display: flex; }
+
+        .top-bar { display: flex; justify-content: space-between; align-items: center; background: rgba(245,240,232,0.08); border-radius: 10px; padding: 8px 14px; margin-bottom: 8px; flex-shrink:0; }
+        .slide-num { background: #c75b39; color: #fff; font-weight: 700; padding: 3px 10px; border-radius: 5px; font-size: 0.75rem; white-space: nowrap; transition: background 0.5s; }
+        .slide-tit { font-size: 0.8rem; font-weight: 600; text-align: center; flex: 1; padding: 0 8px; color: #f5f0e8; line-height: 1.3; }
+        .who { font-size: 0.7rem; color: #a09080; white-space: nowrap; font-weight: 500; padding: 3px 8px; background: rgba(245,240,232,0.08); border-radius: 5px; }
+        .timer { font-size: 0.75rem; font-weight: 700; color: #c75b39; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+        .timer-total { display: flex; align-items: center; gap: 2px; }
+        .timer-slide { display: flex; align-items: center; gap: 2px; font-size: 0.7rem; color: #dc9632; }
+        .timer-target { font-size: 0.5rem; color: #a09080; font-weight: 400; }
+
+        .main { display: grid; grid-template-columns: 35fr 65fr; gap: 8px; flex: 1; min-height: 0; }
+        @media (max-width: 700px) { .main { grid-template-columns: 1fr; } }
+        .col { display: flex; flex-direction: column; gap: 8px; }
+
+        .card { background: #f5f0e8; color: #1a3a2a; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; }
+        .card-dark { background: rgba(245,240,232,0.1); color: #f5f0e8; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; }
+        .card-title { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.8px; color: #8a7a6a; margin-bottom: 4px; font-weight: 600; }
+        .card-title-w { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.8px; color: #a09080; margin-bottom: 4px; font-weight: 600; }
+
+        .kpi-row { display: flex; gap: 5px; flex-wrap: wrap; }
+        .kpi-card { background: rgba(26,58,42,0.06); border-radius: 6px; padding: 6px; text-align: center; flex: 1; min-width: 50px; }
+        .kpi-num { font-size: 1.1rem; font-weight: 900; color: #c75b39; line-height: 1.2; }
+        .kpi-label { font-size: 0.5rem; color: #555; text-transform: uppercase; letter-spacing: 0.3px; }
+        .kpi-sub { font-size: 0.45rem; color: #8a7a6a; font-style: italic; }
+
+        .script-box { background: #1a3a2a; color: #f5f0e8; border-radius: 8px; padding: 10px; flex: 1; display: flex; flex-direction: column; overflow-y: auto; }
+        .script-text { font-size: 0.95rem; line-height: 1.55; }
+        .script-text strong { color: #c75b39; }
+
+        .core-box { background: rgba(199,91,57,0.15); border: 2px solid #c75b39; border-radius: 10px; padding: 10px 12px; text-align: center; flex-shrink:0; }
+        .core-text { font-size: 1.1rem; font-weight: 800; color: #c75b39; line-height: 1.4; }
+
+        .pill-row { display: flex; flex-wrap: wrap; gap: 4px; flex-shrink:0; justify-content: center; }
+        .pill { background: rgba(26,58,42,0.1); color: #1a3a2a; padding: 4px 10px; border-radius: 20px; font-size: 0.65rem; font-weight: 500; }
+        .pill-w { background: rgba(245,240,232,0.15); color: #f5f0e8; padding: 4px 10px; border-radius: 20px; font-size: 0.65rem; font-weight: 500; }
+
+        .dica { background: rgba(245,240,232,0.06); border-radius: 6px; padding: 6px 10px; font-size: 0.6rem; color: #a09080; line-height: 1.3; display: flex; align-items: center; gap: 5px; flex-shrink:0; }
+        .dica strong { color: #c75b39; }
+
+        .bottom-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; gap: 6px; flex-shrink:0; }
+        .nav-btn { background: #c75b39; color: #fff; border: none; border-radius: 8px; padding: 6px 16px; font-size: 0.75rem; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: opacity 0.2s; -webkit-tap-highlight-color: transparent; }
+        .nav-btn:active { opacity: 0.7; }
+        .nav-btn:disabled { opacity: 0.3; cursor: default; }
+        .nav-btn-outline { background: transparent; border: 2px solid rgba(245,240,232,0.3); color: #f5f0e8; }
+        .slide-counter { color: #a09080; font-size: 0.65rem; font-weight: 500; }
+
+        .big-question { font-size: 0.9rem; font-weight: 700; line-height: 1.3; }
+        .sub-text { font-size: 0.55rem; color: #8a7a6a; margin-top: 2px; }
+
+        .chart-bars { display: flex; flex-direction: column; gap: 3px; }
+        .bar-row { display: flex; align-items: center; gap: 5px; }
+        .bar-label { min-width: 60px; font-size: 0.55rem; font-weight: 500; text-align: right; }
+        .bar-track { flex: 1; height: 14px; background: rgba(26,58,42,0.08); border-radius: 7px; overflow: hidden; }
+        .bar-fill { height: 100%; background: #1a3a2a; border-radius: 7px; display: flex; align-items: center; justify-content: flex-end; padding-right: 4px; font-size: 0.45rem; font-weight: 600; color: #f5f0e8; }
+
+        .impact-grid { display: flex; gap: 4px; flex: 1; }
+        .impact-block { flex: 1; border-radius: 6px; padding: 6px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+        .impact-pct { font-size: 1.2rem; font-weight: 900; }
+
+        .lessons { display: flex; flex-direction: column; gap: 4px; flex: 1; justify-content: center; }
+        .lesson { background: rgba(245,240,232,0.08); border-left: 4px solid #c75b39; padding: 6px 8px; border-radius: 0 6px 6px 0; font-size: 0.65rem; line-height: 1.3; }
+        .lesson strong { color: #c75b39; }
+
+        .color-list { font-size: 0.55rem; line-height: 1.3; }
+        .color-item { display: flex; justify-content: space-between; }
+        .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+        .rec-item { background: rgba(26,58,42,0.06); border-radius: 5px; padding: 5px; display: flex; flex-direction: column; }
+        .rec-title { font-weight: 700; font-size: 0.6rem; color: #c75b39; }
+        .rec-desc { font-size: 0.5rem; color: #555; margin-top: 1px; line-height: 1.2; }
+
+        .member-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; flex: 1; }
+        .member-card { background: #f5f0e8; color: #1a3a2a; border-radius: 8px; padding: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4px; }
+        .avatar { width: 32px; height: 32px; border-radius: 50%; background: #1a3a2a; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 900; color: #f5f0e8; }
+        .member-name { font-size: 0.65rem; font-weight: 700; }
+        .member-role { font-size: 0.5rem; color: #8a7a6a; }
+
+        .esg-grid { display: flex; gap: 4px; flex: 1; }
+        .esg-block { flex: 1; background: rgba(26,58,42,0.06); border-radius: 6px; padding: 6px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+        .esg-letter { font-size: 1rem; font-weight: 900; color: #1a3a2a; }
+        .esg-name { font-size: 0.55rem; font-weight: 600; }
+        .esg-desc { font-size: 0.45rem; color: #8a7a6a; }
+
+        .timeline { display: flex; flex-direction: column; gap: 3px; flex: 1; justify-content: center; }
+        .tl-item { display: flex; gap: 4px; align-items: flex-start; }
+        .tl-year { font-size: 0.6rem; font-weight: 700; color: #c75b39; min-width: 42px; }
+        .tl-text { font-size: 0.55rem; line-height: 1.2; color: #555; }
+
+        .checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; flex:1; align-content:center; }
+        @media (max-width: 500px) { .checklist { grid-template-columns: 1fr; } }
+        .check-item { background: rgba(245,240,232,0.08); border-radius: 8px; padding: 10px; display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: #f5f0e8; }
+        .check-icon { font-size: 1rem; }
+
+        .source { font-size: 0.45rem; color: #8a7a6a; font-style: italic; margin-top: 3px; }
+        .big-num { font-size: 1.6rem; font-weight: 900; color: #c75b39; line-height: 1; }
+        .stat-label { font-size: 0.55rem; color: #555; margin-top: 2px; }
+        #progress-top { position: fixed; top:0; left:0; right:0; height:3px; z-index:999; background:rgba(245,240,232,0.15); }
+        #progress-top-fill { height:100%; width:0%; background:#3ca050; border-radius:0 2px 2px 0; transition:width 1s linear; }
+        .timer-remaining { font-size:0.6rem; font-weight:600; white-space:nowrap; }
+    </style>
+</head>
+<body>
+<div id="progress-top"><div id="progress-top-fill"></div></div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 0 — CHECKLIST -->
+<!-- ============================================================ -->
+    <div class="slide active bg-green" data-slide="0">
+    <div class="top-bar">
+        <div class="slide-num">☐ CHECKLIST</div>
+        <div class="slide-tit">Antes de entrar na sala</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:8px;min-height:0;padding:4px 0">
+        <div class="checklist">
+            <div class="check-item"><span class="check-icon">☐</span> Cada pessoa leu o guião em voz alta pelo menos 2 vezes</div>
+            <div class="check-item"><span class="check-icon">☐</span> Cronometrámos — deve ficar entre 9:30 e 10 min</div>
+            <div class="check-item"><span class="check-icon">☐</span> Cada um sabe quem fala antes e depois</div>
+            <div class="check-item"><span class="check-icon">☐</span> PDF de backup no telemóvel</div>
+            <div class="check-item"><span class="check-icon">☐</span> Decidimos quem responde a perguntas de cada área</div>
+            <div class="check-item"><span class="check-icon">☐</span> Respirar fundo 3× juntos antes de entrar</div>
+        </div>
+        <div class="dica" style="margin-top:auto"><strong>💡 Dica:</strong> Nervosismo é normal. Até oradores experientes sentem. A adrenalina ajuda a focar. Usa-a a teu favor.</div>
+    </div>
+    <div class="bottom-nav">
+        <div></div>
+        <div class="slide-counter">0/12 · Antes de começar</div>
+        <button class="nav-btn" onclick="nextSlide()">Começar →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 1 — ABERTURA -->
+<!-- ============================================================ -->
+<div class="slide bg-green" data-slide="1">
+    <div class="top-bar">
+        <div class="slide-num">SLIDE 1</div>
+        <div class="slide-tit">Sustentabilidade e Rentabilidade podem coexistir?</div>
+        <div class="who">LETÍCIA</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 30s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="big-question">Sustentabilidade e Rentabilidade podem coexistir de forma eficiente?</div>
+                <div class="sub-text" style="margin-top:8px">Wish · Agosto 2020 · Summer Products Dataset</div>
+                <div class="kpi-row" style="margin-top:10px">
+                    <div class="kpi-card"><div class="kpi-num">1.341</div><div class="kpi-label">Produtos</div></div>
+                    <div class="kpi-card"><div class="kpi-num">6,46M</div><div class="kpi-label">Unid. Vendidas</div></div>
+                    <div class="kpi-card"><div class="kpi-num">52,4M€</div><div class="kpi-label">Receita</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "Boa tarde a todos. Somos a <strong>Letícia</strong>, o <strong>Gustavo</strong> e o <strong>Ricardo</strong>, do programa Data Analyst da <strong>Bytes4Future</strong>.<br><br>
+                        A pergunta que nos trouxe aqui hoje é: <strong>Sustentabilidade e Rentabilidade podem coexistir de forma eficiente?</strong><br><br>
+                        Para responder, analisámos <strong>1.341 produtos</strong> de verão na plataforma <strong>Wish</strong>, em agosto de 2020 — <strong>6,46 milhões</strong> de unidades vendidas e <strong>52,4 milhões de euros</strong> em receita estimada."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 Sustentabilidade e rentabilidade não são opostas — os dados é que nos dirão se podem coexistir.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill-w">Sustentabilidade</span><span class="pill-w">Rentabilidade</span><span class="pill-w">Paradoxo</span><span class="pill-w">ESG</span><span class="pill-w">Fast Fashion</span><span class="pill-w">Baseline 2020</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Começa com um sorriso e uma respiração funda antes de falar. O público quer que corras bem.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()">←</button>
+        <div class="slide-counter">1 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2 — EQUIPA -->
+<!-- ============================================================ -->
+<div class="slide bg-green" data-slide="2">
+    <div class="top-bar">
+        <div class="slide-num">SLIDE 2</div>
+        <div class="slide-tit">Quem somos — Três perspetivas, uma análise</div>
+        <div class="who">LETÍCIA</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 20s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1;padding:8px">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="member-grid" style="flex:1">
+                    <div class="member-card"><div class="avatar">LA</div><div class="member-name">Letícia Alexandre</div><div class="member-role">Análise de Sustentabilidade</div></div>
+                    <div class="member-card"><div class="avatar">GC</div><div class="member-name">Gustavo Carvalho</div><div class="member-role">Análise de Qualidade & Regulatory</div></div>
+                    <div class="member-card"><div class="avatar">RN</div><div class="member-name">Ricardo Neves</div><div class="member-role">Análise Fast Fashion & Consumidor</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "O <strong>Gustavo</strong> focou-se na qualidade dos produtos; o <strong>Ricardo</strong> analisou os padrões de fast fashion e o comportamento do consumidor; e eu, <strong>Letícia</strong>, fiz a análise de sustentabilidade.<br><br>
+                        Vamos partilhar o que descobrimos."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 Três formações diferentes — uma conclusão em comum.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill-w">Multidisciplinar</span><span class="pill-w">Complementaridade</span><span class="pill-w">Dados + Contexto + Design</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Fala devagar. Se sentires pressa, pausa 1 segundo — isso transmite confiança.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()">←</button>
+        <div class="slide-counter">2 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3 — WISH + ESG -->
+<!-- ============================================================ -->
+<div class="slide bg-green" data-slide="3">
+    <div class="top-bar">
+        <div class="slide-num">SLIDE 3</div>
+        <div class="slide-tit">Plataforma Wish & Metodologia ESG</div>
+        <div class="who">LETÍCIA</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 30s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+                    <div style="font-size:1.2rem;font-weight:700;color:#1a3a2a;">Wish</div>
+                    <div style="font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:#8a7a6a;margin-bottom:6px;">Marketplace · Agosto 2020</div>
+                    <div style="font-size:0.7rem;color:#555;line-height:1.5">Dados de web scraping com palavra-chave "summer". Pré-regulação têxtil europeia.</div>
+                    <div class="esg-grid" style="margin-top:8px">
+                        <div class="esg-block"><div class="esg-letter">E</div><div class="esg-name">Ambiental</div><div class="esg-desc">CO₂, transporte, tingimento</div></div>
+                        <div class="esg-block"><div class="esg-letter">S</div><div class="esg-name">Social</div><div class="esg-desc">Consumo, qualidade, confiança</div></div>
+                        <div class="esg-block"><div class="esg-letter">G</div><div class="esg-name">Governança</div><div class="esg-desc">Transparência, dark patterns</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "Os dados foram retirados por <strong>webscraping</strong> usando a palavra-chave 'summer'.<br><br>
+                        A nossa análise seguiu os três pilares <strong>ESG</strong>: <strong>Ambiental</strong>, <strong>Social</strong> e <strong>Governança</strong>.<br><br>
+                        É um dataset real, com implicações reais — e os números falam por si."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 ESG como lente de análise — cada pilar revela um problema diferente.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill-w">Web Scraping</span><span class="pill-w">"Summer"</span><span class="pill-w">Pré-DSA</span><span class="pill-w">Baseline 2020</span><span class="pill-w">ESG Framework</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Tom expositivo. Explica com calma — o público precisa de perceber a lente ESG.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()">←</button>
+        <div class="slide-counter">3 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4 — Q1 CONCENTRAÇÃO GEOGRÁFICA -->
+<!-- ============================================================ -->
+<div class="slide bg-cream" data-slide="4">
+    <div class="top-bar" style="background:#1a3a2a;">
+        <div class="slide-num">PERGUNTA 1</div>
+        <div class="slide-tit">Qual o impacto desta concentração geográfica?</div>
+        <div class="who" style="color:#a09080;">LETÍCIA</div>
+        <div class="timer" style="color:#c75b39"><span class="timer-total">⏱ <span class="live-total" style="color:#c75b39">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide" style="color:#dc9632">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 50s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="kpi-row">
+                    <div class="kpi-card"><div class="kpi-num">96,5%</div><div class="kpi-label">Origem China</div><div class="kpi-sub">1.294 de 1.341</div></div>
+                    <div class="kpi-card"><div class="kpi-num">~8.000 km</div><div class="kpi-label">Distância Média</div><div class="kpi-sub">CN → Europa</div></div>
+                    <div class="kpi-card"><div class="kpi-num">40</div><div class="kpi-label">Países Destino</div><div class="kpi-sub">média por produto</div></div>
+                </div>
+                <div style="margin-top:6px;padding:5px;background:rgba(199,91,57,0.1);border-radius:4px;font-size:0.5rem;color:#c75b39;font-weight:600;text-align:center">29 badges "local" · 100% são CN · Greenwashing confirmado</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "<strong>96,5% dos produtos</strong> — 1.294 de 1.341 — têm origem na <strong>China</strong>. A distância média percorrida até ao consumidor final é de aproximadamente <strong>8.000 km</strong>, com destino a uma média de <strong>40 países</strong> por produto.<br><br>
+                        Esta dependência quase total de um único país representa um <strong>risco ambiental e logístico enorme</strong>."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 Cadeia mono-origem. Badge "local" é greenwashing. Risco de sourcing concentrado.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill">Mono-Origem</span><span class="pill">Greenwashing</span><span class="pill">Badge Local</span><span class="pill">Logística</span><span class="pill">Risco CN</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Destaca a contradição: 100% dos badges "local" são de produtos chineses.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()" style="color:#1a3a2a;border-color:#1a3a2a">←</button>
+        <div class="slide-counter" style="color:#1a3a2a">4 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5 — Q2 CARBONO -->
+<!-- ============================================================ -->
+<div class="slide bg-sage" data-slide="5">
+    <div class="top-bar" style="background:#1a3a2a;">
+        <div class="slide-num">PERGUNTA 2</div>
+        <div class="slide-tit">Qual a estimativa de carbono deste modelo logístico?</div>
+        <div class="who" style="color:#a09080;">LETÍCIA</div>
+        <div class="timer" style="color:#c75b39"><span class="timer-total">⏱ <span class="live-total" style="color:#c75b39">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide" style="color:#dc9632">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 55s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div style="text-align:center;padding:6px 0"><span class="big-num">10%</span><div class="stat-label">das emissões globais de CO₂ são da indústria da moda</div><div class="kpi-sub">Mais que aviação + transporte marítimo combinados</div></div>
+                <div class="kpi-row" style="margin-top:6px">
+                    <div class="kpi-card"><div style="font-size:0.8rem;font-weight:700">✈️ 2.280.000g</div><div class="kpi-label">Avião</div></div>
+                    <div class="kpi-card"><div style="font-size:0.8rem;font-weight:700">🚢 200.000g</div><div class="kpi-label">Navio</div></div>
+                    <div class="kpi-card"><div style="font-size:0.8rem;font-weight:700">🚂 112.000g</div><div class="kpi-label">Trem</div></div>
+                </div>
+                <div class="kpi-sub" style="text-align:center;margin-top:4px">Avião emite 11× mais que navio neste percurso</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "A indústria da moda é responsável por <strong>10% das emissões globais de CO₂</strong> — mais do que a aviação e o transporte marítimo combinados.<br><br>
+                        Para este percurso de <strong>8.000 km</strong> da China à Europa, o <strong>avião</strong> emite cerca de <strong>2.280.000g</strong> por envio, o <strong>navio</strong> <strong>200.000g</strong> e o <strong>comboio</strong> <strong>112.000g</strong>.<br><br>
+                        E se nada mudar, as emissões têxteis vão aumentar mais <strong>60% até 2030</strong>. O modelo logístico do Wish amplifica diretamente este problema."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 O maior poluidor não é o produto — é a jornada até aqui. Modo de transporte é tudo.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill">CO₂</span><span class="pill">Avião 11× Navio</span><span class="pill">Frete Subsidiado</span><span class="pill">+60% até 2030</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Pausa um segundo antes de avançar para o slide 6. Esse silêncio transmite confiança.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()" style="color:#1a3a2a;border-color:#1a3a2a">←</button>
+        <div class="slide-counter" style="color:#1a3a2a">5 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6 — Q3 CORES -->
+<!-- ============================================================ -->
+<div class="slide bg-green" data-slide="6">
+    <div class="top-bar">
+        <div class="slide-num">PERGUNTA 3</div>
+        <div class="slide-tit">As cores mais vendidas são as mais poluentes?</div>
+        <div class="who">GUSTAVO</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 55s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1;overflow-y:auto">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="color-list">
+                    <div class="color-item"><span>⬛ Preto</span><strong>2,3M</strong></div>
+                    <div class="color-item"><span>🌈 Multicor</span><strong>1,9M</strong></div>
+                    <div class="color-item"><span>⬜ Branco</span><strong>1,7M</strong></div>
+                    <div class="color-item"><span>🔵 Azul</span><strong>1,4M</strong></div>
+                    <div class="color-item"><span>🩷 Rosa</span><strong>1,2M</strong></div>
+                    <div class="color-item"><span>🔴 Vermelho</span><strong>1,1M</strong></div>
+                    <div class="color-item"><span>🟢 Verde</span><strong>943k</strong></div>
+                    <div class="color-item"><span>🟤 Neutros</span><strong>876k</strong></div>
+                    <div class="color-item"><span>🟣 Roxo</span><strong>654k</strong></div>
+                    <div class="color-item"><span>🟠 Laranja/Amar.</span><strong>543k</strong></div>
+                    <div class="color-item"><span>⚪ Cinzento</span><strong>432k</strong></div>
+                </div>
+                <div class="impact-grid" style="margin-top:6px">
+                    <div class="impact-block impact-high"><div class="impact-pct" style="color:#c83c32">52%</div><div style="font-size:0.55rem">Alto</div></div>
+                    <div class="impact-block impact-med"><div class="impact-pct" style="color:#dc9632">31%</div><div style="font-size:0.55rem">Médio</div></div>
+                    <div class="impact-block impact-low"><div class="impact-pct" style="color:#3ca050">17%</div><div style="font-size:0.55rem">Baixo</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "Os dados mostram que os produtos com cores de <strong>médio e alto impacto ambiental</strong> são os mais vendidos — são muito poucas as vendas de produtos de baixo impacto.<br><br>
+                        O <strong>tingimento têxtil</strong> é a segunda maior causa de poluição industrial da água no mundo, responsável por <strong>20%</strong> dessa poluição. Na China, rios inteiros mudam de cor devido ao descarte indevido de químicos.<br><br>
+                        E os corantes sintéticos <strong>não são biodegradáveis</strong> — permanecem no ambiente durante décadas."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 52% das vendas são alto impacto. Tingimento têxtil é 2ª maior causa de poluição da água.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill-w">Tingimento</span><span class="pill-w">Poluição Água</span><span class="pill-w">Preto+Branco</span><span class="pill-w">2ª maior poluente</span><span class="pill-w">Não biodegradável</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Quando a Letícia terminar, espera 2 segundos antes de começar. Ajuda-te a centrar.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()">←</button>
+        <div class="slide-counter">6 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7 — Q4 RATING VS LUCRO -->
+<!-- ============================================================ -->
+<div class="slide bg-green" data-slide="7">
+    <div class="top-bar">
+        <div class="slide-num">PERGUNTA 4</div>
+        <div class="slide-tit">Produtos bem avaliados vendem mais e geram mais lucro?</div>
+        <div class="who">GUSTAVO</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 55s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="chart-bars">
+                    <div class="bar-row"><div class="bar-label">⭐⭐⭐⭐⭐ 4-5</div><div class="bar-track"><div class="bar-fill" style="width:38.63%">38,63%</div></div></div>
+                    <div class="bar-row"><div class="bar-label">⭐⭐⭐ 3</div><div class="bar-track"><div class="bar-fill" style="width:57.94%">57,94%</div></div></div>
+                    <div class="bar-row"><div class="bar-label">⭐⭐ 2</div><div class="bar-track"><div class="bar-fill" style="width:3.21%;font-size:0.5rem">3,21%</div></div></div>
+                    <div class="bar-row"><div class="bar-label">⭐ 1</div><div class="bar-track"><div class="bar-fill" style="width:0.22%;font-size:0.5rem">0,22%</div></div></div>
+                </div>
+                <div class="kpi-row" style="margin-top:8px">
+                    <div class="kpi-card"><div class="kpi-num">€8,75</div><div class="kpi-label">Rating 4-5</div></div>
+                    <div class="kpi-card"><div class="kpi-num">€6,80</div><div class="kpi-label">Rating 1-3</div></div>
+                    <div class="kpi-card"><div class="kpi-num">+29%</div><div class="kpi-label">Diferença</div></div>
+                </div>
+                <div style="margin-top:4px;padding:4px;background:rgba(199,91,57,0.1);border-radius:4px;font-size:0.5rem;color:#c75b39;font-weight:600;text-align:center">Badge qualidade (7,4%) → vendem <strong>54% mais</strong></div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "Aqui surge algo interessante: <strong>57,94%</strong> das unidades vendidas têm <strong>rating 3</strong>, e <strong>38,63%</strong> têm <strong>rating 4 e 5</strong>. Apenas <strong>0,22%</strong> têm rating 1.<br><br>
+                        Os produtos com avaliação 4 ou 5 têm um preço médio de <strong>8,75€</strong>, contra <strong>6,80€</strong> para os produtos com rating inferior a 3.<br><br>
+                        Ou seja: <strong>apostar em produtos de qualidade</strong> não só reduz devoluções e reclamações, como <strong>gera mais receita por unidade</strong>."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 Qualidade não é custo — é investimento. Badge qualidade = +54% vendas. Oceano do meio domina.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill-w">Qualidade</span><span class="pill-w">Rating 3</span><span class="pill-w">Badge +54%</span><span class="pill-w">Prémio Preço</span><span class="pill-w">Oceano do Meio</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Olha para o público quando disseres "apostar em produtos de qualidade". É o ponto de viragem.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()">←</button>
+        <div class="slide-counter">7 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8 — FRANÇA VS WISH -->
+<!-- ============================================================ -->
+<div class="slide bg-green" data-slide="8">
+    <div class="top-bar">
+        <div class="slide-num">CASO REAL</div>
+        <div class="slide-tit">A França baniu a Wish em 2021</div>
+        <div class="who">GUSTAVO</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 55s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="timeline">
+                    <div class="tl-item"><div class="tl-year">2020</div><div class="tl-text">DGCCRF compra 140 produtos na Wish e testa segurança.</div></div>
+                    <div class="tl-item"><div class="tl-year">Jul 2021</div><div class="tl-text">Aviso oficial: 2 meses para cumprir lei europeia.</div></div>
+                    <div class="tl-item"><div class="tl-year">Nov 2021</div><div class="tl-text">Wish não cumpriu. França bane app das lojas e pesquisa.</div></div>
+                    <div class="tl-item"><div class="tl-year">2023</div><div class="tl-text">Wish readmitida. Reputação ficou danificada.</div></div>
+                </div>
+                <div class="source">Fonte: DGCCRF — economie.gouv.fr</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "Este é um slide que torna tudo mais concreto. Em <strong>2020</strong>, a <strong>DGCCRF</strong> — a autoridade francesa de repressão às fraudes — comprou <strong>140 produtos</strong> na Wish e testou a sua segurança.<br><br>
+                        Em <strong>julho de 2021</strong>, a Wish recebeu um aviso oficial com dois meses para cumprir a legislação europeia. <strong>Não cumpriu</strong>. Em <strong>novembro de 2021</strong>, a app foi banida das stores e dos resultados de pesquisa.<br><br>
+                        Em <strong>2023</strong>, a Wish foi readmitida após correções, mas a <strong>reputação ficou permanentemente danificada</strong>. Os nossos dados de <strong>2020 já antecipavam estes problemas</strong>."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 Regulação está a chegar. Os dados de 2020 são o "antes" — a prova de que os problemas já existiam.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill-w">DGCCRF</span><span class="pill-w">França</span><span class="pill-w">Regulação</span><span class="pill-w">Banimento</span><span class="pill-w">Reputação</span><span class="pill-w">Caso Real</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Se gaguejares ou perderes o fio, respira e olha para o slide. Ele está lá para te apoiar.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()">←</button>
+        <div class="slide-counter">8 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9 — Q5 PREÇO BAIXO = DESCARTE -->
+<!-- ============================================================ -->
+<div class="slide bg-sage" data-slide="9">
+    <div class="top-bar" style="background:#1a3a2a;">
+        <div class="slide-num">PERGUNTA 5</div>
+        <div class="slide-tit">Preço baixo = peça descartada mais rapidamente?</div>
+        <div class="who" style="color:#a09080;">RICARDO</div>
+        <div class="timer" style="color:#c75b39"><span class="timer-total">⏱ <span class="live-total" style="color:#c75b39">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide" style="color:#dc9632">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 55s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="kpi-row">
+                    <div class="kpi-card"><div class="kpi-num">80 mil<br>milhões</div><div class="kpi-label">Peças/ano</div><div class="kpi-sub">+400% que há 20 anos</div></div>
+                    <div class="kpi-card"><div class="kpi-num">7-10</div><div class="kpi-label">Usos por peça</div><div class="kpi-sub">Vida útil média</div></div>
+                    <div class="kpi-card"><div class="kpi-num">85%</div><div class="kpi-label">Aterro/Incin.</div><div class="kpi-sub">Em menos de 12 meses</div></div>
+                </div>
+                <div class="source">Ellen MacArthur · David Suzuki · UNEP</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "São consumidas <strong>80 mil milhões de peças</strong> de roupa por ano — <strong>400% mais</strong> do que há 20 anos. Uma peça de fast fashion tem uma vida útil média de apenas <strong>7 a 10 usos</strong>.<br><br>
+                        E <strong>85% dos têxteis descartados</strong> vão para aterro ou são incinerados em menos de 12 meses.<br><br>
+                        O <strong>preço baixo</strong> — que é a proposta de valor central do Wish — encoraja compras impulsivas e acelera este ciclo. Produtos de qualidade inferior são descartados mais depressa, gerando <strong>mais resíduos e mais emissões</strong>."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 O preço vence a qualidade — sempre. Não é falta de informação, é a mecânica do sistema.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill">Fast Fashion</span><span class="pill">Consumismo</span><span class="pill">Preço < €5</span><span class="pill">Descarte</span><span class="pill">7-10 Usos</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Postura aberta — ombros para trás, mãos visíveis. Transmite segurança mesmo quando ainda não a sentes.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()" style="color:#1a3a2a;border-color:#1a3a2a">←</button>
+        <div class="slide-counter" style="color:#1a3a2a">9 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10 — LIÇÕES -->
+<!-- ============================================================ -->
+<div class="slide bg-green" data-slide="10">
+    <div class="top-bar">
+        <div class="slide-num">LIÇÕES</div>
+        <div class="slide-tit">O que os dados nos ensinaram</div>
+        <div class="who">RICARDO</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 40s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w" style="font-size:0.7rem;letter-spacing:1px;">📊 Dados para Citar</div>
+                <div style="font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:6px">4 GRANDES LIÇÕES</div>
+                <div class="lessons">
+                    <div class="lesson"><strong>1.</strong> 96,5% CN + ~8.000 km = risco ambiental e logístico enorme</div>
+                    <div class="lesson"><strong>2.</strong> Moda supera aviação + navio combinados. Avião emite 11× mais que navio</div>
+                    <div class="lesson"><strong>3.</strong> Tingimento têxtil é 2ª maior poluição da água. 52% das vendas são alto impacto</div>
+                    <div class="lesson"><strong>4.</strong> Preço baixo → compra impulsiva → descarte rápido. 85% dos têxteis vão para aterro</div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "Quatro grandes lições emergem desta análise:<br><br>
+                        <strong>1.</strong> A concentração geográfica de <strong>96,5%</strong> na China cria <strong>~8.000 km</strong> de distância média — risco enorme.<br><br>
+                        <strong>2.</strong> As emissões do setor da moda superam a <strong>aviação e o transporte marítimo combinados</strong>.<br><br>
+                        <strong>3.</strong> O tingimento têxtil é a <strong>2ª maior causa de poluição da água industrial</strong>.<br><br>
+                        <strong>4.</strong> O preço baixo alimenta compras impulsivas que aceleram o <strong>descarte</strong>.<br><br>
+                        Sustentabilidade e rentabilidade <strong>podem coexistir</strong> — mas exigem escolhas deliberadas."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 O sistema está desenhado para volume. Pode ser redesenhado para valor.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill-w">Distância</span><span class="pill-w">Emissões</span><span class="pill-w">Poluição</span><span class="pill-w">Descarte</span><span class="pill-w">Escolha Deliberada</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Tom solene, reflexivo. Pausa entre cada lição. Deixa o público absorver.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()">←</button>
+        <div class="slide-counter">10 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11 — RECOMENDAÇÕES -->
+<!-- ============================================================ -->
+<div class="slide bg-cream" data-slide="11">
+    <div class="top-bar" style="background:#1a3a2a;">
+        <div class="slide-num">RECOMENDAÇÕES</div>
+        <div class="slide-tit">O que a Wish pode fazer — 6 medidas</div>
+        <div class="who" style="color:#a09080;">RICARDO</div>
+        <div class="timer" style="color:#c75b39"><span class="timer-total">⏱ <span class="live-total" style="color:#c75b39">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide" style="color:#dc9632">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 50s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="rec-grid" style="flex:1">
+                    <div class="rec-item"><div class="rec-title">🌱 Eco Badge</div><div class="rec-desc">Identificar produtos sustentáveis com certificação verificável.</div></div>
+                    <div class="rec-item"><div class="rec-title">📦 Consolidar Envios</div><div class="rec-desc">Reduzir frete e embalagens por agregação de pedidos.</div></div>
+                    <div class="rec-item"><div class="rec-title">⬇ Penalizar Má Qualidade</div><div class="rec-desc">Menos visibilidade para produtos com rating < 3.</div></div>
+                    <div class="rec-item"><div class="rec-title">🎨 Insumos Verdes</div><div class="rec-desc">Promover pigmentos e tintas ecológicas.</div></div>
+                    <div class="rec-item"><div class="rec-title">💰 Carbono no Checkout</div><div class="rec-desc">Mostrar impacto de carbono no momento da compra.</div></div>
+                    <div class="rec-item"><div class="rec-title">⚖️ Regularização</div><div class="rec-desc">Adequação às regulamentações ambientais globais.</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "Com base nesta análise, identificámos seis medidas concretas que a Wish poderia implementar:<br><br>
+                        <strong>1.</strong> Criar um <strong>Eco Badge</strong> com certificação real.<br>
+                        <strong>2.</strong> <strong>Consolidar envios</strong> para reduzir frete e embalagens.<br>
+                        <strong>3.</strong> <strong>Penalizar</strong> produtos de baixa qualidade com menos visibilidade.<br>
+                        <strong>4.</strong> Promover <strong>insumos verdes</strong> — tintas ecológicas.<br>
+                        <strong>5.</strong> Mostrar <strong>carbono no checkout</strong>.<br>
+                        <strong>6.</strong> Adequar-se às <strong>regulamentações globais</strong>.<br><br>
+                        Negócios conscientes constroem um futuro mais justo e equilibrado."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 Qualidade converte. Transparência constrói confiança. Regulamentação é caminho sem volta.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill">Eco Badge</span><span class="pill">Qualidade</span><span class="pill">Transparência</span><span class="pill">Carbono</span><span class="pill">Regulamentação</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Tom inspirador, prospetivo. Foco em soluções, não só nos problemas.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()" style="color:#1a3a2a;border-color:#1a3a2a">←</button>
+        <div class="slide-counter" style="color:#1a3a2a">11 / 12</div>
+        <button class="nav-btn" onclick="nextSlide()">Próximo →</button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12 — FECHO IMPACTO -->
+<!-- ============================================================ -->
+<div class="slide bg-green" data-slide="12">
+    <div class="top-bar">
+        <div class="slide-num">FECHO</div>
+        <div class="slide-tit">O impacto em tempo real</div>
+        <div class="who">RICARDO</div>
+        <div class="timer"><span class="timer-total">⏱ <span class="live-total">00:00</span></span><span class="timer-slide">⬤ <span class="live-slide">00:00</span></span><span class="timer-remaining">⏳ <span class="live-remaining">10:00</span></span><span class="timer-target">/ 20s</span></div>
+    </div>
+    <div class="main">
+        <div class="col">
+            <div class="card" style="flex:1;justify-content:center;align-items:center;text-align:center">
+                <div class="card-title">📊 Dados para Citar</div>
+                <div class="big-num">~900 camiões</div>
+                <div style="font-size:0.75rem;color:#555;font-weight:500;margin-top:3px">de roupa descarregados no mundo</div>
+                <div style="font-size:0.6rem;color:#8a7a6a;margin-top:1px">durante os 10 min desta apresentação</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-dark" style="flex:1">
+                <div class="card-title-w">🎯 O que Dizer</div>
+                <div class="script-box" style="flex:1">
+                    <div class="script-text">
+                        "Para terminar, deixamos esta imagem: durante os <strong>10 minutos</strong> desta apresentação, cerca de <strong>900 camiões</strong> de roupa foram descarregados em todo o mundo.<br><br>
+                        <strong>Obrigado pela atenção</strong> — ficamos disponíveis para responder às vossas perguntas."
+                    </div>
+                </div>
+            </div>
+            <div class="core-box"><div class="core-text">💬 A pergunta final: o que queremos que o consumo seja — e se estamos dispostos a pagar o preço real.</div></div>
+        </div>
+    </div>
+    <div class="pill-row"><span class="pill-w">Impacto</span><span class="pill-w">Escala</span><span class="pill-w">Consciência</span><span class="pill-w">Mudança</span><span class="pill-w">Amanhã</span></div>
+    <div class="dica"><strong>💡 Dica:</strong> Se houver perguntas e não souberes: "Essa é uma boa pergunta — posso confirmar e partilhar depois." Isso é profissionalismo.</div>
+    <div class="bottom-nav">
+        <button class="nav-btn nav-btn-outline" onclick="prevSlide()">←</button>
+        <div class="slide-counter">12 / 12 · Fim</div>
+        <button class="nav-btn" onclick="goToSlide(0)" style="background:#1a3a2a;border:2px solid rgba(245,240,232,0.3)">↻ Checklist</button>
+    </div>
+</div>
+
+<script>
+let current = 0;
+const total = 12;
+let totalSeconds = 0;
+let slideSeconds = 0;
+let timerInterval = null;
+
+function pad(n) { return n.toString().padStart(2, '0'); }
+
+function tick() {
+    totalSeconds++;
+    slideSeconds++;
+    const tm = Math.floor(totalSeconds / 60);
+    const ts = totalSeconds % 60;
+    const sm = Math.floor(slideSeconds / 60);
+    const ss = slideSeconds % 60;
+    document.querySelectorAll('.live-total').forEach(el => el.textContent = pad(tm) + ':' + pad(ts));
+    document.querySelectorAll('.live-slide').forEach(el => el.textContent = pad(sm) + ':' + pad(ss));
+    document.querySelectorAll('.slide.active .slide-num').forEach(el => {
+        el.style.background = slideSeconds > 20 ? '#c83c32' : slideSeconds > 10 ? '#dc9632' : '#c75b39';
+    });
+    const remaining = Math.max(0, 600 - totalSeconds);
+    const rmin = Math.floor(remaining / 60);
+    const rsec = remaining % 60;
+    document.querySelectorAll('.live-remaining').forEach(el => el.textContent = pad(rmin) + ':' + pad(rsec));
+    const pct = ((totalSeconds / 600) * 100) + '%';
+    document.getElementById('progress-top-fill').style.width = pct;
+    const fill = document.getElementById('progress-top-fill');
+    if (remaining < 60) fill.style.background = '#c83c32';
+    else if (remaining < 180) fill.style.background = '#dc9632';
+    else fill.style.background = '#3ca050';
+}
+
+function startTimer() {
+    if (timerInterval) return;
+    timerInterval = setInterval(tick, 1000);
+}
+
+function showSlide(n) {
+    if (n < 0 || n > total) return;
+    document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+    document.querySelector(`[data-slide="${n}"]`).classList.add('active');
+    current = n;
+    slideSeconds = 0;
+    document.querySelectorAll('.live-slide').forEach(el => el.textContent = '00:00');
+    document.querySelectorAll('.slide-num').forEach(el => el.style.background = '#c75b39');
+}
+
+function nextSlide() { if (current < total) showSlide(current + 1); }
+function prevSlide() { if (current > 0) showSlide(current - 1); }
+function goToSlide(n) { showSlide(n); }
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prevSlide(); }
+});
+let touchX = 0;
+document.addEventListener('touchstart', e => { touchX = e.changedTouches[0].screenX; });
+document.addEventListener('touchend', e => {
+    const diff = touchX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) { if (diff > 0) nextSlide(); else prevSlide(); }
+});
+
+window.addEventListener('load', () => setTimeout(startTimer, 300));
+</script>
+</body>
+</html>
